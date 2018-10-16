@@ -12,6 +12,7 @@ secrets.yaml
 webostv.conf
 zwave_device_config.yaml
 zwcfg_0xd30a70fa.xml
-.storage/auth
-.storage/auth_provider.homeassistant
 deps/
+.storage
+node-red
+zwscene.xml
