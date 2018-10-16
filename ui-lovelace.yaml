@@ -198,10 +198,10 @@ views:
         entities:
           - entity: sensor.hallway_nest_protect_smoke_status
             name: Smoke Status
-            icon: mdi:smoke-detector
+            icon: mdi:fire
           - entity: sensor.hallway_nest_protect_co_status
             name: CO2 Status
-            icon: mdi:smoke-detector
+            icon: mdi:periodic-table-co2
           - entity: sensor.hallway_nest_protect_co_status
             name: Nest Battery Level (3x AAA)
             icon: mdi:battery-80
