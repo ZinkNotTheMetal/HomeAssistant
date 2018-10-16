@@ -1,0 +1,17 @@
+.HA_VERSION
+.uuid
+.ios.conf
+OZW_Log.txt
+ecobee.conf
+home-assistant.log
+home-assistant_v2.db
+known_devices.yaml
+options.xml
+pyozw.sqlite
+secrets.yaml
+webostv.conf
+zwave_device_config.yaml
+zwcfg_0xd30a70fa.xml
+.storage/auth
+.storage/auth_provider.homeassistant
+deps/
