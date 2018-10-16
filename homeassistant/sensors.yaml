@@ -1,0 +1,52 @@
+  # Travel Times #
+  - platform: waze_travel_time
+    name: Work Travel Time
+    origin: !secret home_address
+    destination: !secret work_address
+    region: 'US'
+  - platform: waze_travel_time
+    name: CostCo Travel Time
+    origin: !secret home_address
+    destination: !secret costco_address
+    region: 'US'
+  - platform: waze_travel_time
+    name: Game Night Travel Time
+    origin: !secret home_address
+    destination: !secret game_night_address
+    region: 'US'
+  - platform: waze_travel_time
+    name: BNA Travel Time
+    origin: !secret home_address
+    destination: !secret airport_address
+    region: 'US'
+  - platform: waze_travel_time
+    name: MQY Travel Time
+    origin: !secret home_address
+    destination: !secret mqy_airport_address
+    region: 'US'
+  # Speed Test #
+  - platform: speedtest
+    minute:
+      - 0
+      - 15
+      - 30
+      - 45
+    monitored_conditions:
+      - ping
+      - download
+      - upload
+  # RPi3 Sensors #
+  - platform: systemmonitor
+    resources:
+      - type: disk_use_percent
+        arg: /home
+      - type: memory_free
+      - type: memory_use
+      - type: swap_use_percent
+      - type: load_1m
+      - type: load_5m
+      - type: load_15m
+      - type: network_in
+        arg: eth0
+      - type: processor_use
+      - type: since_last_boot

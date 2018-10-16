@@ -1,0 +1,259 @@
+title: !secret home_name
+
+background: center / cover no-repeat url("/local/city-night.jpg") fixed
+
+views:
+##  Overview
+  - title: Overview
+    icon: mdi:home-assistant
+    cards:
+      # OUR locations
+      - type: glance
+        column_width: calc(100% / 5)
+        show_state: false
+        entities:
+          - entity: lock.unknown_id033f_unknown_type0001_id0001_locked
+            tap_action: toggle
+            name: Door
+          - entity: light.entryway
+            tap_action: toggle
+            name: Entryway            
+          - entity: light.kitchen
+            tap_action: toggle
+            name: Kitchen
+          - entity: light.bedroom
+            tap_action: toggle
+            name: Bedroom
+          - entity: binary_sensor.patio_door
+            name: Back
+          - entity: script.lower_all_blinds
+            name: Lower (All)
+            tap_action: toggle
+          - entity: script.raise_all_blinds
+            name: Raise (All)
+            tap_action: toggle
+          - entity: script.raise_main_blinds
+            name: Raise (Main)
+            tap_action: toggle
+          - entity: script.lower_main_blinds
+            name: Lower (Main)
+            tap_action: toggle
+          - entity: input_boolean.authorized_person
+            name: Enter
+            tap_action: toggle            
+      - type: weather-forecast
+        title: Weather
+        entity: weather.openweathermap
+      - type: iframe
+        url: https://embed.windy.com/embed2.html?lat=36.076&lon=-86.814&zoom=7&level=surface&overlay=wind&menu=&message=true&marker=true&calendar=&pressure=true&type=map&location=coordinates&detail=&detailLat=36.120&detailLon=-86.814&metricWind=kt&metricTemp=%C2%B0F&radarRange=-1
+        aspect_ratio: 100%
+      - type: entities
+        title: Climate
+        entities:
+          - climate.condo
+          - script.resume_ac
+          - script.set_ac_home
+          - script.set_ac_away
+          - script.set_ac_sleep
+      - type: entity-filter
+        entities:
+          - media_player.kitchen
+        state_filter:
+          - 'paused'
+        card:
+          type: media-control
+          entity: media_player.kitchen
+      - type: entities
+        title: Overrides
+        show_header_toggle: false
+        entities:
+          - input_boolean.vacation_mode
+          - input_boolean.guest_override
+          - input_boolean.blind_override          
+      - type: map
+        entities:
+          - zone.home
+          - zone.school
+          - device_tracker.kelseyiphone_c41cc61922044ae0a329532d807ac316
+          - device_tracker.williamiphone_a5bf7b44a94e410ebee3bac29793986a
+##  Floor Plan
+  - title: Floor Plan
+    icon: mdi:floor-plan
+##  Kitchen
+  - title: Kitchen
+    icon: mdi:fridge
+    cards:
+      - type: glance
+        column_width: calc(100% / 5)
+        entities:
+          - light.kitchen
+          - media_player.kitchen
+          - entity: binary_sensor.patio_door
+            name: Back Door
+          - sun.sun
+          - entity: script.join_sonos
+            name: Join
+            tap_action: toggle
+      - type: glance
+        column_width: calc(100% / 4)
+        show_state: false
+        entities:
+          - entity: script.lower_kitchen_blinds
+            name: Lower (Kitchen)
+            tap_action: toggle
+          - entity: script.raise_kitchen_blinds
+            name: Raise (Kitchen)
+            tap_action: toggle
+          # TODO: Fix this once blinds come in
+          - entity: script.lower_kitchen_blinds
+            name: Lower (All)
+            tap_action: toggle
+          - entity: script.raise_kitchen_blinds
+            name: Raise (All)
+            tap_action: toggle
+##  Bedroom
+  - title: Bedroom
+    icon: mdi:hotel
+    cards:
+      - type: glance
+        show_state: false
+        column_width: calc(100% / 3)
+        entities:
+          - entity: light.bedroom
+            name: Lights
+          - entity: script.shower_time
+            name: Shower
+            tap_action: toggle
+          - entity: input_boolean.go_to_sleep
+            name: Sleep
+            tap_action: toggle
+##  Bathroom
+  - title: Bathroom
+    icon: mdi:shower
+    cards:
+      - type: glance
+        show_state: false
+        column_width: calc(100% / 4)
+        entities:
+          - entity: script.shower_time
+            name: Shower
+            tap_action: toggle
+          - entity: light.bathroom
+            name: Lights
+          - entity: script.join_sonos
+            name: Join
+            tap_action: toggle
+      - type: entity-filter
+        entities:
+          - media_player.bathroom
+        state_filter:
+          - 'paused'
+        card:
+          type: media-control
+          entity: media_player.bathroom
+##  Entertainment
+  - title: Entertainment
+    icon: mdi:television
+    cards:
+      - type: entity-filter
+        entities:
+          - media_player.lg_webos_smart_tv
+        state_filter:
+          - 'off'
+        card:
+          type: media-control
+          entity: media_player.lg_webos_smart_tv
+      - type: entity-filter
+        entities:
+          - media_player.living_room
+        state_filter:
+          - 'off'
+        card:
+          type: media-control
+          entity: media_player.living_room
+      - type: entity-filter
+        entities:
+          - media_player.kitchen
+        state_filter:
+          - 'paused'
+        card:
+          type: media-control
+          entity: media_player.kitchen
+      - type: entity-filter
+        entities:
+          - media_player.bathroom
+        state_filter:
+          - 'paused'
+        card:
+          type: media-control
+          entity: media_player.bathroom
+
+##  Status
+  - title: Status
+    icon: mdi:settings
+    cards:
+      - type: entities
+        title: Connectivity
+        show_header_toggle: false
+        entities:
+          - entity: sensor.hallway_nest_protect_smoke_status
+            name: Smoke Status
+            icon: mdi:smoke-detector
+          - entity: sensor.hallway_nest_protect_co_status
+            name: CO2 Status
+            icon: mdi:smoke-detector
+          - entity: sensor.hallway_nest_protect_co_status
+            name: Nest Battery Level (3x AAA)
+            icon: mdi:battery-80
+          - binary_sensor.condo_nas
+          - binary_sensor.blind_hub
+          - zwave.aeotec_zw090_zstick_gen5_us
+          - media_player.lg_webos_smart_tv
+          - media_player.bathroom
+          - media_player.kitchen
+          - device_tracker.kelseyiphone_c41cc61922044ae0a329532d807ac316
+          - device_tracker.williamiphone_a5bf7b44a94e410ebee3bac29793986a
+      - type: entities
+        title: Travel Times
+        show_header_toggle: false
+        entities:
+          - sensor.work_travel_time
+          - sensor.costco_travel_time
+          - sensor.bna_travel_time
+          - sensor.game_night_travel_time
+          - sensor.mqy_travel_time   
+      - type: entities
+        title: Climate
+        show_header_toggle: false
+        entities:
+          - sensor.condo_humidity
+          - sensor.condo_temperature
+          - sensor.kitchen_temperature   
+      - type: entities
+        title: Internet
+        show_header_toggle: false
+        entities:
+          - sensor.speedtest_download
+          - sensor.speedtest_upload
+          - sensor.speedtest_ping
+      - type: entities
+        title: Raspberry Pi 3 B+
+        show_header_toggle: false
+        entities:
+          - sensor.processor_use
+          - sensor.memory_free
+          - sensor.memory_use
+          - sensor.load_1m
+          - sensor.load_5m
+          - sensor.load_15m
+          - sensor.disk_use_percent_home
+          - sensor.since_last_boot
+          - sensor.swap_use_percent
+      - type: entities
+        title: Overrides
+        show_header_toggle: false
+        entities:
+          - input_boolean.vacation_mode
+          - input_boolean.guest_override
+          - input_boolean.blind_override
+          - input_boolean.go_to_sleep

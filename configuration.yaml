@@ -1,0 +1,125 @@
+homeassistant:
+  # Name of the location where Home Assistant is running
+  name: !secret home_name
+  # Location required to calculate the time the sun rises and sets
+  latitude: !secret home_latitude
+  longitude: !secret home_longitude
+  # Impacts weather/sunrise data (altitude above sea level in meters)
+  elevation: 125
+  # metric for Metric, imperial for Imperial
+  unit_system: imperial
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone: America/Chicago
+  # Customization file
+  customize: !include homeassistant/customize.yaml
+
+# Enables the frontend
+frontend:
+
+# Enables configuration UI
+config:
+
+panel_iframe:
+  nodered_flows:
+    title: 'Node-RED Flows'
+    url: 'http://hassio.local:1880'
+    icon: mdi:nodejs
+#  pi_hole:
+#    title: 'PiHole Admin'
+#    url: 'http://hassio.local:4865'
+#    icon: mdi:pi-box
+#  influx_db:
+#    title: 'InfluxDB'
+#    url: 'http://hassio.local:8888'
+#    icon: mdi:chart-areaspline
+    
+http:
+  base_url: hassio.local:8123
+  # Secrets are defined in the file secrets.yaml
+  # api_password: !secret homeassistant_api_password
+  # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
+
+# Checks for available updates
+# Note: This component will send some information about your system to
+# the developers to assist with development of Home Assistant.
+# For more information, please see:
+# https://home-assistant.io/blog/2016/10/25/explaining-the-updater/
+updater:
+  # Optional, allows Home Assistant developers to focus on popular components.
+  # include_used_components: true
+
+# Discover some devices automatically
+discovery:
+
+# Allows you to issue voice commands from the frontend in enabled browsers
+conversation:
+
+# Enables support for tracking state changes over time
+history:
+
+# View all events in a logbook
+logbook:
+
+# Enables a map showing the location of tracked devices
+map:
+
+# Track the sun
+sun:
+
+# Text to speech
+tts:
+  - platform: google
+
+# Cloud
+cloud:
+
+group: !include homeassistant/groups.yaml
+automation: !include homeassistant/automations.yaml
+script: !include homeassistant/scripts.yaml
+notify: !include homeassistant/notify.yaml
+zone: !include homeassistant/zones.yaml
+device_tracker: !include homeassistant/device_tracker.yaml
+sensor: !include homeassistant/sensors.yaml
+media_player: !include homeassistant/media_players.yaml
+switch: !include homeassistant/switches.yaml
+binary_sensor: !include homeassistant/binary_sensors.yaml
+input_boolean: !include homeassistant/input_booleans.yaml
+history_graph: !include homeassistant/history_graphs.yaml
+calendar: !include homeassistant/calendars.yaml
+
+## Do not use scenes - prefer scripts w/ customize
+#scene: !include scenes.yaml
+
+ios:
+
+ifttt:
+  key: !secret ifttt_api_key
+
+ecobee:
+  api_key: !secret ecobee_api_key
+
+#https://www.home-assistant.io/components/sensor.nest/
+nest:
+  client_id: !secret nest_client_id
+  client_secret: !secret nest_client_secret
+
+weather: !include_dir_list weather/
+
+wake_on_lan: # enables `wake_on_lan` domain
+
+zwave:
+  usb_path: /dev/ttyACM0
+  network_key: !secret z_wave_network_key
+  polling_interval: 10000
+  autoheal: false
+
+no_ip:
+  domain: !secret no_ip_domain
+  username: !secret no_ip_username
+  password: !secret no_ip_password
+
+mqtt:
+  broker: m11.cloudmqtt.com
+  port: !secret mqtt_port
+  username: !secret mqtt_username
+  password: !secret mqtt_password

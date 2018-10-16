@@ -1,0 +1,99 @@
+  raise_kitchen_blinds:
+    sequence:
+      - service: ifttt.trigger
+        data:
+          event: 'kitchen_blind_up_request'
+  lower_kitchen_blinds:
+    sequence:
+      - service: ifttt.trigger
+        data:
+          event: 'kitchen_blind_down_request'
+  raise_main_blinds:
+    sequence:
+      - service: ifttt.trigger
+        data:
+          event: 'main_blind_up_request'
+  lower_main_blinds:
+    sequence:
+      - service: ifttt.trigger
+        data:
+          event: 'main_blind_down_request'
+  raise_all_blinds:
+    sequence:
+      - service: ifttt.trigger
+        data:
+          event: 'all_blinds_up_request'
+  lower_all_blinds:
+    sequence:
+      - service: ifttt.trigger
+        data:
+          event: 'all_blinds_down_request'
+  shower_time:
+    sequence:
+      - service: media_player.sonos_unjoin
+        entity_id: media_player.bathroom
+      - service: media_player.volume_set
+        entity_id:
+          - media_player.bathroom
+        data:
+          volume_level: 0.25
+      - service: media_player.shuffle_set
+        data:
+          entity_id: media_player.kitchen
+          shuffle: true
+      - service: media_player.sonos_set_sleep_timer
+        data:
+          entity_id: media_player.bathroom
+          sleep_time: 1080 ## 18 minutes
+      - service: media_player.media_play_pause
+        entity_id: media_player.bathroom
+  join_sonos:
+    sequence:
+      - service: media_player.sonos_unjoin
+        entity_id: media_player.bathroom
+      - service: media_player.media_pause
+        entity_id: media_player.bathroom
+      - service: media_player.media_pause
+        entity_id: media_player.kitchen
+      - service: media_player.join
+      - service: media_player.sonos_join
+        data:
+          master: media_player.kitchen
+        entity_id: media_player.bathroom
+      - service: media_player.media_play
+        entity_id: media_player.kitchen
+      - service: media_player.volume_set
+        entity_id:
+          - media_player.kitchen
+        data:
+          volume_level: 0.23
+      - service: media_player.shuffle_set
+        data:
+          entity_id: media_player.kitchen
+          shuffle: true
+  set_ac_away:
+    sequence:
+      - service: climate.set_hold_mode
+        data:
+          entity_id: climate.condo
+          hold_mode: away
+  set_ac_sleep:
+    sequence:
+      - service: climate.ecobee_resume_program
+        entity_id: climate.condo
+      - service: climate.set_hold_mode
+        data:
+          entity_id: climate.condo
+          hold_mode: sleep
+  resume_ac:
+    sequence:
+      - service: climate.ecobee_resume_program
+        entity_id: climate.condo
+  set_ac_home:
+    sequence:
+      - service: climate.ecobee_resume_program
+        entity_id: climate.condo
+      - service: climate.set_hold_mode
+        data:
+          entity_id: cilmate.condo
+          hold_mode: home

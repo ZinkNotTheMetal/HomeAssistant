@@ -1,0 +1,9 @@
+  - platform: wake_on_lan
+    name: 'PC'
+    mac_address: !secret razer_wired_mac_address
+    host: !secret computer_ip_address
+    turn_off:
+      - service: hassio.addon_stdin
+        data:
+          addon: core_rpc_shutdown
+          input: william-razer

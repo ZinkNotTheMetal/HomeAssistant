@@ -1,0 +1,66 @@
+- id: update_available_notification
+  alias: Update Available Notification
+  initial_state: 'on'
+  trigger:
+    platform: template
+    value_template: "{{states('sensor.pypi_hass_version') == states('sensor.current_version') }}"
+  action:
+    - service: persistent_notification.create
+      data:
+        title: "Update Available"
+        message: >
+          Home Assistant {{ states('sensor.pypi_hass_version') }} is available, please update.
+        notification_id: "update_available"
+
+- id: sleep_switch
+  alias: Switch to off after 20 seconds
+  initial_state: 'on'
+  trigger:
+    platform: state
+    entity_id: input_boolean.go_to_sleep
+    from: 'off'
+    to: 'on'
+  action:
+    - delay: '00:00:08'
+    - service: homeassistant.turn_off
+      entity_id: input_boolean.go_to_sleep
+
+- id: authorized_entry_enter
+  alias: Authorized Entry
+  initial_state: 'on'
+  trigger:
+    platform: state
+    entity_id: input_boolean.authorized_person
+    from: 'off'
+    to: 'on'
+  action:
+    - service: lock.unlock
+      entity_id: lock.unknown_id033f_unknown_type0001_id0001_locked
+    - service: light.turn_on
+      entity_id: light.bedroom
+    - service: light.turn_on
+      entity_id: light.kitchen
+    - service: light.turn_on
+      entity_id: light.closet
+    - service: light.turn_on
+      entity_id: light.entryway
+
+- id: authorized_entry_exit
+  alias: Authorized Exit
+  initial_state: 'on'
+  trigger:
+    platform: state
+    entity_id: input_boolean.authorized_person
+    from: 'on'
+    to: 'off'
+  action:
+    - service: lock.lock
+      entity_id: lock.unknown_id033f_unknown_type0001_id0001_locked
+    - service: light.turn_off
+      entity_id: light.bedroom
+    - service: light.turn_off
+      entity_id: light.kitchen
+    - service: light.turn_off
+      entity_id: light.closet
+    - service: light.turn_off
+      entity_id: light.entryway

@@ -1,0 +1,76 @@
+  bedroom:
+    name: Bedroom
+    entities:
+      - light.bedroom
+  kitchen:
+    name: Kitchen
+    entities:
+      - light.kitchen
+
+  bathroom:
+    name: Bathroom
+    entities:
+      - light.bathroom
+####VIEWS
+#  default_view:
+#    view: yes
+#    icon: mdi:home-automation
+#    entities:
+#      - device_tracker.williamiphone_a5bf7b44a94e410ebee3bac29793986a
+#      - device_tracker.kelseyiphone_c41cc61922044ae0a329532d807ac316
+#      - lock.unknown_id033f_unknown_type0001_id0001_locked
+#      - group.entry_way
+#      - group.bedroom
+#      - group.kitchen
+#      - switch.pc
+#      - weather.openweathermap
+#      - sensor.condo_temperature
+  lights_view:
+    view: yes
+    name: Lights
+    icon: mdi:lightbulb-outline
+    entities:
+      - light.williams_side_lamp
+      - light.kelseys_side_lamp
+      - light.bedroom_fan_light
+      - light.kitchen_sink_light
+      - light.kitchen_sink_lightstrip
+      - light.kitchen_walkway_light
+      - light.microwave_light
+      - light.computer_desk_light
+      - light.bright_patio_light
+      - light.kitchen_corner_light
+      - light.closet_light
+  battery_level_view:
+    view: yes
+    name: Battery Levels
+    icon: mdi:battery-unknown
+    entities:
+      - sensor.kelseys_iphone_battery_level
+      - sensor.williams_iphone_battery_level
+  entertainment_view:
+    view: yes
+    name: Entertainment
+    icon: mdi:play-circle-outline
+    entities:
+      - media_player.lg_webos_smart_tv 
+      - media_player.spotify
+      - media_player.living_room
+      - group.kitchen
+  home_assistant_view:
+    view: yes
+    name: Home Assistant Monitor
+    icon: mdi:desktop-classic
+    entities:
+    - sensor.processor_use
+    - sensor.disk_use_percent_home
+    - sensor.memory_use_percent
+    - sensor.since_last_boot_templated
+    - sensor.network_in_eth0
+    - sensor.network_out_eth0
+    - sensor.cpu
+    - sensor.cpu_temperature
+    - sensor.lets_encrypt_expiration
+    - sensor.load_1m
+    - sensor.load_5m
+    - sensor.load_15m
