@@ -111,6 +111,9 @@ views:
           - entity: script.raise_kitchen_blinds
             name: Raise (All)
             tap_action: toggle
+##  Porch
+  - title: Porch
+    icon: mdi:flower
 ##  Bedroom
   - title: Bedroom
     icon: mdi:hotel

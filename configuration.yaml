@@ -103,6 +103,8 @@ nest:
   client_id: !secret nest_client_id
   client_secret: !secret nest_client_secret
 
+wemo:
+
 weather: !include_dir_list weather/
 
 wake_on_lan: # enables `wake_on_lan` domain
