@@ -120,10 +120,12 @@ views:
     cards:
       - type: glance
         show_state: false
-        column_width: calc(100% / 3)
+        column_width: calc(100% / 4)
         entities:
           - entity: light.bedroom
-            name: Lights
+            name: Bedroom
+          - entity: light.closet
+            name: Closet
           - entity: script.shower_time
             name: Shower
             tap_action: toggle
@@ -203,8 +205,8 @@ views:
             name: Smoke Status
             icon: mdi:fire
           - entity: sensor.hallway_nest_protect_co_status
-            name: CO2 Status
-            icon: mdi:periodic-table-co2
+            name: Carbon Monoxide Status
+            icon: mdi:gas-cylinder
           - entity: sensor.hallway_nest_protect_co_status
             name: Nest Battery Level (3x AAA)
             icon: mdi:battery-80
