@@ -124,8 +124,10 @@ views:
         entities:
           - entity: light.bedroom
             name: Bedroom
+            tap_action: toggle
           - entity: light.closet
             name: Closet
+            tap_action: toggle
           - entity: script.shower_time
             name: Shower
             tap_action: toggle
