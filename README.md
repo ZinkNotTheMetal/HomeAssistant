@@ -10,6 +10,7 @@ Installation:
 - [Log Viewer](https://github.com/hassio-addons/addon-log-viewer) (using Hassio addins)
 - [SSH server](https://github.com/hassio-addons/addon-ssh) (using Hassio addins) to utilize I use [PuTTY](https://www.putty.org/) for Windows
 - [Samba Share](https://github.com/home-assistant/hassio-addons/tree/master/samba) (using Hassio addins)
+- [Sweeet Home 3D](http://www.sweethome3d.com/) for Floor plan picture
 
 ## Some of the devices and services that I use with HA
 * Lighting and Switches
