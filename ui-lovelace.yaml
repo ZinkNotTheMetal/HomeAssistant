@@ -1,14 +1,16 @@
-title: !secret home_name
+title: Home
 
 background: center / cover no-repeat url("/local/city-night.jpg") fixed
 
 views:
 ##  Overview
-  - title: Overview
+  - id: 0  # Automatically created id
+    title: Overview
     icon: mdi:home-assistant
     cards:
       # OUR locations
-      - type: glance
+      - id: 5a8a79fb08fc4d04b6ad350d07207445  # Automatically created id
+        type: glance
         column_width: calc(100% / 5)
         show_state: false
         entities:
@@ -17,7 +19,7 @@ views:
             name: Door
           - entity: light.entryway
             tap_action: toggle
-            name: Entryway            
+            name: Entryway
           - entity: light.kitchen
             tap_action: toggle
             name: Kitchen
@@ -40,14 +42,20 @@ views:
             tap_action: toggle
           - entity: input_boolean.authorized_person
             name: Enter
-            tap_action: toggle            
-      - type: weather-forecast
+            tap_action: toggle
+      - id: 46961635462048c996587f7ea3db8feb  # Automatically created id
+        type: weather-forecast
         title: Weather
         entity: weather.openweathermap
-      - type: iframe
+      - id: bc9daf3c39c04d66a3fcaf81e41b4942  # Automatically created id
+        type: iframe
         url: https://embed.windy.com/embed2.html?lat=36.076&lon=-86.814&zoom=7&level=surface&overlay=wind&menu=&message=true&marker=true&calendar=&pressure=true&type=map&location=coordinates&detail=&detailLat=36.120&detailLon=-86.814&metricWind=kt&metricTemp=%C2%B0F&radarRange=-1
         aspect_ratio: 100%
-      - type: entities
+      - id: ad3a584234024c138264a636d2e19f85  # Automatically created id
+        type: thermostat
+        entity: climate.condo
+      - id: 4a1b893379f94e41a5e299cea5df8857  # Automatically created id
+        type: entities
         title: Climate
         entities:
           - climate.condo
@@ -55,35 +63,165 @@ views:
           - script.set_ac_home
           - script.set_ac_away
           - script.set_ac_sleep
-      - type: entity-filter
+      - id: d979a079cf974aecab594eb18c2ff56b  # Automatically created id
+        type: entity-filter
         entities:
           - media_player.kitchen
         state_filter:
-          - 'paused'
+          - paused
         card:
           type: media-control
           entity: media_player.kitchen
-      - type: entities
+      - id: 35fbffdc40a14191a29a1d56d2c9a8b0  # Automatically created id
+        type: entities
         title: Overrides
         show_header_toggle: false
         entities:
           - input_boolean.vacation_mode
           - input_boolean.guest_override
-          - input_boolean.blind_override          
-      - type: map
+          - input_boolean.blind_override
+      - id: c4e87938182444d19ad8bac260c5d528  # Automatically created id
+        type: map
         entities:
           - zone.home
           - zone.school
           - device_tracker.kelseyiphone_c41cc61922044ae0a329532d807ac316
           - device_tracker.williamiphone_a5bf7b44a94e410ebee3bac29793986a
 ##  Floor Plan
-  - title: Floor Plan
+  - id: 1  # Automatically created id
+    title: Floor Plan
     icon: mdi:floor-plan
+    panel: true
+    cards:
+      - id: cc60cdc04a1e4bb5b6675fb8724c1fab  # Automatically created id
+        type: vertical-stack
+        cards:
+          - type: picture-elements
+            image: /local/home.png
+            elements:
+              - type: state-icon
+                tap_action: toggle
+                entity: light.entryway
+                style:
+                  top: 29%
+                  left: 18%
+              - type: state-icon
+                tap_action: toggle
+                entity: light.closet
+                style:
+                  top: 70%
+                  left: 18%
+              - type: state-icon
+                tap_action: toggle
+                entity: light.utility_room
+                style:
+                  top: 46%
+                  left: 36%
+              - type: state-icon
+                tap_action: toggle
+                entity: light.laundry_room
+                style:
+                  top: 57%
+                  left: 36%
+              - type: state-icon
+                tap_action: toggle
+                entity: lock.unknown_id033f_unknown_type0001_id0001_locked
+                style:
+                  top: 25%
+                  left: 12%
+              - type: state-icon
+                tap_action: toggle
+                entity: light.bedroom
+                style:
+                  top: 47%
+                  left: 18%
+              - type: state-icon
+                tap_action: toggle
+                entity: light.bathroom
+                style:
+                  top: 70%
+                  left: 33%
+              - type: state-icon
+                tap_action: toggle
+                entity: light.kitchen
+                style:
+                  top: 62%
+                  left: 52%
+              - type: state-icon
+                entity: media_player.kitchen
+                style:
+                  top: 70%
+                  left: 44%
+              - type: state-label
+                entity: media_player.kitchen
+                style:
+                  top: 73%
+                  left: 44%
+              - type: state-icon
+                entity: media_player.bathroom
+                style:
+                  top: 73%
+                  left: 28%
+              - type: state-label
+                entity: media_player.bathroom
+                style:
+                  top: 76%
+                  left: 28%
+              - type: state-icon
+                entity: media_player.lg_webos_smart_tv
+                style:
+                  top: 23%
+                  left: 51.20%
+              - type: state-label
+                entity: media_player.lg_webos_smart_tv
+                style:
+                  top: 25%
+                  left: 51.20%
+              - type: state-icon
+                entity: binary_sensor.patio_door
+                style:
+                  top: 62%
+                  left: 60.5%
+              - type: service-button
+                title: Lower
+                service: ifttt.trigger
+                service_data:
+                  event: 'main_blind_down_request'
+                style:
+                  top: 40%
+                  left: 60.5%
+              - type: service-button
+                title: Raise
+                service: ifttt.trigger
+                service_data:
+                  event: 'main_blind_up_request'
+                style:
+                  top: 36%
+                  left: 60.5%
+              - type: service-button
+                title: Lower
+                service: ifttt.trigger
+                service_data:
+                  event: 'kitchen_blind_down_request'
+                style:
+                  top: 69%
+                  left: 60.5%
+              - type: service-button
+                title: Raise
+                service: ifttt.trigger
+                service_data:
+                  event: 'kitchen_blind_up_request'
+                style:
+                  top: 66%
+                  left: 60.5%
+
 ##  Kitchen
-  - title: Kitchen
+  - id: 2  # Automatically created id
+    title: Kitchen
     icon: mdi:fridge
     cards:
-      - type: glance
+      - id: 4bb3b38866de4f01991ffa662c2f2bfc  # Automatically created id
+        type: glance
         column_width: calc(100% / 5)
         entities:
           - light.kitchen
@@ -94,7 +232,8 @@ views:
           - entity: script.join_sonos
             name: Join
             tap_action: toggle
-      - type: glance
+      - id: 891e2e7291ac4d1c95aa7e57313cfa45  # Automatically created id
+        type: glance
         column_width: calc(100% / 4)
         show_state: false
         entities:
@@ -112,13 +251,16 @@ views:
             name: Raise (All)
             tap_action: toggle
 ##  Porch
-  - title: Porch
+  - id: 3  # Automatically created id
+    title: Porch
     icon: mdi:flower
 ##  Bedroom
-  - title: Bedroom
+  - id: 4  # Automatically created id
+    title: Bedroom
     icon: mdi:hotel
     cards:
-      - type: glance
+      - id: 75533eeecc5c4622b0a421ca31805aa5  # Automatically created id
+        type: glance
         show_state: false
         column_width: calc(100% / 4)
         entities:
@@ -135,10 +277,12 @@ views:
             name: Sleep
             tap_action: toggle
 ##  Bathroom
-  - title: Bathroom
+  - id: 5  # Automatically created id
+    title: Bathroom
     icon: mdi:shower
     cards:
-      - type: glance
+      - id: 3f1e3cd1f4a94380ae37a312b6a620e1  # Automatically created id
+        type: glance
         show_state: false
         column_width: calc(100% / 4)
         entities:
@@ -150,56 +294,64 @@ views:
           - entity: script.join_sonos
             name: Join
             tap_action: toggle
-      - type: entity-filter
+      - id: 98cb317802494ac4bf35eaa9e0418463  # Automatically created id
+        type: entity-filter
         entities:
           - media_player.bathroom
         state_filter:
-          - 'paused'
+          - paused
         card:
           type: media-control
           entity: media_player.bathroom
 ##  Entertainment
-  - title: Entertainment
+  - id: 6  # Automatically created id
+    title: Entertainment
     icon: mdi:television
     cards:
-      - type: entity-filter
+      - id: a7b4737409ec4fa3be9da3316b2d5124  # Automatically created id
+        type: entity-filter
         entities:
           - media_player.lg_webos_smart_tv
         state_filter:
-          - 'off'
+          - off
         card:
           type: media-control
           entity: media_player.lg_webos_smart_tv
-      - type: entity-filter
+      - id: 40fbdf8bfb884292a8b4ecd3c0f140c6  # Automatically created id
+        type: entity-filter
         entities:
           - media_player.living_room
         state_filter:
-          - 'off'
+          - off
         card:
           type: media-control
           entity: media_player.living_room
-      - type: entity-filter
+      - id: 570c2eccece3489c80e828065a6ace43  # Automatically created id
+        type: entity-filter
         entities:
           - media_player.kitchen
         state_filter:
-          - 'paused'
+          - paused
         card:
           type: media-control
           entity: media_player.kitchen
-      - type: entity-filter
+      - id: fbea16496b3348838d770267bdead7a9  # Automatically created id
+        type: entity-filter
         entities:
           - media_player.bathroom
         state_filter:
-          - 'paused'
+          - paused
         card:
           type: media-control
           entity: media_player.bathroom
 
 ##  Status
-  - title: Status
+  - id: 7  # Automatically created id
+    title: Status
     icon: mdi:settings
     cards:
-      - type: entities
+      - id: bef75647a8a54cbe9bd3b9329d46e2f9  # Automatically created id
+        type: entities
         title: Connectivity
         show_header_toggle: false
         entities:
@@ -220,7 +372,8 @@ views:
           - media_player.kitchen
           - device_tracker.kelseyiphone_c41cc61922044ae0a329532d807ac316
           - device_tracker.williamiphone_a5bf7b44a94e410ebee3bac29793986a
-      - type: entities
+      - id: df9a207e81ff464e8dd643eef1637200  # Automatically created id
+        type: entities
         title: Travel Times
         show_header_toggle: false
         entities:
@@ -228,22 +381,25 @@ views:
           - sensor.costco_travel_time
           - sensor.bna_travel_time
           - sensor.game_night_travel_time
-          - sensor.mqy_travel_time   
-      - type: entities
+          - sensor.mqy_travel_time
+      - id: 7f86f912a32b4e588fef14494727aac2  # Automatically created id
+        type: entities
         title: Climate
         show_header_toggle: false
         entities:
           - sensor.condo_humidity
           - sensor.condo_temperature
-          - sensor.kitchen_temperature   
-      - type: entities
+          - sensor.kitchen_temperature
+      - id: e2e5acd7d0f14d689dd903e248121bca  # Automatically created id
+        type: entities
         title: Internet
         show_header_toggle: false
         entities:
           - sensor.speedtest_download
           - sensor.speedtest_upload
           - sensor.speedtest_ping
-      - type: entities
+      - id: c78572bad9874d0f9800371cb6f05ca5  # Automatically created id
+        type: entities
         title: Raspberry Pi 3 B+
         show_header_toggle: false
         entities:
@@ -256,7 +412,8 @@ views:
           - sensor.disk_use_percent_home
           - sensor.since_last_boot
           - sensor.swap_use_percent
-      - type: entities
+      - id: 086a6653cdbb4e5689a4d98beb3f5803  # Automatically created id
+        type: entities
         title: Overrides
         show_header_toggle: false
         entities:
