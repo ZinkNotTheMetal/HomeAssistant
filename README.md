@@ -5,14 +5,17 @@ Equipment:
 - [64GB SD Card](http://a.co/d/iygZSba)
 
 Installation:
-- [Hass.io](https://www.home-assistant.io/hassio/installation/) 
-- [Node-Red](https://nodered.org/) (using Hassio addins)
-- [Log Viewer](https://github.com/hassio-addons/addon-log-viewer) (using Hassio addins)
-- [SSH server](https://github.com/hassio-addons/addon-ssh) (using Hassio addins) to utilize I use [PuTTY](https://www.putty.org/) for Windows
-- [Samba Share](https://github.com/home-assistant/hassio-addons/tree/master/samba) (using Hassio addins)
-- [Sweeet Home 3D](http://www.sweethome3d.com/) for Floor plan picture
-- [PuTTY](https://www.putty.org/) to SSH into RPi when Home Assistant doesn't respond or to check configs
-- [Visual Studio Code](https://code.visualstudio.com/) text editor of choice
+* Computer
+  * [Etcher](https://etcher.io/) for burning an image to Micro SD (installation following Hass.io documenation)
+  * [Sweeet Home 3D](http://www.sweethome3d.com/) for Floor plan picture
+  * [PuTTY](https://www.putty.org/) to SSH into RPi when Home Assistant doesn't respond or to check configs
+  * [Visual Studio Code](https://code.visualstudio.com/) text editor of choice
+* Raspberry Pi
+  * [Hass.io](https://www.home-assistant.io/hassio/installation/) 
+  * [Node-Red](https://nodered.org/) (using Hassio addins)
+  * [Log Viewer](https://github.com/hassio-addons/addon-log-viewer) (using Hassio addins)
+  * [SSH server](https://github.com/hassio-addons/addon-ssh) (using Hassio addins) to utilize I use [PuTTY](https://www.putty.org/) for Windows
+  * [Samba Share](https://github.com/home-assistant/hassio-addons/tree/master/samba) (using Hassio addins)
 
 ## Some of the devices and services that I use with HA
 * Lighting and Switches
