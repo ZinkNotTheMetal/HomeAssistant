@@ -50,3 +50,10 @@
         arg: eth0
       - type: processor_use
       - type: since_last_boot
+  - platform: openweathermap
+    api_key: !secret openweather_api_key
+    monitored_conditions:
+      - humidity
+      - wind_speed
+      - wind_bearing
+      - temperature

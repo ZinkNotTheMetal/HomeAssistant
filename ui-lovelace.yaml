@@ -2,32 +2,52 @@ title: Home
 
 background: center / cover no-repeat url("/local/city-night.jpg") fixed
 
+resources:
+  - url: /local/mini-media-player-bundle.js?v=0.9.1
+    type: module
+
 views:
+    
 ##  Overview
   - id: 0  # Automatically created id
     title: Overview
     icon: mdi:home-assistant
     cards:
-      # OUR locations
-      - id: 5a8a79fb08fc4d04b6ad350d07207445  # Automatically created id
-        type: glance
-        column_width: calc(100% / 5)
+      - type: glance
         show_state: false
+        column_width: calc(100% / 4)
         entities:
           - entity: lock.unknown_id033f_unknown_type0001_id0001_locked
             tap_action: toggle
             name: Door
-          - entity: light.entryway
+          - entity: binary_sensor.patio_door
+            name: Back
+          - entity: media_player.lg_webos_smart_tv
+            name: TV
             tap_action: toggle
-            name: Entryway
-          - entity: light.kitchen
+          - entity: input_boolean.authorized_person
+            name: Enter
             tap_action: toggle
-            name: Kitchen
+      - type: glance
+        show_state: false
+        column_width: calc(100% / 4)
+        entities:
+          - entity: light.hallway
+            tap_action: toggle
+            name: Entry
+          - entity: light.living_room
+            tap_action: toggle
+            name: Living
           - entity: light.bedroom
             tap_action: toggle
             name: Bedroom
-          - entity: binary_sensor.patio_door
-            name: Back
+          - entity: light.kitchen
+            tap_action: toggle
+            name: Kitchen
+      - type: glance
+        show_state: false
+        column_width: calc(100% / 4)
+        entities:
           - entity: script.lower_all_blinds
             name: Lower (All)
             tap_action: toggle
@@ -40,8 +60,21 @@ views:
           - entity: script.lower_main_blinds
             name: Lower (Main)
             tap_action: toggle
-          - entity: input_boolean.authorized_person
-            name: Enter
+      - type: glance
+        show_state: false
+        column_width: calc(100% / 4)
+        entities:
+          - entity: script.resume_ac
+            name: Resume
+            tap_action: toggle
+          - entity: script.set_ac_home
+            name: Home
+            tap_action: toggle
+          - entity: script.set_ac_away
+            name: Away
+            tap_action: toggle
+          - entity: script.set_ac_sleep
+            name: Sleep
             tap_action: toggle
       - id: 46961635462048c996587f7ea3db8feb  # Automatically created id
         type: weather-forecast
@@ -54,15 +87,20 @@ views:
       - id: ad3a584234024c138264a636d2e19f85  # Automatically created id
         type: thermostat
         entity: climate.condo
-      - id: 4a1b893379f94e41a5e299cea5df8857  # Automatically created id
-        type: entities
-        title: Climate
-        entities:
-          - climate.condo
-          - script.resume_ac
-          - script.set_ac_home
-          - script.set_ac_away
-          - script.set_ac_sleep
+      - type: gauge
+        entity: sensor.condo_humidity
+        title: Indoor Humidity
+        min: 0
+        max: 100
+        severity: 
+          red: 0
+          green: 30
+          yellow: 65
+      - type: gauge
+        entity: sensor.owm_humidity
+        title: Outdoor Humidity
+        min: 0
+        max: 100
       - id: d979a079cf974aecab594eb18c2ff56b  # Automatically created id
         type: entity-filter
         entities:
@@ -243,12 +281,11 @@ views:
           - entity: script.raise_kitchen_blinds
             name: Raise (Kitchen)
             tap_action: toggle
-          # TODO: Fix this once blinds come in
-          - entity: script.lower_kitchen_blinds
-            name: Lower (All)
+          - entity: script.lower_main_blinds
+            name: Lower (Main)
             tap_action: toggle
-          - entity: script.raise_kitchen_blinds
-            name: Raise (All)
+          - entity: script.raise_main_blinds
+            name: Raise (Main)
             tap_action: toggle
 ##  Porch
   - id: 3  # Automatically created id
