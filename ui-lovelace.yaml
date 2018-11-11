@@ -139,28 +139,34 @@ views:
             elements:
               - type: state-icon
                 tap_action: toggle
-                entity: light.entryway
+                entity: light.hallway
                 style:
-                  top: 29%
-                  left: 18%
+                  top: 23%
+                  left: 20%
+              - type: state-icon
+                tap_action: toggle
+                entity: light.living_room
+                style:
+                  top: 17%
+                  left: 51.2%
               - type: state-icon
                 tap_action: toggle
                 entity: light.closet
                 style:
-                  top: 70%
-                  left: 18%
+                  top: 75%
+                  left: 14%
               - type: state-icon
                 tap_action: toggle
                 entity: light.utility_room
                 style:
-                  top: 46%
-                  left: 36%
+                  top: 47%
+                  left: 34%
               - type: state-icon
                 tap_action: toggle
                 entity: light.laundry_room
                 style:
-                  top: 57%
-                  left: 36%
+                  top: 60%
+                  left: 34%
               - type: state-icon
                 tap_action: toggle
                 entity: lock.unknown_id033f_unknown_type0001_id0001_locked
@@ -172,48 +178,48 @@ views:
                 entity: light.bedroom
                 style:
                   top: 47%
-                  left: 18%
+                  left: 16%
               - type: state-icon
                 tap_action: toggle
                 entity: light.bathroom
                 style:
-                  top: 70%
+                  top: 73%
                   left: 33%
               - type: state-icon
                 tap_action: toggle
                 entity: light.kitchen
                 style:
-                  top: 62%
-                  left: 52%
+                  top: 64%
+                  left: 53.5%
               - type: state-icon
                 entity: media_player.kitchen
                 style:
-                  top: 70%
-                  left: 44%
+                  top: 73%
+                  left: 43.5%
               - type: state-label
                 entity: media_player.kitchen
-                style:
-                  top: 73%
-                  left: 44%
-              - type: state-icon
-                entity: media_player.bathroom
-                style:
-                  top: 73%
-                  left: 28%
-              - type: state-label
-                entity: media_player.bathroom
                 style:
                   top: 76%
-                  left: 28%
+                  left: 43.5%
+              - type: state-icon
+                entity: media_player.bathroom
+                style:
+                  top: 80%
+                  left: 24%
+              - type: state-label
+                entity: media_player.bathroom
+                style:
+                  top: 83%
+                  left: 24%
               - type: state-icon
                 entity: media_player.lg_webos_smart_tv
                 style:
-                  top: 23%
+                  top: 21%
                   left: 51.20%
               - type: state-label
                 entity: media_player.lg_webos_smart_tv
                 style:
-                  top: 25%
+                  top: 23%
                   left: 51.20%
               - type: state-icon
                 entity: binary_sensor.patio_door
@@ -345,6 +351,24 @@ views:
     title: Entertainment
     icon: mdi:television
     cards:
+      - type: glance
+        show_state: false
+        column_width: calc(100% / 4)
+        entities:
+          - entity: light.hallway
+            name: Entry
+          - entity: light.living_room
+            name: Living
+          - entity: light.bedroom
+            name: Bedroom
+          - entity: light.kitchen
+            name: Kitchen
+          - entity: light.closet
+            name: Closet
+          - entity: light.laundry_room
+            name: Laundry
+          - entity: light.utility_room
+            name: Utility
       - id: a7b4737409ec4fa3be9da3316b2d5124  # Automatically created id
         type: entity-filter
         entities:
