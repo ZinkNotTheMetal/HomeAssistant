@@ -104,12 +104,12 @@ views:
       - id: d979a079cf974aecab594eb18c2ff56b  # Automatically created id
         type: entity-filter
         entities:
-          - media_player.kitchen
+          - media_player.tv_room
         state_filter:
           - paused
         card:
           type: media-control
-          entity: media_player.kitchen
+          entity: media_player.tv_room
       - id: 35fbffdc40a14191a29a1d56d2c9a8b0  # Automatically created id
         type: entities
         title: Overrides
@@ -192,12 +192,12 @@ views:
                   top: 64%
                   left: 53.5%
               - type: state-icon
-                entity: media_player.kitchen
+                entity: media_player.tv_room
                 style:
                   top: 73%
                   left: 43.5%
               - type: state-label
-                entity: media_player.kitchen
+                entity: media_player.tv_room
                 style:
                   top: 76%
                   left: 43.5%
@@ -269,7 +269,7 @@ views:
         column_width: calc(100% / 5)
         entities:
           - light.kitchen
-          - media_player.kitchen
+          - media_player.tv_room
           - entity: binary_sensor.patio_door
             name: Back Door
           - sun.sun
@@ -390,12 +390,12 @@ views:
       - id: 570c2eccece3489c80e828065a6ace43  # Automatically created id
         type: entity-filter
         entities:
-          - media_player.kitchen
+          - media_player.tv_room
         state_filter:
           - paused
         card:
           type: media-control
-          entity: media_player.kitchen
+          entity: media_player.tv_room
       - id: fbea16496b3348838d770267bdead7a9  # Automatically created id
         type: entity-filter
         entities:
@@ -430,7 +430,7 @@ views:
           - zwave.aeotec_zw090_zstick_gen5_us
           - media_player.lg_webos_smart_tv
           - media_player.bathroom
-          - media_player.kitchen
+          - media_player.tv_room
           - device_tracker.kelseyiphone_c41cc61922044ae0a329532d807ac316
           - device_tracker.williamiphone_a5bf7b44a94e410ebee3bac29793986a
       - id: df9a207e81ff464e8dd643eef1637200  # Automatically created id
