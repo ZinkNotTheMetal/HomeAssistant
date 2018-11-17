@@ -1,0 +1,15 @@
+[connection]
+id=hassos-ethernet
+uuid=fcec8f1a-acd0-11e8-98d0-529269fb1460
+type=ethernet
+interface-name=eth0
+
+[ethernet]
+mac-address-blacklist=
+
+[ipv4]
+method=auto
+
+[ipv6]
+addr-gen-mode=stable-privacy
+method=auto

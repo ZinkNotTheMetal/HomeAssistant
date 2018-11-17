@@ -1,0 +1,21 @@
+[connection]
+id=hassos-network
+uuid=<Generate UUID here>
+type=802-11-wireless
+
+[802-11-wireless]
+mode=infrastructure
+ssid=<SSID here>
+powersave=2
+
+[802-11-wireless-security]
+auth-alg=open
+key-mgmt=wpa-psk
+psk=<Wireless Key here>
+
+[ipv4]
+method=auto
+
+[ipv6]
+addr-gen-mode=stable-privacy
+method=auto
