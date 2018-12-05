@@ -7,5 +7,8 @@
     new_device_defaults:
       track_new_devices: false
       hide_if_away: false
-  - platform: owntracks
-    max_gps_accuracy: 200
+    # This is for Mi Flora sensors when they come in
+  - platform: bluetooth_tracker
+    interval_seconds: 15
+    consider_home: 150
+    track_new_devices: yes

@@ -121,7 +121,10 @@ no_ip:
   password: !secret no_ip_password
 
 mqtt:
-  broker: m11.cloudmqtt.com
+  broker: !secret mqtt_broker
   port: !secret mqtt_port
   username: !secret mqtt_username
   password: !secret mqtt_password
+
+owntracks:
+  max_gps_accuracy: 200
