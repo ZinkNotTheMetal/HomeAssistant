@@ -297,6 +297,24 @@ views:
   - id: 3  # Automatically created id
     title: Porch
     icon: mdi:flower
+    cards:
+      - type: sensor
+        entity: sensor.mi_flora_light_intensity
+        name: Light
+        height: 50
+        line_color: "#3498db"
+      - type: sensor
+        entity: sensor.mi_flora_moisture
+        name: Light
+        height: 50
+        line_color: "#3498db"
+      - type: entities
+        entities:
+          - sensor.mi_flora_battery
+          - sensor.mi_flora_conductivity
+          - sensor.mi_flora_light_intensity
+          - sensor.mi_flora_moisture
+          - sensor.mi_flora_temperature
 ##  Bedroom
   - id: 4  # Automatically created id
     title: Bedroom
@@ -351,26 +369,20 @@ views:
     title: Entertainment
     icon: mdi:television
     cards:
-      - type: glance
-        show_state: false
-        column_width: calc(100% / 4)
-        entities:
-          - entity: light.hallway
-            name: Entry
-          - entity: light.living_room
-            name: Living
-          - entity: light.bedroom
-            name: Bedroom
-          - entity: light.kitchen
-            name: Kitchen
-          - entity: light.closet
-            name: Closet
-          - entity: light.laundry_room
-            name: Laundry
-          - entity: light.utility_room
-            name: Utility
-          - entity: light.outdoor
-            name: Outdoor
+      - type: light
+        entity: light.hallway
+      - type: light
+        entity: light.living_room
+      - type: light
+        entity: light.bedroom
+      - type: light
+        entity: light.kitchen
+      - type: light
+        entity: light.outdoor
+      - type: light
+        entity: light.laundry_room
+      - type: light
+        entity: light.utility_room
       - id: a7b4737409ec4fa3be9da3316b2d5124  # Automatically created id
         type: entity-filter
         entities:
@@ -424,10 +436,6 @@ views:
           - entity: sensor.hallway_nest_protect_co_status
             name: Carbon Monoxide Status
             icon: mdi:gas-cylinder
-          - entity: sensor.hallway_nest_protect_co_status
-            name: Nest Battery Level (3x AAA)
-            icon: mdi:battery-80
-          - binary_sensor.condo_nas
           - binary_sensor.blind_hub
           - zwave.aeotec_zw090_zstick_gen5_us
           - media_player.lg_webos_smart_tv
@@ -435,6 +443,20 @@ views:
           - media_player.tv_room
           - device_tracker.kelseyiphone_c41cc61922044ae0a329532d807ac316
           - device_tracker.williamiphone_a5bf7b44a94e410ebee3bac29793986a
+          - entity: sensor.crime_reports
+            name: Crime Reports (1/2 mile)
+            icon: mdi:file-chart
+      - type: entities
+        title: NAS
+        show_header_toggle: false
+        entities:
+          - binary_sensor.condo_nas        
+          - entity: sensor.maximum_disk_temp_volume_1
+            name: Maximum Disk Temperature
+            icon: mdi:thermometer
+          - sensor.status_smart_sda
+          - sensor.status_smart_sdb
+          - sensor.volume_used_volume_1
       - id: df9a207e81ff464e8dd643eef1637200  # Automatically created id
         type: entities
         title: Travel Times
@@ -461,6 +483,13 @@ views:
           - sensor.speedtest_download
           - sensor.speedtest_upload
           - sensor.speedtest_ping
+      - type: history-graph
+        title: Internet History
+        hours_to_show: 48
+        refresh_interval: 600       
+        entities:
+          - sensor.speedtest_upload
+          - sensor.speedtest_download
       - id: c78572bad9874d0f9800371cb6f05ca5  # Automatically created id
         type: entities
         title: Raspberry Pi 3 B+
@@ -475,6 +504,34 @@ views:
           - sensor.disk_use_percent_home
           - sensor.since_last_boot
           - sensor.swap_use_percent
+      - type: entities
+        title: Currencies
+        show_header_toggle: false
+        entities:
+          - entity: sensor.usd
+            name: Dollar to British Pound Sterling
+            icon: mdi:currency-gbp
+          - entity: sensor.usd_2
+            name: Dollar to Canadian Dollar
+            icon: mdi:currency-usd
+          - entity: sensor.usd_3
+            name: Dollar to Euro
+            icon: mdi:currency-eur
+      - type: entities
+        title: Batteries
+        show_header_toggle: false
+        entities:
+          - entity: sensor.mi_flora_battery
+            name: Plant 1
+            icon: mdi:battery-bluetooth
+          - entity: sensor.mi_flora_battery_2
+            name: Plant 2
+            icon: mdi:battery-bluetooth
+          - sensor.williams_iphone_battery_level_3
+          - sensor.kelseys_iphone_battery_level_2
+          - entity: sensor.hallway_nest_protect_co_status
+            name: Nest Battery Level (3x AAA)
+            icon: mdi:battery-80
       - id: 086a6653cdbb4e5689a4d98beb3f5803  # Automatically created id
         type: entities
         title: Overrides

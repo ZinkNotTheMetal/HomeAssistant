@@ -57,3 +57,35 @@
       - wind_speed
       - wind_bearing
       - temperature
+  # MiFlora sensors here
+  - platform: miflora
+    mac: !secret miflora_mac_1
+  - platform: miflora
+    mac: !secret miflora_mac_2
+  # End of MiFlora sensors  
+  - platform: crimereports
+    name: Crime Reports
+    radius: 750 # Roughly half a mile
+  - platform: currencylayer
+    api_key: !secret currency_api_key
+    base: USD
+    quote:
+      - EUR
+      - GBP
+      - CAD
+  - platform: pollen
+    zip_code: !secret home_zipcode
+    monitored_conditions:
+      - disease_average_forecasted
+  - platform: synologydsm
+    host: !secret nas_ip_address
+    username: !secret nas_username
+    password: !secret nas_password
+    monitored_conditions:
+      - disk_smart_status
+      - disk_status
+      - volume_percentage_used
+      - volume_disk_temp_avg
+      - volume_disk_temp_max
+      - disk_below_remain_life_thr
+      - cpu_total_load
