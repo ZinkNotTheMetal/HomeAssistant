@@ -14,6 +14,8 @@ If you found this extremely helpful, feel free to reach out
 
 [![](https://img.shields.io/badge/PayPal.me-Caffeine-blue.svg)](https://paypal.me/wdzink)
 
+![](https://img.shields.io/badge/email-ZinkNotTheMetal@gmail.com-red.svg)
+
 
 ### Equipment:
 - [Raspberry Pi 3 B+](http://a.co/d/c4m30oN)
