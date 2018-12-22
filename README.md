@@ -57,6 +57,10 @@ If you found this extremely helpful, feel free to reach out
   * [Apple TV](https://www.apple.com/tv/) and [component](https://www.home-assistant.io/components/apple_tv/)
   * LG WebOS Smart TV and [component](https://www.home-assistant.io/components/media_player.webostv/)
 * [iOS](https://home-assistant.io/docs/ecosystem/ios/notifications/basic/) Notifications
+* Other
+  * [NAS Synology 218+](http://a.co/d/bzj6UVi)
+  * [MiFlora Flower Sensors (x3)](http://a.co/d/evtvD9V)
+  * Ecobee 3 sensors (x2)
 
 Below are some lovelace screen shots taken of my dashboard:
 <img src="https://github.com/ZinkNotTheMetal/HomeAssistant/blob/master/Home-Assistant-Lovelace-1.PNG" alt="Home Assistant dashboard 1" />
