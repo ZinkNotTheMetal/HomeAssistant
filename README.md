@@ -1,10 +1,25 @@
 # Here's my [Home Assistant (HA)](https://home-assistant.io/) configuration. 
 
-Equipment:
+| ![](https://img.shields.io/badge/Home%20Assistant-0.83.3-blue.svg) | ![](https://img.shields.io/github/stars/zinknotthemetal/homeassistant.svg?label=Stars)|
+|:---:|:---:|
+| Configuration for Home Assistant version | Please :star: this repo if you found it useful! (Click Star in the top right) |
+| [![](https://img.shields.io/github/issues-raw/zinknotthemetal/homeassistant.svg)](https://github.com/ZinkNotTheMetal/HomeAssistant/issues) | ![](https://img.shields.io/github/last-commit/zinknotthemetal/homeassistant.svg) |
+| Currently using issues as TODO | This is the last time I was active in this repository |
+| ![](https://img.shields.io/github/languages/code-size/zinknotthemetal/homeassistant.svg) | ![](https://img.shields.io/github/commit-activity/y/zinknotthemetal/homeassistant.svg) |
+| Current code size of the repository | The average amount of commits per year |
+
+If you found this extremely helpful, feel free to reach out
+
+![](https://img.shields.io/badge/Venmo-@ZinkNotTheMetal-blue.svg)
+
+[![](https://img.shields.io/badge/PayPal.me-Caffeine-blue.svg)](https://paypal.me/wdzink)
+
+
+### Equipment:
 - [Raspberry Pi 3 B+](http://a.co/d/c4m30oN)
 - [64GB SD Card](http://a.co/d/iygZSba)
 
-Installation:
+### Installation:
 * Computer
   * [Etcher](https://etcher.io/) for burning an image to Micro SD (installation following Hass.io documenation)
   * [Sweeet Home 3D](http://www.sweethome3d.com/) for Floor plan picture
