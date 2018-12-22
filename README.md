@@ -36,7 +36,11 @@ If you found this extremely helpful, feel free to reach out
 
 ## Some of the devices and services that I use with HA
 * Lighting and Switches
-  * [Philips Hue](https://www2.meethue.com/en-us)
+  * [Philips Hue A19 Bulb (x25)](http://a.co/d/a54cHvp)
+  * [Philips Hue Indoor Light Strip (x2)](http://a.co/d/6OUFPsd)
+  * [Philips Hue Outdoor Light Strip (x4)](http://a.co/d/7N361Gx)
+  * [Philips Hue Tap Switch (x1)](http://a.co/d/fv4wwLC)
+  * [Philips Hue Dimmer Switch (x3)](http://a.co/d/6DmlQdy)
   * [WeMo Plugs](http://a.co/d/4Z3Zl8v)
   * [Aeotec Z-Stick Gen5](https://www.amazon.com/dp/B00X0AWA6E/) for Z-Wave control
   * [Z-Wave Door Sensor](https://www.monoprice.com/product?p_id=24259)
@@ -47,6 +51,7 @@ If you found this extremely helpful, feel free to reach out
   * [Nest Smoke & Carbon Monoxide Alarm - Gen2](http://a.co/d/cM1LTUv)
   * [Windy](https://www.windy.com/)
   * [Open Weather Map](https://www.home-assistant.io/components/sensor.openweathermap/)
+  * [Open Weather Map Api for Node-Red](https://openweathermap.org/api)
 * Presence:
   * [OwnTracks](https://home-assistant.io/components/device_tracker.owntracks/)
   * MQTT
@@ -61,6 +66,27 @@ If you found this extremely helpful, feel free to reach out
   * [NAS Synology 218+](http://a.co/d/bzj6UVi)
   * [MiFlora Flower Sensors (x3)](http://a.co/d/evtvD9V)
   * Ecobee 3 sensors (x2)
+  
+## Automations
+All Automations are using Node-Red (using Hassio Addins). This can be downloaded from my [scrubbed file](https://github.com/ZinkNotTheMetal/HomeAssistant/blob/master/Node-Red-Scrubbed-Automations.js)
+### Time Automations
+1) At 4AM (when everyone is sleeping) raise the bilnds to allow more light in, in the morning.
+2) When light comes through the living room time (around 1:30) lower the blinds to 50%
+3) At sunset raise the blinds
+4) Notify if the low tonight is below freezing
+### Hue Switch Automations
+1) When the Tap is pressed, turn off all lights, Set AC to sleep mode, turn off TV, turn off Sonos, lock the door (this is using hue-magic)
+2) When any of the Dimmer switches are held on, raise the blinds
+3) When any of the Dimmer switches are held off, lower the blinds
+### Device Change automations
+1) If the back door opens, turn on the Hue Outdoor lights
+2) Notify if any device on the network fails to connect
+3) Notify if the humidity is above or below a certain amount
+4) Notify if the back door opened when no one is home
+5) If no one is home, set AC to away
+### Weather Automations
+1) Do not lower the blinds if the cloud cover is more than 60% (using open weather map api)
+2) Notify if it begins to rain and back door is open
 
 Below are some lovelace screen shots taken of my dashboard:
 <img src="https://github.com/ZinkNotTheMetal/HomeAssistant/blob/master/Home-Assistant-Lovelace-1.PNG" alt="Home Assistant dashboard 1" />
