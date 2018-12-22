@@ -26,7 +26,7 @@ If you found this extremely helpful, feel free to reach out
   * [PuTTY](https://www.putty.org/) to SSH into RPi when Home Assistant doesn't respond or to check configs
   * [Visual Studio Code](https://code.visualstudio.com/) text editor of choice
 * Raspberry Pi
-  * [Hass.io](https://www.home-assistant.io/hassio/installation/) 
+  * [Hass.io](https://www.home-assistant.io/hassio/installation/) I used ethernet for speed, but if you need Wifi [check my instructions here](https://github.com/ZinkNotTheMetal/HomeAssistant/wiki/Hass.io-RPi-3-B--Wifi-Connection)
   * [Node-Red](https://nodered.org/) (using Hassio addins)
   * [Log Viewer](https://github.com/hassio-addons/addon-log-viewer) (using Hassio addins)
   * [SSH server](https://github.com/hassio-addons/addon-ssh) (using Hassio addins) to utilize I use [PuTTY](https://www.putty.org/) for Windows
