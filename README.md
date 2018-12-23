@@ -41,7 +41,7 @@ If you found this extremely helpful, feel free to reach out
 </div>
 
 
-### [Equipment](#equipment):
+### Equipment running Home Assistant:
 - [Raspberry Pi 3 B+](http://a.co/d/c4m30oN)
 - [64GB SD Card](http://a.co/d/iygZSba)
 
@@ -58,9 +58,7 @@ If you found this extremely helpful, feel free to reach out
   * [SSH server](https://github.com/hassio-addons/addon-ssh) (using Hassio addins) to utilize I use [PuTTY](https://www.putty.org/) for Windows
   * [Samba Share](https://github.com/home-assistant/hassio-addons/tree/master/samba) (using Hassio addins)
 
-## [Devices used with Home Assistant](#devices)
-
-[Aeotec Z-Stick Gen5](https://www.amazon.com/dp/B00X0AWA6E/) for Z-Wave control
+## [Devices](#devices)
 
 ### Hubs
 | Device  | Quantity | Connection | Component | Notes |
@@ -118,8 +116,9 @@ If you found this extremely helpful, feel free to reach out
 | ------------- | :---: | ------------- | ------------- | ------------- |
 | <a href="http://a.co/d/4Z3Zl8v9"><img src="https://images-na.ssl-images-amazon.com/images/I/61HqxIYsqPL._SL1000_.jpg" width="200px" height="160px" /></a><br> [WeMo Mini Smart Plugs](http://a.co/d/4Z3Zl8v) | 1 | Wi-Fi | [WeMo](https://www.home-assistant.io/components/wemo/) | Useful plugs that you can automate, I like that you can use 2 per outlet  |
   * [WeMo Plugs](http://a.co/d/4Z3Zl8v)
- 
-## [Services used with Home Assistant](#services)
+  
+  
+## [Services](#services)
 * Weather and Climate related
   * [Windy](https://www.windy.com/)
   * [Open Weather Map](https://www.home-assistant.io/components/sensor.openweathermap/)
@@ -130,6 +129,8 @@ If you found this extremely helpful, feel free to reach out
   * [iOS app](https://itunes.apple.com/us/app/home-assistant-companion/id1099568401?mt=8)
   * [Waze](https://www.home-assistant.io/components/sensor.waze_travel_time/) (for commute times)
 * [iOS](https://home-assistant.io/docs/ecosystem/ios/notifications/basic/) Notifications
+  
+  
   
 ## [Automations](#automations)
 All Automations are using Node-Red (using Hassio Addins). This can be downloaded from my [scrubbed file](https://github.com/ZinkNotTheMetal/HomeAssistant/blob/master/Node-Red-Scrubbed-Automations.js)
