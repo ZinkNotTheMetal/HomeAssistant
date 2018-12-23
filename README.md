@@ -115,9 +115,9 @@ If you found this extremely helpful, feel free to reach out
 | Device  | Quantity | Connection | Component | Notes |
 | ------------- | :---: | ------------- | ------------- | ------------- |
 | <a href="http://a.co/d/4Z3Zl8v9"><img src="https://images-na.ssl-images-amazon.com/images/I/61HqxIYsqPL._SL1000_.jpg" width="200px" height="160px" /></a><br> [WeMo Mini Smart Plugs](http://a.co/d/4Z3Zl8v) | 1 | Wi-Fi | [WeMo](https://www.home-assistant.io/components/wemo/) | Useful plugs that you can automate, I like that you can use 2 per outlet  |
-  * [WeMo Plugs](http://a.co/d/4Z3Zl8v)
-  
-  
+
+
+
 ## [Services](#services)
 * Weather and Climate related
   * [Windy](https://www.windy.com/)
@@ -152,6 +152,8 @@ All Automations are using Node-Red (using Hassio Addins). This can be downloaded
 ### Weather Automations
 1) Do not lower the blinds if the cloud cover is more than 60% (using open weather map api)
 2) Notify if it begins to rain and back door is open
+
+
 
 ## [Dashboard](#dashboard)
 <img src="https://github.com/ZinkNotTheMetal/HomeAssistant/blob/master/Home-Assistant-Lovelace-1.PNG" alt="Home Assistant dashboard 1" />
