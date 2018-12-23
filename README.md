@@ -16,8 +16,32 @@ If you found this extremely helpful, feel free to reach out
 
 ![](https://img.shields.io/badge/email-ZinkNotTheMetal@gmail.com-red.svg)
 
+<div align="center"><a name="menu"></a>
+  <h4>
+    <a href="#devices">
+      Devices
+    </a>
+    <span> | </span>
+    <a href="#services">
+      Services
+    </a>
+    <span> | </span>
+    <a href="#automations">
+      Automations
+    </a>
+    <span> | </span>
+    <a href="#dashboard">
+      Dashboard
+    </a>
+    <span> | </span>
+    <a href="https://github.com/ZinkNotTheMetal/HomeAssistant/issues">
+      Todo List
+    </a>
+  </h4>
+</div>
 
-### Equipment:
+
+### [Equipment](#equipment):
 - [Raspberry Pi 3 B+](http://a.co/d/c4m30oN)
 - [64GB SD Card](http://a.co/d/iygZSba)
 
@@ -34,7 +58,7 @@ If you found this extremely helpful, feel free to reach out
   * [SSH server](https://github.com/hassio-addons/addon-ssh) (using Hassio addins) to utilize I use [PuTTY](https://www.putty.org/) for Windows
   * [Samba Share](https://github.com/home-assistant/hassio-addons/tree/master/samba) (using Hassio addins)
 
-## Devices used with Home Assistant
+## [Devices used with Home Assistant](#devices)
 
 [Aeotec Z-Stick Gen5](https://www.amazon.com/dp/B00X0AWA6E/) for Z-Wave control
 
@@ -76,16 +100,26 @@ If you found this extremely helpful, feel free to reach out
 | <a href="http://a.co/d/evtvD9V"><img src="https://images-na.ssl-images-amazon.com/images/I/51Gmx6KCbVL._SL1000_.jpg" width="140px" height="140px" /></a><br> [MiFlora Flower Sensors](http://a.co/d/evtvD9V) | 3 | Bluetooth | [MiFlora](https://www.home-assistant.io/components/sensor.miflora/) | Very useful to check on indoor plant health. $25 |
 
 ### Media
-  * [Sonos](https://www.sonos.com/) speakers and [component](https://home-assistant.io/components/media_player.sonos/)
-  * [Apple TV](https://www.apple.com/tv/) and [component](https://www.home-assistant.io/components/apple_tv/)
-  * LG WebOS Smart TV and [component](https://www.home-assistant.io/components/media_player.webostv/)
-  * [NAS Synology 218+](http://a.co/d/bzj6UVi)
-### 
+| Device  | Quantity | Connection | Component | Notes |
+| ------------- | :---: | ------------- | ------------- | ------------- |
+| <a href="http://a.co/d/0uRLeYF"><img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/image/AppleInc/aos/published/images/H/KK/HKKZ2/HKKZ2_AV1?wid=572&hei=572&fmt=jpeg&qlt=95&op_usm=0.5,0.5&.v=1475452852873" width="270px" height="160px" /></a><br> [Sonos Play:1](http://a.co/d/0uRLeYF) | 3 | Wi-Fi | [SONOS](https://www.home-assistant.io/components/sonos/) | I currently do not have any Alexa or Google Assistant devices $150 |
+| <a href="http://a.co/d/6aAYt6w"><img src="https://assets.pcmag.com/media/images/316505-sonos-playbar.jpg?width=1000&height=542" width="270px" height="160px" /></a><br> [Sonos Playbar](http://a.co/d/6aAYt6w) | 1 | Wi-Fi | [SONOS](https://www.home-assistant.io/components/sonos/) | Very good sound, it's not completely sold me yet though $699 |
+| <a href="http://a.co/d/cbajxaQ"><img src="https://images-na.ssl-images-amazon.com/images/I/51Y-Dulc3bL._SL1024_.jpg" width="200px" height="160px" /></a><br> [Apple TV](http://a.co/d/cbajxaQ) | 1 | Wi-Fi | [Apple TV](https://www.home-assistant.io/components/apple_tv/) | This is my main media player, althought this is not the 4K model, $150 |
+| <a href="http://a.co/d/dxfiS79"><img src="https://images-na.ssl-images-amazon.com/images/I/817C2spZZDL._SL1500_.jpg" width="210px" height="180px" /></a><br> [LG Web OS Smart TV](http://a.co/d/dxfiS79) | 1 | Wi-Fi | [LG WebOS](https://www.home-assistant.io/components/media_player.webostv/) | This is my main main TV. Highly recommend OLED and this is the 4K model |
+| <a href="http://a.co/d/bzj6UVi"><img src="https://images-na.ssl-images-amazon.com/images/I/91FXcrjI-3L._SL1500_.jpg" width="210px" height="180px" /></a><br> [NAS Synology 218+](http://a.co/d/bzj6UVi) | 1 | Ethernet | [Synology](https://www.home-assistant.io/components/sensor.synologydsm/) | Loaded with 2x [4TB NAS Drives](http://a.co/d/67f2Rza) |
+  
+### Sensors
+| Device  | Quantity | Connection | Component | Notes |
+| ------------- | :---: | ------------- | ------------- | ------------- |
+| <a href="https://www.monoprice.com/product?p_id=24259"><img src="https://images.monoprice.com/productlargeimages/242591.jpg" width="270px" height="160px" /></a><br> [Monoprice Z-Wave Plus Door Sensor](https://www.monoprice.com/product?p_id=24259) | 1 | Z-Wave | [Z-Wave](https://www.home-assistant.io/components/zwave/) | Currently on my back door, to trigger a few automations |
 
+### Plugs and Misc
+| Device  | Quantity | Connection | Component | Notes |
+| ------------- | :---: | ------------- | ------------- | ------------- |
+| <a href="http://a.co/d/4Z3Zl8v9"><img src="https://images-na.ssl-images-amazon.com/images/I/61HqxIYsqPL._SL1000_.jpg" width="200px" height="160px" /></a><br> [WeMo Mini Smart Plugs](http://a.co/d/4Z3Zl8v) | 1 | Wi-Fi | [WeMo](https://www.home-assistant.io/components/wemo/) | Useful plugs that you can automate, I like that you can use 2 per outlet  |
   * [WeMo Plugs](http://a.co/d/4Z3Zl8v)
-  * [Z-Wave Door Sensor](https://www.monoprice.com/product?p_id=24259)
  
-## Services used with Home Assistant
+## [Services used with Home Assistant](#services)
 * Weather and Climate related
   * [Windy](https://www.windy.com/)
   * [Open Weather Map](https://www.home-assistant.io/components/sensor.openweathermap/)
@@ -97,7 +131,7 @@ If you found this extremely helpful, feel free to reach out
   * [Waze](https://www.home-assistant.io/components/sensor.waze_travel_time/) (for commute times)
 * [iOS](https://home-assistant.io/docs/ecosystem/ios/notifications/basic/) Notifications
   
-## Automations
+## [Automations](#automations)
 All Automations are using Node-Red (using Hassio Addins). This can be downloaded from my [scrubbed file](https://github.com/ZinkNotTheMetal/HomeAssistant/blob/master/Node-Red-Scrubbed-Automations.js)
 ### Time Automations
 1) At 4AM (when everyone is sleeping) raise the bilnds to allow more light in, in the morning.
@@ -118,7 +152,7 @@ All Automations are using Node-Red (using Hassio Addins). This can be downloaded
 1) Do not lower the blinds if the cloud cover is more than 60% (using open weather map api)
 2) Notify if it begins to rain and back door is open
 
-Below are some lovelace screen shots taken of my dashboard:
+## [Dashboard](#dashboard)
 <img src="https://github.com/ZinkNotTheMetal/HomeAssistant/blob/master/Home-Assistant-Lovelace-1.PNG" alt="Home Assistant dashboard 1" />
 
 <img src="https://github.com/ZinkNotTheMetal/HomeAssistant/blob/master/Home-Assistant-Lovelace-2.PNG" alt="Home Assistant dashboard 2" />
