@@ -469,6 +469,7 @@ views:
         title: NAS
         show_header_toggle: false
         entities:
+          - binary_sensor.condo_nas
           - sensor.status_smart_sda
           - sensor.status_smart_sdb
           - sensor.volume_used_volume_1
@@ -523,10 +524,10 @@ views:
         title: Currencies
         show_header_toggle: false
         entities:
-          - entity: sensor.usd
+          - entity: sensor.usd_2
             name: Dollar to British Pound Sterling
             icon: mdi:currency-gbp
-          - entity: sensor.usd_2
+          - entity: sensor.usd
             name: Dollar to Canadian Dollar
             icon: mdi:currency-usd
           - entity: sensor.usd_3
