@@ -300,21 +300,40 @@ views:
     cards:
       - type: sensor
         entity: sensor.mi_flora_light_intensity
-        name: Light
+        name: Plant 1 - Light Level
         height: 50
-        line_color: "#3498db"
+        line_color: "#FFE761"
+      - type: sensor
+        entity: sensor.mi_flora_light_intensity_2
+        name: Plant 2 - Light Level
+        height: 50
+        line_color: "#FFE761"
       - type: sensor
         entity: sensor.mi_flora_moisture
-        name: Light
+        name: Plant 1 - Moisture Level
         height: 50
+        icon: mdi:water
         line_color: "#3498db"
+      - type: sensor
+        entity: sensor.mi_flora_moisture_2
+        name: Plant 2 - Moisture Level
+        height: 50
+        icon: mdi:water
+        line_color: "#3498db"
+      - type: sensor
+        entity: sensor.mi_flora_conductivity
+        name: Plant 1 - Conductivity Level
+        height: 50
+        line_color: "#C0C0C0"
+      - type: sensor
+        entity: sensor.mi_flora_conductivity_2
+        name: Plant 2 - Conductivity Level
+        height: 50
+        line_color: "#C0C0C0"  
       - type: entities
         entities:
-          - sensor.mi_flora_battery
-          - sensor.mi_flora_conductivity
-          - sensor.mi_flora_light_intensity
-          - sensor.mi_flora_moisture
           - sensor.mi_flora_temperature
+          - sensor.mi_flora_temperature_2
 ##  Bedroom
   - id: 4  # Automatically created id
     title: Bedroom
@@ -450,10 +469,6 @@ views:
         title: NAS
         show_header_toggle: false
         entities:
-          - binary_sensor.condo_nas        
-          - entity: sensor.maximum_disk_temp_volume_1
-            name: Maximum Disk Temperature
-            icon: mdi:thermometer
           - sensor.status_smart_sda
           - sensor.status_smart_sdb
           - sensor.volume_used_volume_1
