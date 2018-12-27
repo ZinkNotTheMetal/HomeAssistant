@@ -13,160 +13,160 @@ views:
     title: Overview
     icon: mdi:home-assistant
     cards:
-      - type: glance
-        show_state: false
-        column_width: calc(100% / 4)
-        entities:
-          - entity: lock.unknown_id033f_unknown_type0001_id0001_locked
-            tap_action:
-              action: toggle
-            hold_action:
-              action: more-info
-            name: Door
-          - entity: binary_sensor.patio_door
-            name: Back
-            tap_action:
-              action: more-info
-          - entity: media_player.lg_webos_smart_tv
-            name: TV
-            tap_action:
-              action: toggle
-            hold_action:
-              action: more-info
-          - entity: input_boolean.authorized_person
-            name: Enter
-            tap_action:
-              action: toggle
-            hold_action:
-              action: more-info
-      - type: glance
-        show_state: false
-        column_width: calc(100% / 4)
-        entities:
-          - entity: light.hallway
-            tap_action:
-              action: toggle
-            hold_action:
-              navigation_path: /lovelace/lights
-            name: Entry
-          - entity: light.living_room
-            name: Living
-            tap_action:
-              action: toggle
-            hold_action:
-              navigation_path: /lovelace/lights
-          - entity: light.bedroom
-            name: Bedroom
-            tap_action:
-              action: toggle
-            hold_action:
-              navigation_path: /lovelace/lights
-          - entity: light.kitchen
-            name: Kitchen
-            tap_action:
-              action: toggle
-            hold_action:
-              navigation_path: /lovelace/lights
-      - type: glance
-        show_state: false
-        column_width: calc(100% / 4)
-        entities:
-          - entity: script.lower_all_blinds
-            name: Lower (All)
-            tap_action:
-              action: toggle
-          - entity: script.raise_all_blinds
-            name: Raise (All)
-            tap_action:
-              action: toggle
-          - entity: script.raise_main_blinds
-            name: Raise (Main)
-            tap_action:
-              action: toggle
-          - entity: script.lower_main_blinds
-            name: Lower (Main)
-            tap_action:
-              action: toggle
-      - type: glance
-        show_state: false
-        column_width: calc(100% / 4)
-        entities:
-          - entity: script.resume_ac
-            name: Resume
-            tap_action:
-              action: toggle
-          - entity: script.set_ac_home
-            name: Home
-            tap_action:
-              action: toggle
-          - entity: script.set_ac_away
-            name: Away
-            tap_action:
-              action: toggle
-          - entity: script.set_ac_sleep
-            name: Sleep
-            tap_action:
-              action: toggle
-      - id: 46961635462048c996587f7ea3db8feb  # Automatically created id
-        type: weather-forecast
-        title: Weather
-        entity: weather.openweathermap
-      - id: bc9daf3c39c04d66a3fcaf81e41b4942  # Automatically created id
-        type: iframe
-        url: https://embed.windy.com/embed2.html?lat=36.076&lon=-86.814&zoom=7&level=surface&overlay=wind&menu=&message=true&marker=true&calendar=&pressure=true&type=map&location=coordinates&detail=&detailLat=36.120&detailLon=-86.814&metricWind=kt&metricTemp=%C2%B0F&radarRange=-1
-        aspect_ratio: 100%
-      - id: ad3a584234024c138264a636d2e19f85  # Automatically created id
-        type: thermostat
-        entity: climate.condo
-        name: HVAC
-      - type: gauge
-        entity: sensor.condo_humidity
-        name: Indoor Humidity
-        min: 0
-        max: 100
-        severity: 
-          red: 0
-          green: 30
-          yellow: 65
-      - type: gauge
-        entity: sensor.owm_humidity
-        name: Outdoor Humidity
-        min: 0
-        max: 100
-      - type: gauge
-        entity: sensor.cold__flu_forecasted_average
-        name: Cold & Flu
-        unit: 'idx'
-        min: 0
-        max: 12.0
-        severity:
-          green: 0
-          yellow: 4.9
-          red: 9.8
-      - id: d979a079cf974aecab594eb18c2ff56b  # Automatically created id
-        type: entity-filter
-        entities:
-          - media_player.tv_room
-        state_filter:
-          - paused
-        card:
-          type: media-control
-          entity: media_player.tv_room
-      - id: 35fbffdc40a14191a29a1d56d2c9a8b0  # Automatically created id
-        type: entities
-        title: Overrides
-        show_header_toggle: false
-        entities:
-          - input_boolean.vacation_mode
-          - input_boolean.guest_override
-          - input_boolean.blind_override
-      - id: c4e87938182444d19ad8bac260c5d528  # Automatically created id
-        type: map
-        entities:
-          - zone.home
-          - zone.school
-          - device_tracker.kelseyiphone_c41cc61922044ae0a329532d807ac316
-          - device_tracker.williamiphone_a5bf7b44a94e410ebee3bac29793986a
+      - type: vertical-stack
+        cards:
+          - type: glance
+            show_state: false
+            column_width: calc(100% / 4)
+            entities:
+              - entity: lock.unknown_id033f_unknown_type0001_id0001_locked
+                tap_action:
+                  action: toggle
+                hold_action:
+                  action: more-info
+                name: Door
+              - entity: binary_sensor.patio_door
+                name: Back
+                tap_action:
+                  action: more-info
+              - entity: media_player.lg_webos_smart_tv
+                name: TV
+                tap_action:
+                  action: toggle
+                hold_action:
+                  action: more-info
+              - entity: input_boolean.authorized_person
+                name: Enter
+                tap_action:
+                  action: toggle
+                hold_action:
+                  action: more-info
+          - type: glance
+            show_state: false
+            column_width: calc(100% / 4)
+            entities:
+              - entity: light.hallway
+                tap_action:
+                  action: toggle
+                hold_action:
+                  navigation_path: /lovelace/lights
+                name: Entry
+              - entity: light.living_room
+                name: Living
+                tap_action:
+                  action: toggle
+                hold_action:
+                  navigation_path: /lovelace/lights
+              - entity: light.bedroom
+                name: Bedroom
+                tap_action:
+                  action: toggle
+                hold_action:
+                  navigation_path: /lovelace/lights
+              - entity: light.kitchen
+                name: Kitchen
+                tap_action:
+                  action: toggle
+                hold_action:
+                  navigation_path: /lovelace/lights
+          - type: glance
+            show_state: false
+            column_width: calc(100% / 4)
+            entities:
+              - entity: script.lower_all_blinds
+                name: Lower (All)
+                tap_action:
+                  action: toggle
+              - entity: script.raise_all_blinds
+                name: Raise (All)
+                tap_action:
+                  action: toggle
+              - entity: script.raise_main_blinds
+                name: Raise (Main)
+                tap_action:
+                  action: toggle
+              - entity: script.lower_main_blinds
+                name: Lower (Main)
+                tap_action:
+                  action: toggle
+      - type: vertical-stack
+        cards:
+          - id: 46961635462048c996587f7ea3db8feb  # Automatically created id
+            type: weather-forecast
+            title: Weather
+            entity: weather.openweathermap
+          - id: bc9daf3c39c04d66a3fcaf81e41b4942  # Automatically created id
+            type: iframe
+            aspect_ratio: 75%
+            url: https://embed.windy.com/embed2.html?lat=36.076&lon=-86.814&zoom=7&level=surface&overlay=wind&menu=&message=true&marker=true&calendar=&pressure=true&type=map&location=coordinates&detail=&detailLat=36.120&detailLon=-86.814&metricWind=kt&metricTemp=%C2%B0F&radarRange=-1
+      - type: vertical-stack
+        cards:
+          - id: ad3a584234024c138264a636d2e19f85  # Automatically created id
+            type: thermostat
+            entity: climate.condo
+            name: HVAC
+          - type: glance
+            show_state: false
+            column_width: calc(100% / 4)
+            entities:
+              - entity: script.resume_ac
+                name: Resume
+                tap_action:
+                  action: toggle
+              - entity: script.set_ac_home
+                name: Home
+                tap_action:
+                  action: toggle
+              - entity: script.set_ac_away
+                name: Away
+                tap_action:
+                  action: toggle
+              - entity: script.set_ac_sleep
+                name: Sleep
+                tap_action:
+                  action: toggle
+            aspect_ratio: 100%
+          - id: c4e87938182444d19ad8bac260c5d528  # Automatically created id
+            type: map
+            entities:
+              - zone.home
+              - zone.school
+              - device_tracker.kelseyiphone_c41cc61922044ae0a329532d807ac316
+              - device_tracker.williamiphone_a5bf7b44a94e410ebee3bac29793986a
+      - type: vertical-stack
+        cards:
+          - type: gauge
+            entity: sensor.condo_humidity
+            name: Indoor Humidity
+            min: 0
+            max: 100
+            severity: 
+              red: 0
+              green: 30
+              yellow: 65
+          - type: gauge
+            entity: sensor.owm_humidity
+            name: Outdoor Humidity
+            min: 0
+            max: 100
+          - type: gauge
+            entity: sensor.cold__flu_forecasted_average
+            name: Cold & Flu
+            unit: 'idx'
+            min: 0
+            max: 12.0
+            severity:
+              green: 0
+              yellow: 4.9
+              red: 9.8
+          - id: 35fbffdc40a14191a29a1d56d2c9a8b0  # Automatically created id
+            type: entities
+            title: Overrides
+            show_header_toggle: false
+            entities:
+              - input_boolean.vacation_mode
+              - input_boolean.guest_override
+              - input_boolean.blind_override
 ##  Floor Plan
   - path: floor_plan  # Automatically created id
     title: Floor Plan
@@ -454,42 +454,46 @@ views:
     title: Entertainment
     icon: mdi:television
     cards:
-      - id: a7b4737409ec4fa3be9da3316b2d5124  # Automatically created id
-        type: entity-filter
-        entities:
-          - media_player.lg_webos_smart_tv
-        state_filter:
-          - off
-        card:
-          type: media-control
-          entity: media_player.lg_webos_smart_tv
-      - id: 40fbdf8bfb884292a8b4ecd3c0f140c6  # Automatically created id
-        type: entity-filter
-        entities:
-          - media_player.living_room
-        state_filter:
-          - off
-        card:
-          type: media-control
-          entity: media_player.living_room
-      - id: 570c2eccece3489c80e828065a6ace43  # Automatically created id
-        type: entity-filter
-        entities:
-          - media_player.tv_room
-        state_filter:
-          - paused
-        card:
-          type: media-control
-          entity: media_player.tv_room
-      - id: fbea16496b3348838d770267bdead7a9  # Automatically created id
-        type: entity-filter
-        entities:
-          - media_player.bathroom
-        state_filter:
-          - paused
-        card:
-          type: media-control
-          entity: media_player.bathroom
+      - type: vertical-stack
+        cards:
+          - id: a7b4737409ec4fa3be9da3316b2d5124  # Automatically created id
+            type: entity-filter
+            entities:
+              - media_player.lg_webos_smart_tv
+            state_filter:
+              - off
+            card:
+              type: media-control
+              entity: media_player.lg_webos_smart_tv
+          - id: 40fbdf8bfb884292a8b4ecd3c0f140c6  # Automatically created id
+            type: entity-filter
+            entities:
+              - media_player.living_room
+            state_filter:
+              - off
+            card:
+              type: media-control
+              entity: media_player.living_room
+      - type: vertical-stack
+        cards:
+          - id: 570c2eccece3489c80e828065a6ace43  # Automatically created id
+            type: entity-filter
+            entities:
+              - media_player.tv_room
+            state_filter:
+              - paused
+            card:
+              type: media-control
+              entity: media_player.tv_room
+          - id: fbea16496b3348838d770267bdead7a9  # Automatically created id
+            type: entity-filter
+            entities:
+              - media_player.bathroom
+            state_filter:
+              - paused
+            card:
+              type: media-control
+              entity: media_player.bathroom
 ##  Lights
   - path: lights
     title: Lights
@@ -519,129 +523,135 @@ views:
     title: Status
     icon: mdi:settings
     cards:
-      - type: entities
-        title: Home Assistant
-        show_header_toggle: false
-        entities:
-          - entity: sensor.installed_version
-            icon: mdi:harddisk
-          - entity: sensor.hassio_version
-            icon: mdi:package-up
-          - entity: sensor.sensor_count
-            name: Number of Sensors
-            icon: mdi:counter
-          - entity: sensor.lights_count
-            name: Number of Lights
-            icon: mdi:lightbulb-on
-      - id: bef75647a8a54cbe9bd3b9329d46e2f9  # Automatically created id
-        type: entities
-        title: Connectivity
-        show_header_toggle: false
-        entities:
-          - entity: sensor.hallway_nest_protect_smoke_status
-            name: Smoke Status
-            icon: mdi:fire
-          - entity: sensor.hallway_nest_protect_co_status
-            name: Carbon Monoxide Status
-            icon: mdi:gas-cylinder
-          - binary_sensor.blind_hub
-          - zwave.aeotec_zw090_zstick_gen5_us
-          - media_player.lg_webos_smart_tv
-          - media_player.bathroom
-          - media_player.tv_room
-          - device_tracker.kelseyiphone_c41cc61922044ae0a329532d807ac316
-          - device_tracker.williamiphone_a5bf7b44a94e410ebee3bac29793986a
-          - entity: sensor.crime_reports
-            name: Crime Reports (1/2 mile)
-            icon: mdi:file-chart
-      - type: entities
-        title: NAS
-        show_header_toggle: false
-        entities:
-          - binary_sensor.condo_nas
-          - sensor.status_smart_sda
-          - sensor.status_smart_sdb
-          - sensor.volume_used_volume_1
-      - id: df9a207e81ff464e8dd643eef1637200  # Automatically created id
-        type: entities
-        title: Travel Times
-        show_header_toggle: false
-        entities:
-          - sensor.work_travel_time
-          - sensor.costco_travel_time
-          - sensor.bna_travel_time
-          - sensor.game_night_travel_time
-          - sensor.mqy_travel_time
-      - id: 7f86f912a32b4e588fef14494727aac2  # Automatically created id
-        type: entities
-        title: Climate
-        show_header_toggle: false
-        entities:
-          - sensor.condo_humidity
-          - sensor.condo_temperature
-          - sensor.kitchen_temperature
-      - id: e2e5acd7d0f14d689dd903e248121bca  # Automatically created id
-        type: entities
-        title: Internet
-        show_header_toggle: false
-        entities:
-          - sensor.speedtest_download
-          - sensor.speedtest_upload
-          - sensor.speedtest_ping
-      - type: history-graph
-        title: Internet History
-        hours_to_show: 48
-        refresh_interval: 600       
-        entities:
-          - sensor.speedtest_upload
-          - sensor.speedtest_download
-      - id: c78572bad9874d0f9800371cb6f05ca5  # Automatically created id
-        type: entities
-        title: Raspberry Pi 3 B+
-        show_header_toggle: false
-        entities:
-          - sensor.processor_use
-          - sensor.memory_free
-          - sensor.memory_use
-          - sensor.load_1m
-          - sensor.load_5m
-          - sensor.load_15m
-          - sensor.disk_use_percent_home
-          - sensor.swap_use_percent
-      - type: entities
-        title: Currencies
-        show_header_toggle: false
-        entities:
-          - entity: sensor.usd
-            name: Dollar to British Pound Sterling
-            icon: mdi:currency-gbp
-          - entity: sensor.usd_2
-            name: Dollar to Canadian Dollar
-            icon: mdi:currency-usd
-          - entity: sensor.usd_3
-            name: Dollar to Euro
-            icon: mdi:currency-eur
-      - type: entities
-        title: Batteries
-        show_header_toggle: false
-        entities:
-          - entity: sensor.mi_flora_battery
-            name: Plant 1
-            icon: mdi:battery-bluetooth
-          - entity: sensor.mi_flora_battery_2
-            name: Plant 2
-            icon: mdi:battery-bluetooth
-          - sensor.williams_iphone_battery_level_3
-          - sensor.kelseys_iphone_battery_level_2
-          - entity: sensor.hallway_nest_protect_co_status
-            name: Nest Battery Level (3x AAA)
-            icon: mdi:battery-80
-      - id: 086a6653cdbb4e5689a4d98beb3f5803  # Automatically created id
-        type: entities
-        title: Overrides
-        show_header_toggle: false
-        entities:
-          - input_boolean.vacation_mode
-          - input_boolean.guest_override
-          - input_boolean.blind_override
-          - input_boolean.go_to_sleep
+      - type: vertical-stack
+        cards:
+          - type: entities
+            title: Home Assistant
+            show_header_toggle: false
+            entities:
+              - entity: sensor.installed_version
+                icon: mdi:harddisk
+              - entity: sensor.hassio_version
+                icon: mdi:package-up
+              - entity: sensor.sensor_count
+                name: Number of Sensors
+                icon: mdi:counter
+              - entity: sensor.lights_count
+                name: Number of Lights
+                icon: mdi:lightbulb-on
+          - id: bef75647a8a54cbe9bd3b9329d46e2f9  # Automatically created id
+            type: entities
+            title: Connectivity
+            show_header_toggle: false
+            entities:
+              - entity: sensor.hallway_nest_protect_smoke_status
+                name: Smoke Status
+                icon: mdi:fire
+              - entity: sensor.hallway_nest_protect_co_status
+                name: Carbon Monoxide Status
+                icon: mdi:gas-cylinder
+              - binary_sensor.blind_hub
+              - zwave.aeotec_zw090_zstick_gen5_us
+              - media_player.lg_webos_smart_tv
+              - media_player.bathroom
+              - media_player.tv_room
+              - device_tracker.kelseyiphone_c41cc61922044ae0a329532d807ac316
+              - device_tracker.williamiphone_a5bf7b44a94e410ebee3bac29793986a
+              - entity: sensor.crime_reports
+                name: Crime Reports (1/2 mile)
+                icon: mdi:file-chart
+          - id: 7f86f912a32b4e588fef14494727aac2  # Automatically created id
+            type: entities
+            title: Climate
+            show_header_toggle: false
+            entities:
+              - sensor.condo_humidity
+              - sensor.condo_temperature
+              - sensor.kitchen_temperature
+      - type: vertical-stack
+        cards:
+          - type: entities
+            title: NAS
+            show_header_toggle: false
+            entities:
+              - binary_sensor.condo_nas
+              - sensor.status_smart_sda
+              - sensor.status_smart_sdb
+              - sensor.volume_used_volume_1
+          - type: history-graph
+            title: Internet History
+            hours_to_show: 48
+            refresh_interval: 600       
+            entities:
+              - sensor.speedtest_upload
+              - sensor.speedtest_download
+          - id: e2e5acd7d0f14d689dd903e248121bca  # Automatically created id
+            type: entities
+            title: Internet
+            show_header_toggle: false
+            entities:
+              - sensor.speedtest_download
+              - sensor.speedtest_upload
+              - sensor.speedtest_ping
+          - id: c78572bad9874d0f9800371cb6f05ca5  # Automatically created id
+            type: entities
+            title: Raspberry Pi 3 B+
+            show_header_toggle: false
+            entities:
+              - sensor.processor_use
+              - sensor.memory_free
+              - sensor.memory_use
+              - sensor.load_1m
+              - sensor.load_5m
+              - sensor.load_15m
+              - sensor.disk_use_percent_home
+              - sensor.swap_use_percent
+      - type: vertical-stack
+        cards: 
+          - id: df9a207e81ff464e8dd643eef1637200  # Automatically created id
+            type: entities
+            title: Travel Times
+            show_header_toggle: false
+            entities:
+              - sensor.work_travel_time
+              - sensor.costco_travel_time
+              - sensor.bna_travel_time
+              - sensor.game_night_travel_time
+              - sensor.mqy_travel_time
+          - type: entities
+            title: Currencies
+            show_header_toggle: false
+            entities:
+              - entity: sensor.usd_2
+                name: Dollar to British Pound Sterling
+                icon: mdi:currency-gbp
+              - entity: sensor.usd_3
+                name: Dollar to Canadian Dollar
+                icon: mdi:currency-usd
+              - entity: sensor.usd
+                name: Dollar to Euro
+                icon: mdi:currency-eur
+          - type: entities
+            title: Batteries
+            show_header_toggle: false
+            entities:
+              - entity: sensor.mi_flora_battery
+                name: Plant 1
+                icon: mdi:battery-bluetooth
+              - entity: sensor.mi_flora_battery_2
+                name: Plant 2
+                icon: mdi:battery-bluetooth
+              - sensor.williams_iphone_battery_level_3
+              - sensor.kelseys_iphone_battery_level_2
+              - entity: sensor.hallway_nest_protect_co_status
+                name: Nest Battery Level (3x AAA)
+                icon: mdi:battery
+          - id: 086a6653cdbb4e5689a4d98beb3f5803  # Automatically created id
+            type: entities
+            title: Overrides
+            show_header_toggle: false
+            entities:
+              - input_boolean.vacation_mode
+              - input_boolean.guest_override
+              - input_boolean.blind_override
+              - input_boolean.go_to_sleep
