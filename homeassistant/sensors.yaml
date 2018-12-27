@@ -48,8 +48,12 @@
       - type: load_15m
       - type: network_in
         arg: eth0
+      - type: network_out
+        arg: eth0
+      - type: ipv4_address
+        arg: eth0
       - type: processor_use
-      - type: since_last_boot
+      - type: last_boot
   - platform: openweathermap
     api_key: !secret openweather_api_key
     monitored_conditions:

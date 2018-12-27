@@ -9,7 +9,7 @@ resources:
 views:
     
 ##  Overview
-  - id: 0  # Automatically created id
+  - path: overview  # Automatically created id
     title: Overview
     icon: mdi:home-assistant
     cards:
@@ -87,9 +87,10 @@ views:
       - id: ad3a584234024c138264a636d2e19f85  # Automatically created id
         type: thermostat
         entity: climate.condo
+        name: HVAC
       - type: gauge
         entity: sensor.condo_humidity
-        title: Indoor Humidity
+        name: Indoor Humidity
         min: 0
         max: 100
         severity: 
@@ -98,12 +99,12 @@ views:
           yellow: 65
       - type: gauge
         entity: sensor.owm_humidity
-        title: Outdoor Humidity
+        name: Outdoor Humidity
         min: 0
         max: 100
       - type: gauge
         entity: sensor.cold__flu_forecasted_average
-        title: Cold & Flu Index
+        name: Cold & Flu Index
         min: 0
         max: 12.0
         severity:
@@ -135,7 +136,7 @@ views:
           - device_tracker.kelseyiphone_c41cc61922044ae0a329532d807ac316
           - device_tracker.williamiphone_a5bf7b44a94e410ebee3bac29793986a
 ##  Floor Plan
-  - id: 1  # Automatically created id
+  - path: floor_plan  # Automatically created id
     title: Floor Plan
     icon: mdi:floor-plan
     panel: true
@@ -269,7 +270,7 @@ views:
                   left: 60.5%
 
 ##  Kitchen
-  - id: 2  # Automatically created id
+  - path: kitchen  # Automatically created id
     title: Kitchen
     icon: mdi:fridge
     cards:
@@ -303,48 +304,42 @@ views:
             name: Raise (Main)
             tap_action: toggle
 ##  Porch
-  - id: 3  # Automatically created id
+  - path: porch  # Automatically created id
     title: Porch
     icon: mdi:flower
     cards:
       - type: sensor
         entity: sensor.mi_flora_light_intensity
         name: Plant 1 - Light Level
-        height: 50
-        line_color: "#FFE761"
+        graph: line
       - type: sensor
         entity: sensor.mi_flora_light_intensity_2
         name: Plant 2 - Light Level
-        height: 50
-        line_color: "#FFE761"
+        graph: line
       - type: sensor
         entity: sensor.mi_flora_moisture
         name: Plant 1 - Moisture Level
-        height: 50
+        graph: line
         icon: mdi:water
-        line_color: "#3498db"
       - type: sensor
         entity: sensor.mi_flora_moisture_2
         name: Plant 2 - Moisture Level
-        height: 50
         icon: mdi:water
-        line_color: "#3498db"
+        graph: line
       - type: sensor
         entity: sensor.mi_flora_conductivity
         name: Plant 1 - Conductivity Level
-        height: 50
-        line_color: "#C0C0C0"
+        graph: line
       - type: sensor
         entity: sensor.mi_flora_conductivity_2
         name: Plant 2 - Conductivity Level
-        height: 50
-        line_color: "#C0C0C0"  
+        graph: line
       - type: entities
         entities:
           - sensor.mi_flora_temperature
           - sensor.mi_flora_temperature_2
 ##  Bedroom
-  - id: 4  # Automatically created id
+  - path: bedroom  # Automatically created id
     title: Bedroom
     icon: mdi:hotel
     cards:
@@ -366,7 +361,7 @@ views:
             name: Sleep
             tap_action: toggle
 ##  Bathroom
-  - id: 5  # Automatically created id
+  - path: bathroom  # Automatically created id
     title: Bathroom
     icon: mdi:shower
     cards:
@@ -393,7 +388,7 @@ views:
           type: media-control
           entity: media_player.bathroom
 ##  Entertainment
-  - id: 6  # Automatically created id
+  - path: entertainment  # Automatically created id
     title: Entertainment
     icon: mdi:television
     cards:
@@ -449,7 +444,7 @@ views:
           entity: media_player.bathroom
 
 ##  Status
-  - id: 7  # Automatically created id
+  - path: status  # Automatically created id
     title: Status
     icon: mdi:settings
     cards:
@@ -541,16 +536,15 @@ views:
           - sensor.load_5m
           - sensor.load_15m
           - sensor.disk_use_percent_home
-          - sensor.since_last_boot
           - sensor.swap_use_percent
       - type: entities
         title: Currencies
         show_header_toggle: false
         entities:
-          - entity: sensor.usd_2
+          - entity: sensor.usd
             name: Dollar to British Pound Sterling
             icon: mdi:currency-gbp
-          - entity: sensor.usd
+          - entity: sensor.usd_2
             name: Dollar to Canadian Dollar
             icon: mdi:currency-usd
           - entity: sensor.usd_3
