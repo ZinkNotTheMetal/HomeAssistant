@@ -457,8 +457,10 @@ views:
         title: Home Assistant
         show_header_toggle: false
         entities:
-          - sensor.installed_version
-          - sensor.hassio_version
+          - entity: sensor.installed_version
+            icon: mdi:harddisk
+          - entity: sensor.hassio_version
+            icon: mdi:package-up
           - entity: sensor.sensor_count
             name: Number of Sensors
             icon: mdi:counter
