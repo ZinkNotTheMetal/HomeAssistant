@@ -18,64 +18,95 @@ views:
         column_width: calc(100% / 4)
         entities:
           - entity: lock.unknown_id033f_unknown_type0001_id0001_locked
-            tap_action: toggle
+            tap_action:
+              action: toggle
+            hold_action:
+              action: more-info
             name: Door
           - entity: binary_sensor.patio_door
             name: Back
+            tap_action:
+              action: more-info
           - entity: media_player.lg_webos_smart_tv
             name: TV
-            tap_action: toggle
+            tap_action:
+              action: toggle
+            hold_action:
+              action: more-info
           - entity: input_boolean.authorized_person
             name: Enter
-            tap_action: toggle
+            tap_action:
+              action: toggle
+            hold_action:
+              action: more-info
       - type: glance
         show_state: false
         column_width: calc(100% / 4)
         entities:
           - entity: light.hallway
-            tap_action: toggle
+            tap_action:
+              action: toggle
+            hold_action:
+              navigation_path: /lovelace/lights
             name: Entry
           - entity: light.living_room
-            tap_action: toggle
             name: Living
+            tap_action:
+              action: toggle
+            hold_action:
+              navigation_path: /lovelace/lights
           - entity: light.bedroom
-            tap_action: toggle
             name: Bedroom
+            tap_action:
+              action: toggle
+            hold_action:
+              navigation_path: /lovelace/lights
           - entity: light.kitchen
-            tap_action: toggle
             name: Kitchen
+            tap_action:
+              action: toggle
+            hold_action:
+              navigation_path: /lovelace/lights
       - type: glance
         show_state: false
         column_width: calc(100% / 4)
         entities:
           - entity: script.lower_all_blinds
             name: Lower (All)
-            tap_action: toggle
+            tap_action:
+              action: toggle
           - entity: script.raise_all_blinds
             name: Raise (All)
-            tap_action: toggle
+            tap_action:
+              action: toggle
           - entity: script.raise_main_blinds
             name: Raise (Main)
-            tap_action: toggle
+            tap_action:
+              action: toggle
           - entity: script.lower_main_blinds
             name: Lower (Main)
-            tap_action: toggle
+            tap_action:
+              action: toggle
       - type: glance
         show_state: false
         column_width: calc(100% / 4)
         entities:
           - entity: script.resume_ac
             name: Resume
-            tap_action: toggle
+            tap_action:
+              action: toggle
           - entity: script.set_ac_home
             name: Home
-            tap_action: toggle
+            tap_action:
+              action: toggle
           - entity: script.set_ac_away
             name: Away
-            tap_action: toggle
+            tap_action:
+              action: toggle
           - entity: script.set_ac_sleep
             name: Sleep
-            tap_action: toggle
+            tap_action:
+              action: toggle
       - id: 46961635462048c996587f7ea3db8feb  # Automatically created id
         type: weather-forecast
         title: Weather
@@ -104,7 +135,8 @@ views:
         max: 100
       - type: gauge
         entity: sensor.cold__flu_forecasted_average
-        name: Cold & Flu Index
+        name: Cold & Flu
+        unit: 'idx'
         min: 0
         max: 12.0
         severity:
@@ -148,55 +180,64 @@ views:
             image: /local/home.png
             elements:
               - type: state-icon
-                tap_action: toggle
+                tap_action:
+                  action: toggle
                 entity: light.hallway
                 style:
                   top: 23%
                   left: 20%
               - type: state-icon
-                tap_action: toggle
+                tap_action:
+                  action: toggle
                 entity: light.living_room
                 style:
                   top: 17%
                   left: 51.2%
               - type: state-icon
-                tap_action: toggle
+                tap_action:
+                  action: toggle
                 entity: light.closet
                 style:
                   top: 75%
                   left: 14%
               - type: state-icon
-                tap_action: toggle
+                tap_action:
+                  action: toggle
                 entity: light.utility_room
                 style:
                   top: 47%
                   left: 34%
               - type: state-icon
-                tap_action: toggle
+                tap_action:
+                  action: toggle
                 entity: light.laundry_room
                 style:
                   top: 60%
                   left: 34%
               - type: state-icon
-                tap_action: toggle
+                tap_action:
+                  action: toggle
                 entity: lock.unknown_id033f_unknown_type0001_id0001_locked
                 style:
                   top: 25%
                   left: 12%
               - type: state-icon
-                tap_action: toggle
+                tap_action:
+                  action: toggle
                 entity: light.bedroom
                 style:
                   top: 47%
                   left: 16%
               - type: state-icon
-                tap_action: toggle
+                tap_action:
+                  action: toggle
                 entity: light.bathroom
                 style:
                   top: 73%
                   left: 33%
               - type: state-icon
-                tap_action: toggle
+                tap_action:
+                  action: toggle
                 entity: light.kitchen
                 style:
                   top: 64%
@@ -285,7 +326,8 @@ views:
           - sun.sun
           - entity: script.join_sonos
             name: Join
-            tap_action: toggle
+            tap_action:
+              action: toggle
       - id: 891e2e7291ac4d1c95aa7e57313cfa45  # Automatically created id
         type: glance
         column_width: calc(100% / 4)
@@ -293,16 +335,20 @@ views:
         entities:
           - entity: script.lower_kitchen_blinds
             name: Lower (Kitchen)
-            tap_action: toggle
+            tap_action:
+              action: toggle
           - entity: script.raise_kitchen_blinds
             name: Raise (Kitchen)
-            tap_action: toggle
+            tap_action:
+              action: toggle
           - entity: script.lower_main_blinds
             name: Lower (Main)
-            tap_action: toggle
+            tap_action:
+              action: toggle
           - entity: script.raise_main_blinds
             name: Raise (Main)
-            tap_action: toggle
+            tap_action:
+              action: toggle
 ##  Porch
   - path: porch  # Automatically created id
     title: Porch
@@ -350,16 +396,26 @@ views:
         entities:
           - entity: light.bedroom
             name: Bedroom
-            tap_action: toggle
+            tap_action:
+              action: toggle
+            hold_action:
+              navigation_path: /lovelace/lights
           - entity: light.closet
             name: Closet
-            tap_action: toggle
+            tap_action:
+              action: toggle
+            hold_action:
+              navigation_path: /lovelace/lights
           - entity: script.shower_time
             name: Shower
-            tap_action: toggle
+            tap_action:
+              action: toggle
+            hold_action:
+              navigation_path: /lovelace/lights
           - entity: input_boolean.go_to_sleep
             name: Sleep
-            tap_action: toggle
+            tap_action:
+              action: toggle
 ##  Bathroom
   - path: bathroom  # Automatically created id
     title: Bathroom
@@ -372,12 +428,18 @@ views:
         entities:
           - entity: script.shower_time
             name: Shower
-            tap_action: toggle
+            tap_action:
+              action: toggle
           - entity: light.bathroom
             name: Lights
+            tap_action:
+              action: toggle
+            hold_action:
+              navigation_path: /lovelace/lights
           - entity: script.join_sonos
             name: Join
-            tap_action: toggle
+            tap_action:
+              action: toggle
       - id: 98cb317802494ac4bf35eaa9e0418463  # Automatically created id
         type: entity-filter
         entities:
@@ -392,20 +454,6 @@ views:
     title: Entertainment
     icon: mdi:television
     cards:
-      - type: light
-        entity: light.hallway
-      - type: light
-        entity: light.living_room
-      - type: light
-        entity: light.bedroom
-      - type: light
-        entity: light.kitchen
-      - type: light
-        entity: light.outdoor
-      - type: light
-        entity: light.laundry_room
-      - type: light
-        entity: light.utility_room
       - id: a7b4737409ec4fa3be9da3316b2d5124  # Automatically created id
         type: entity-filter
         entities:
@@ -442,6 +490,29 @@ views:
         card:
           type: media-control
           entity: media_player.bathroom
+##  Lights
+  - path: lights
+    title: Lights
+    icon: mdi:lightbulb-on
+    cards:
+      - type: vertical-stack
+        cards:
+          - type: light
+            entity: light.hallway
+          - type: light
+            entity: light.living_room
+          - type: light
+            entity: light.kitchen
+          - type: light
+            entity: light.outdoor
+      - type: vertical-stack
+        cards:
+          - type: light
+            entity: light.laundry_room
+          - type: light
+            entity: light.utility_room
+          - type: light
+            entity: light.bedroom
 
 ##  Status
   - path: status  # Automatically created id
