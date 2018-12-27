@@ -453,6 +453,18 @@ views:
     title: Status
     icon: mdi:settings
     cards:
+      - type: entities
+        title: Home Assistant
+        show_header_toggle: false
+        entities:
+          - sensor.installed_version
+          - sensor.hassio_version
+          - entity: sensor.sensor_count
+            name: Number of Sensors
+            icon: mdi:counter
+          - entity: sensor.lights_count
+            name: Number of Lights
+            icon: mdi:lightbulb-on
       - id: bef75647a8a54cbe9bd3b9329d46e2f9  # Automatically created id
         type: entities
         title: Connectivity
@@ -474,12 +486,6 @@ views:
           - entity: sensor.crime_reports
             name: Crime Reports (1/2 mile)
             icon: mdi:file-chart
-          - entity: sensor.sensor_count
-            name: Number of Sensors
-            icon: mdi:counter
-          - entity: sensor.lights_count
-            name: Number of Lights
-            icon: mdi:lightbulb-on
       - type: entities
         title: NAS
         show_header_toggle: false

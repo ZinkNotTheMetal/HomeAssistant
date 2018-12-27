@@ -91,6 +91,7 @@
       - cpu_total_load
 
 ##############################################
+#                                            #
 #               TEMPLATES                    #
 #                                            #
 ##############################################
@@ -118,3 +119,22 @@
               {% endif %}
             {%- endfor -%}
           {%- endfor -%}
+
+##############################################
+#                                            #
+#               VERSION                      #
+#                                            #
+##############################################
+  - platform: version
+    name: Installed Version
+
+####################################################
+#                                                  #
+#                      REST                        #
+#                                                  #
+####################################################
+  - platform: rest
+    resource: https://s3.amazonaws.com/hassio-version/stable.json
+    name: Hassio Version
+    value_template: "{{ value_json.homeassistant.default }}"
+    scan_interval: 3600  
