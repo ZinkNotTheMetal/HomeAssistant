@@ -101,6 +101,15 @@ views:
         title: Outdoor Humidity
         min: 0
         max: 100
+      - type: gauge
+        entity: sensor.cold__flu_forecasted_average
+        title: Cold & Flu Index
+        min: 0
+        max: 12.0
+        severity:
+          green: 0
+          yellow: 4.9
+          red: 9.8
       - id: d979a079cf974aecab594eb18c2ff56b  # Automatically created id
         type: entity-filter
         entities:
@@ -465,6 +474,12 @@ views:
           - entity: sensor.crime_reports
             name: Crime Reports (1/2 mile)
             icon: mdi:file-chart
+          - entity: sensor.sensor_count
+            name: Number of Sensors
+            icon: mdi:counter
+          - entity: sensor.lights_count
+            name: Number of Lights
+            icon: mdi:lightbulb-on
       - type: entities
         title: NAS
         show_header_toggle: false

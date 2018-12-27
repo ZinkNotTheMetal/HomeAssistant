@@ -89,3 +89,32 @@
       - volume_disk_temp_max
       - disk_below_remain_life_thr
       - cpu_total_load
+
+##############################################
+#               TEMPLATES                    #
+#                                            #
+##############################################
+  - platform: template
+    sensors:
+      sensor_count:
+        friendly_name: 'Number of Sensors'
+        value_template: >
+          {%- set domains = ['sensor'] -%}
+          {%- for domain in domains -%}
+            {%- for item in states[domain] -%}
+              {% if loop.first %}
+                {{loop.length}}
+              {% endif %}
+            {%- endfor -%}
+          {%- endfor -%}
+      lights_count:
+        friendly_name: 'Number of Lights'
+        value_template: >
+          {%- set domains = ['light'] -%}
+          {%- for domain in domains -%}
+            {%- for item in states[domain] -%}
+              {% if loop.first %}
+                {{loop.length}}
+              {% endif %}
+            {%- endfor -%}
+          {%- endfor -%}
