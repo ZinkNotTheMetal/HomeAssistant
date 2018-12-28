@@ -49,6 +49,7 @@ views:
                 tap_action:
                   action: toggle
                 hold_action:
+                  action: navigate
                   navigation_path: /lovelace/lights
                 name: Entry
               - entity: light.living_room
@@ -56,18 +57,21 @@ views:
                 tap_action:
                   action: toggle
                 hold_action:
+                  action: navigate
                   navigation_path: /lovelace/lights
               - entity: light.bedroom
                 name: Bedroom
                 tap_action:
                   action: toggle
                 hold_action:
+                  action: navigate
                   navigation_path: /lovelace/lights
               - entity: light.kitchen
                 name: Kitchen
                 tap_action:
                   action: toggle
                 hold_action:
+                  action: navigate
                   navigation_path: /lovelace/lights
           - type: glance
             show_state: false
@@ -399,18 +403,21 @@ views:
             tap_action:
               action: toggle
             hold_action:
+              action: navigate
               navigation_path: /lovelace/lights
           - entity: light.closet
             name: Closet
             tap_action:
               action: toggle
             hold_action:
+              action: navigate
               navigation_path: /lovelace/lights
           - entity: script.shower_time
             name: Shower
             tap_action:
               action: toggle
             hold_action:
+              action: navigate
               navigation_path: /lovelace/lights
           - entity: input_boolean.go_to_sleep
             name: Sleep
@@ -435,6 +442,7 @@ views:
             tap_action:
               action: toggle
             hold_action:
+              action: navigate
               navigation_path: /lovelace/lights
           - entity: script.join_sonos
             name: Join
@@ -625,10 +633,10 @@ views:
               - entity: sensor.usd_2
                 name: Dollar to British Pound Sterling
                 icon: mdi:currency-gbp
-              - entity: sensor.usd_3
+              - entity: sensor.usd
                 name: Dollar to Canadian Dollar
                 icon: mdi:currency-usd
-              - entity: sensor.usd
+              - entity: sensor.usd_3
                 name: Dollar to Euro
                 icon: mdi:currency-eur
           - type: entities

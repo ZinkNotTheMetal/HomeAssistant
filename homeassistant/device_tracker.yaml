@@ -1,4 +1,4 @@
-  - platform: netgear
+  - platform: asuswrt
     host: !secret router_ip_address
     username: !secret router_username
     password: !secret router_password

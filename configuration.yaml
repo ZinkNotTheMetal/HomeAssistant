@@ -132,3 +132,15 @@ mqtt:
 
 owntracks:
   max_gps_accuracy: 200
+
+asuswrt:
+  host: !secret router_ip_address
+  username: !secret router_username
+  password: !secret router_password
+
+#vacuum:
+#  - platform: roomba
+#    host: !secret alfred_ip_address
+#    name: Alfred
+#    username: !secret alfred_blid
+#    password: !secret alfred_password
