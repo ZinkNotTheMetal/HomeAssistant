@@ -525,6 +525,10 @@ views:
             entity: light.utility_room
           - type: light
             entity: light.bedroom
+      - type: vertical-stack
+        cards:
+          - type: light
+            entity: light.bathroom
 
 ##  Status
   - path: status  # Automatically created id
