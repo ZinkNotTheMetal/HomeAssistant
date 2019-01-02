@@ -636,13 +636,13 @@ views:
             title: Currencies
             show_header_toggle: false
             entities:
-              - entity: sensor.usd_2
+              - entity: sensor.usd
                 name: Dollar to British Pound Sterling
                 icon: mdi:currency-gbp
-              - entity: sensor.usd
+              - entity: sensor.usd_3
                 name: Dollar to Canadian Dollar
                 icon: mdi:currency-usd
-              - entity: sensor.usd_3
+              - entity: sensor.usd_2
                 name: Dollar to Euro
                 icon: mdi:currency-eur
           - type: entities

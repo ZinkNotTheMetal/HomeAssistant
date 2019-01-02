@@ -161,4 +161,8 @@ All Automations are using Node-Red (using Hassio Addins). This can be downloaded
 
 <img src="https://github.com/ZinkNotTheMetal/HomeAssistant/blob/master/Home-Assistant-Lovelace-3.PNG" alt="Home Assistant dashboard 3" />
 
+<img src="https://github.com/ZinkNotTheMetal/HomeAssistant/blob/master/Home-Assistant-Lovelace-4.PNG" alt="Home Assistant dashboard 4" />
+
+<img src="https://github.com/ZinkNotTheMetal/HomeAssistant/blob/master/Home-Assistant-Lovelace-5.PNG" alt="Home Assistant dashboard 5" />
+
 -ZinkNotTheMetal
