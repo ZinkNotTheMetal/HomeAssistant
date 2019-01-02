@@ -94,6 +94,33 @@
       - disk_below_remain_life_thr
       - cpu_total_load
 
+####################################################
+#                                                  #
+#                      REST                        #
+#                                                  #
+####################################################
+  - platform: rest
+    resource: https://s3.amazonaws.com/hassio-version/stable.json
+    name: Hassio Version
+    value_template: "{{ value_json.homeassistant.default }}"
+    scan_interval: 3600  
+
+  - platform: rest
+    resource: http://192.168.1.216/api/shades
+    name: Shade Positions
+    json_attributes:
+      - shadeData
+    value_template: "{{ value_json.value }}"
+    scan_interval: 20
+
+##############################################
+#                                            #
+#               VERSION                      #
+#                                            #
+##############################################
+  - platform: version
+    name: Installed Version
+
 ##############################################
 #                                            #
 #               TEMPLATES                    #
@@ -123,22 +150,25 @@
               {% endif %}
             {%- endfor -%}
           {%- endfor -%}
-
-##############################################
-#                                            #
-#               VERSION                      #
-#                                            #
-##############################################
-  - platform: version
-    name: Installed Version
-
-####################################################
-#                                                  #
-#                      REST                        #
-#                                                  #
-####################################################
-  - platform: rest
-    resource: https://s3.amazonaws.com/hassio-version/stable.json
-    name: Hassio Version
-    value_template: "{{ value_json.homeassistant.default }}"
-    scan_interval: 3600  
+      main_shade_position:
+        friendly_name: Main Shade Position
+        icon_template: mdi:blinds
+        value_template: >
+          {% if states.sensor.shade_positions.attributes.shadeData[1].positions.position1 == 65535 %}
+            Open
+          {% elif states.sensor.shade_positions.attributes.shadeData[1].positions.position1 == 0 %}
+            Closed
+          {% else %}
+            {{ ((1 - (states.sensor.shade_positions.attributes.shadeData[1].positions.position1 / 65535)) * 100) | round(0) }}%
+          {% endif %}
+      kitchen_shade_position:
+        friendly_name: Kitchen Shade Position
+        icon_template: mdi:blinds
+        value_template: >
+          {% if states.sensor.shade_positions.attributes.shadeData[0].positions.position1 == 65535 %}
+            Open
+          {% elif states.sensor.shade_positions.attributes.shadeData[0].positions.position1 == 0 %}
+            Closed
+          {% else %}
+            {{ ((1 - (states.sensor.shade_positions.attributes.shadeData[0].positions.position1 / 65535)) * 100) | round(0) }}%
+          {% endif %}

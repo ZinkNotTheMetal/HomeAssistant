@@ -74,25 +74,25 @@ views:
                   action: navigate
                   navigation_path: /lovelace/lights
           - type: glance
-            show_state: false
+            show_state: true
             column_width: calc(100% / 4)
             entities:
-              - entity: script.lower_all_blinds
-                name: Lower (All)
+              - entity: sensor.main_shade_position
+                name: Main Shade
                 tap_action:
-                  action: toggle
-              - entity: script.raise_all_blinds
-                name: Raise (All)
+                  action: call-service
+                  service: script.raise_main_blinds
+                hold_action:
+                  action: call-service
+                  service: script.lower_main_blinds
+              - entity: sensor.kitchen_shade_position
+                name: Kitchen Shade
                 tap_action:
-                  action: toggle
-              - entity: script.raise_main_blinds
-                name: Raise (Main)
-                tap_action:
-                  action: toggle
-              - entity: script.lower_main_blinds
-                name: Lower (Main)
-                tap_action:
-                  action: toggle
+                  action: call-service
+                  service: script.lower_kitchen_blinds
+                hold_action:
+                  action: call-service
+                  service: script.raise_kitchen_blinds
       - type: vertical-stack
         cards:
           - id: 46961635462048c996587f7ea3db8feb  # Automatically created id
@@ -551,6 +551,8 @@ views:
               - entity: sensor.lights_count
                 name: Number of Lights
                 icon: mdi:lightbulb-on
+              - sensor.main_shade_position
+              - sensor.kitchen_shade_position
           - id: bef75647a8a54cbe9bd3b9329d46e2f9  # Automatically created id
             type: entities
             title: Connectivity
