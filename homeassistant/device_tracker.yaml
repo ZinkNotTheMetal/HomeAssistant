@@ -1,13 +1,23 @@
+  - platform: life360
+    username: !secret life360_username
+    password: !secret life360_password
+    prefix: life360
+    interval_seconds: 10
+    driving_speed: 16
+    show_as_state: places, driving, moving
+    max_update_wait:
+      minutes: 30
+  # Router
   - platform: asuswrt
     host: !secret router_ip_address
     username: !secret router_username
     password: !secret router_password
     interval_seconds: 2
-    consider_home: 370
+    consider_home: 270
     new_device_defaults:
       track_new_devices: false
       hide_if_away: false
-    # This is for Mi Flora sensors when they come in
+  # Bluetooth for MiFlora
   - platform: bluetooth_tracker
     interval_seconds: 15
     consider_home: 150

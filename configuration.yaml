@@ -124,23 +124,16 @@ no_ip:
   username: !secret no_ip_username
   password: !secret no_ip_password
 
-mqtt:
-  broker: !secret mqtt_broker
-  port: !secret mqtt_port
-  username: !secret mqtt_username
-  password: !secret mqtt_password
+#mqtt:
+#  broker: !secret mqtt_broker
+#  port: !secret mqtt_port
+#  username: !secret mqtt_username
+#  password: !secret mqtt_password
 
-owntracks:
-  max_gps_accuracy: 200
+#owntracks:
+#  max_gps_accuracy: 200
 
 asuswrt:
   host: !secret router_ip_address
   username: !secret router_username
   password: !secret router_password
-
-#vacuum:
-#  - platform: roomba
-#    host: !secret alfred_ip_address
-#    name: Alfred
-#    username: !secret alfred_blid
-#    password: !secret alfred_password

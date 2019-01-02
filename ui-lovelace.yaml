@@ -135,8 +135,8 @@ views:
             entities:
               - zone.home
               - zone.school
-              - device_tracker.kelseyiphone_c41cc61922044ae0a329532d807ac316
-              - device_tracker.williamiphone_a5bf7b44a94e410ebee3bac29793986a
+              - device_tracker.life360_william
+              - device_tracker.life360_kelsey
       - type: vertical-stack
         cards:
           - type: gauge

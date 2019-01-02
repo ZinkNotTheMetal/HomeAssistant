@@ -1,4 +1,3 @@
-.HA_VERSION
 .uuid
 .ios.conf
 OZW_Log.txt
@@ -17,3 +16,4 @@ deps/
 node-red
 zwscene.xml
 www/home.png
+life360.conf

@@ -124,8 +124,7 @@ If you found this extremely helpful, feel free to reach out
   * [Open Weather Map](https://www.home-assistant.io/components/sensor.openweathermap/)
   * [Open Weather Map Api for Node-Red](https://openweathermap.org/api)
 * Presence:
-  * [OwnTracks](https://home-assistant.io/components/device_tracker.owntracks/)
-  * MQTT
+  * [Life360](https://github.com/pnbruckner/homeassistant-config/blob/master/docs/life360.md)
   * [iOS app](https://itunes.apple.com/us/app/home-assistant-companion/id1099568401?mt=8)
   * [Waze](https://www.home-assistant.io/components/sensor.waze_travel_time/) (for commute times)
 * [iOS](https://home-assistant.io/docs/ecosystem/ios/notifications/basic/) Notifications
