@@ -119,19 +119,9 @@ zwave:
   polling_interval: 10000
   autoheal: false
 
-no_ip:
-  domain: !secret no_ip_domain
-  username: !secret no_ip_username
-  password: !secret no_ip_password
-
-#mqtt:
-#  broker: !secret mqtt_broker
-#  port: !secret mqtt_port
-#  username: !secret mqtt_username
-#  password: !secret mqtt_password
-
-#owntracks:
-#  max_gps_accuracy: 200
+duckdns:
+  domain: !secret duck_dns_domain
+  access_token: !secret duck_dns_token
 
 asuswrt:
   host: !secret router_ip_address
