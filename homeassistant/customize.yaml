@@ -40,3 +40,27 @@
     script.raise_main_blinds:
       friendly_name: "Raise Main Blinds"
       icon: mdi:blinds
+    light.living_room:
+      friendly_name: "Living Room Lights"
+      icon: mdi:sofa
+    light.bathroom:
+      friendly_name: "Bathroom Lights"
+      icon: mdi:shower
+    light.kitchen:
+      friendly_name: "Kitchen Lights"
+      icon: mdi:stove
+    light.bedroom:
+      friendly_name: "Bedroom Lights"
+      icon: mdi:hotel
+    light.laundry_room:
+      friendly_name: "Laundry Room Light"
+      icon: mdi:washing-machine
+    light.hallway:
+      friendly_name: "Hallway Lights"
+      icon: mdi:door-open
+    light.outdoor:
+      friendly_name: "Outdoor Lights"
+      icon: mdi:fountain
+    light.utility_room:
+      friendly_name: "Utility Room Light"
+      icon: mdi:water-pump

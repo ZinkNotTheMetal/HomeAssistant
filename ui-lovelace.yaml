@@ -46,6 +46,7 @@ views:
             column_width: calc(100% / 4)
             entities:
               - entity: light.hallway
+                icon: mdi:lightbulb
                 tap_action:
                   action: toggle
                 hold_action:
@@ -54,6 +55,7 @@ views:
                 name: Entry
               - entity: light.living_room
                 name: Living
+                icon: mdi:lightbulb
                 tap_action:
                   action: toggle
                 hold_action:
@@ -61,6 +63,7 @@ views:
                   navigation_path: /lovelace/lights
               - entity: light.bedroom
                 name: Bedroom
+                icon: mdi:lightbulb
                 tap_action:
                   action: toggle
                 hold_action:
@@ -68,6 +71,7 @@ views:
                   navigation_path: /lovelace/lights
               - entity: light.kitchen
                 name: Kitchen
+                icon: mdi:lightbulb
                 tap_action:
                   action: toggle
                 hold_action:
@@ -636,13 +640,13 @@ views:
             title: Currencies
             show_header_toggle: false
             entities:
-              - entity: sensor.usd
+              - entity: sensor.usd_2
                 name: Dollar to British Pound Sterling
                 icon: mdi:currency-gbp
-              - entity: sensor.usd_3
+              - entity: sensor.usd
                 name: Dollar to Canadian Dollar
                 icon: mdi:currency-usd
-              - entity: sensor.usd_2
+              - entity: sensor.usd_3
                 name: Dollar to Euro
                 icon: mdi:currency-eur
           - type: entities
