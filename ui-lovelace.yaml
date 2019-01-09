@@ -541,6 +541,31 @@ views:
     cards:
       - type: vertical-stack
         cards:
+          - id: bef75647a8a54cbe9bd3b9329d46e2f9  # Automatically created id
+            type: entities
+            title: Connectivity
+            show_header_toggle: false
+            entities:
+              - entity: sensor.hallway_nest_protect_smoke_status
+                name: Smoke Status
+                icon: mdi:fire
+              - entity: sensor.hallway_nest_protect_co_status
+                name: Carbon Monoxide Status
+                icon: mdi:gas-cylinder
+              - device_tracker.life360_kelsey
+              - device_tracker.life360_william
+              - sensor.main_shade_position
+              - sensor.kitchen_shade_position
+              - sensor.pihole_ads_blocked_today
+              - sensor.pihole_ads_percentage_blocked_today
+              - binary_sensor.blind_hub
+              - zwave.aeotec_zw090_zstick_gen5_us
+              - media_player.lg_webos_smart_tv
+              - media_player.bathroom
+              - media_player.tv_room
+              - entity: sensor.crime_reports
+                name: Crime Reports (1/2 mile)
+                icon: mdi:file-chart
           - type: entities
             title: Home Assistant
             show_header_toggle: false
@@ -555,29 +580,6 @@ views:
               - entity: sensor.lights_count
                 name: Number of Lights
                 icon: mdi:lightbulb-on
-              - sensor.main_shade_position
-              - sensor.kitchen_shade_position
-          - id: bef75647a8a54cbe9bd3b9329d46e2f9  # Automatically created id
-            type: entities
-            title: Connectivity
-            show_header_toggle: false
-            entities:
-              - entity: sensor.hallway_nest_protect_smoke_status
-                name: Smoke Status
-                icon: mdi:fire
-              - entity: sensor.hallway_nest_protect_co_status
-                name: Carbon Monoxide Status
-                icon: mdi:gas-cylinder
-              - binary_sensor.blind_hub
-              - zwave.aeotec_zw090_zstick_gen5_us
-              - media_player.lg_webos_smart_tv
-              - media_player.bathroom
-              - media_player.tv_room
-              - device_tracker.life360_kelsey
-              - device_tracker.life360_william
-              - entity: sensor.crime_reports
-                name: Crime Reports (1/2 mile)
-                icon: mdi:file-chart
           - id: 7f86f912a32b4e588fef14494727aac2  # Automatically created id
             type: entities
             title: Climate
@@ -640,13 +642,13 @@ views:
             title: Currencies
             show_header_toggle: false
             entities:
-              - entity: sensor.usd_2
+              - entity: sensor.usd_3
                 name: Dollar to British Pound Sterling
                 icon: mdi:currency-gbp
               - entity: sensor.usd
                 name: Dollar to Canadian Dollar
                 icon: mdi:currency-usd
-              - entity: sensor.usd_3
+              - entity: sensor.usd_2
                 name: Dollar to Euro
                 icon: mdi:currency-eur
           - type: entities

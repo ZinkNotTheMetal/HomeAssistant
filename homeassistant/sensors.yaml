@@ -1,3 +1,10 @@
+  # Pi Hole sensor
+  - platform: pi_hole
+    host: !secret pi_hole_ip
+    ssl: false
+    monitored_conditions:
+      - ads_blocked_today
+      - ads_percentage_today
   # Travel Times #
   - platform: waze_travel_time
     name: Work Travel Time

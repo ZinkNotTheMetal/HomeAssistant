@@ -26,19 +26,17 @@ config:
 panel_iframe:
   nodered_flows:
     title: 'Node-RED Flows'
-    url: 'http://hassio.local:1880'
+    url: !secret node_red_url
     icon: mdi:nodejs
-#  pi_hole:
-#    title: 'PiHole Admin'
-#    url: 'http://hassio.local:4865'
-#    icon: mdi:pi-box
 #  influx_db:
 #    title: 'InfluxDB'
 #    url: 'http://hassio.local:8888'
 #    icon: mdi:chart-areaspline
     
 http:
-  base_url: hassio.local:8123
+  base_url: !secret ha_base_url
+  ssl_certificate: /ssl/fullchain.pem
+  ssl_key: /ssl/privkey.pem
   # Secrets are defined in the file secrets.yaml
   # api_password: !secret homeassistant_api_password
   # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
@@ -118,10 +116,6 @@ zwave:
   network_key: !secret z_wave_network_key
   polling_interval: 10000
   autoheal: false
-
-duckdns:
-  domain: !secret duck_dns_domain
-  access_token: !secret duck_dns_token
 
 asuswrt:
   host: !secret router_ip_address

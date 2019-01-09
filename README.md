@@ -43,6 +43,7 @@ If you found this extremely helpful, feel free to reach out
 
 ### Equipment running Home Assistant:
 - [Raspberry Pi 3 B+](http://a.co/d/c4m30oN)
+- [Raspberry Pi Zero W]()
 - [64GB SD Card](http://a.co/d/iygZSba)
 
 ### Installation:
@@ -57,6 +58,8 @@ If you found this extremely helpful, feel free to reach out
   * [Log Viewer](https://github.com/hassio-addons/addon-log-viewer) (using Hassio addins)
   * [SSH server](https://github.com/hassio-addons/addon-ssh) (using Hassio addins) to utilize I use [PuTTY](https://www.putty.org/) for Windows
   * [Samba Share](https://github.com/home-assistant/hassio-addons/tree/master/samba) (using Hassio addins)
+  * [Duck DNS & Let's Encrypt](https://www.home-assistant.io/addons/duckdns/) (using Hassio addins)
+  * [Pi-hole] installed on the Raspberry Pi Zero W [instructions](https://learn.adafruit.com/pi-hole-ad-blocker-with-pi-zero-w/overview-adafruit2)
 
 ## [Devices](#devices)
 
