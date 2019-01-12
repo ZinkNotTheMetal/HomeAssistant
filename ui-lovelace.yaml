@@ -19,7 +19,7 @@ views:
             show_state: false
             column_width: calc(100% / 4)
             entities:
-              - entity: lock.unknown_id033f_unknown_type0001_id0001_locked
+              - entity: lock.august_asl_03_smart_lock_locked
                 tap_action:
                   action: toggle
                 hold_action:
@@ -158,7 +158,7 @@ views:
             min: 0
             max: 100
           - type: gauge
-            entity: sensor.cold__flu_forecasted_average
+            entity: sensor.cold_flu_forecasted_average
             name: Cold & Flu
             unit: 'idx'
             min: 0
@@ -225,7 +225,7 @@ views:
               - type: state-icon
                 tap_action:
                   action: toggle
-                entity: lock.unknown_id033f_unknown_type0001_id0001_locked
+                entity: lock.august_asl_03_smart_lock_locked
                 style:
                   top: 25%
                   left: 12%
@@ -556,10 +556,10 @@ views:
               - device_tracker.life360_william
               - sensor.main_shade_position
               - sensor.kitchen_shade_position
-              - sensor.pihole_ads_blocked_today
-              - sensor.pihole_ads_percentage_blocked_today
+              - sensor.pi_hole_ads_blocked_today
+              - sensor.pi_hole_ads_percentage_blocked_today
               - binary_sensor.blind_hub
-              - zwave.aeotec_zw090_zstick_gen5_us
+              - zwave.aeotec_zw090_z_stick_gen5_us
               - media_player.lg_webos_smart_tv
               - media_player.bathroom
               - media_player.tv_room
@@ -661,11 +661,16 @@ views:
               - entity: sensor.mi_flora_battery_2
                 name: Plant 2
                 icon: mdi:battery-bluetooth
-              - sensor.williams_iphone_battery_level_3
-              - sensor.kelseys_iphone_battery_level_2
+              - sensor.williams_iphone_battery_level
+              - sensor.kelsey_s_iphone_battery_level
               - entity: sensor.hallway_nest_protect_co_status
                 name: Nest Battery Level (3x AAA)
                 icon: mdi:battery
+          - type: entities
+            title: Switches
+            show_header_toggle: false
+            entities:
+              - switch.boosted_charger
           - id: 086a6653cdbb4e5689a4d98beb3f5803  # Automatically created id
             type: entities
             title: Overrides
