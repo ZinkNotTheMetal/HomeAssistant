@@ -17,3 +17,5 @@ node-red
 zwscene.xml
 www/home.png
 life360.conf
+home-assistant_v2.db-shm
+home-assistant_v2.db-wal
