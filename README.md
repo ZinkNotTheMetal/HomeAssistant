@@ -60,6 +60,7 @@ If you found this extremely helpful, feel free to reach out
   * [Samba Share](https://github.com/home-assistant/hassio-addons/tree/master/samba) (using Hassio addins)
   * [Duck DNS & Let's Encrypt](https://www.home-assistant.io/addons/duckdns/) (using Hassio addins)
   * [Pi-hole](https://pi-hole.net/) installed on the Raspberry Pi Zero W [instructions](https://learn.adafruit.com/pi-hole-ad-blocker-with-pi-zero-w/overview-adafruit2)
+  * [Webhook Relay](https://github.com/webhookrelay/home-assistant) (using Hassio addins following instructions) this allows me not to open any external ports for Webhooks
 
 ## [Devices](#devices)
 
