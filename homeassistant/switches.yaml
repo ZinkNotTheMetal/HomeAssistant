@@ -6,4 +6,4 @@
       - service: hassio.addon_stdin
         data:
           addon: core_rpc_shutdown
-          input: william-razer
+          input: WIRED-RAZER
