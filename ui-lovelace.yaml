@@ -35,8 +35,8 @@ views:
                   action: toggle
                 hold_action:
                   action: more-info
-              - entity: input_boolean.authorized_person
-                name: Enter
+              - entity: switch.pc
+                name: PC
                 tap_action:
                   action: toggle
                 hold_action:
@@ -175,6 +175,7 @@ views:
               - input_boolean.vacation_mode
               - input_boolean.guest_override
               - input_boolean.blind_override
+              - input_boolean.authorized_person
 ##  Floor Plan
   - path: floor_plan  # Automatically created id
     title: Floor Plan
