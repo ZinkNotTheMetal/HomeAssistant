@@ -60,6 +60,8 @@ If you found this extremely helpful, feel free to reach out
   * [Samba Share](https://github.com/home-assistant/hassio-addons/tree/master/samba) (using Hassio addins)
   * [Duck DNS & Let's Encrypt](https://www.home-assistant.io/addons/duckdns/) (using Hassio addins)
   * [Pi-hole](https://pi-hole.net/) installed on the Raspberry Pi Zero W [instructions](https://learn.adafruit.com/pi-hole-ad-blocker-with-pi-zero-w/overview-adafruit2)
+* Lovelace (Custom Components)
+  * [Custom Mini Media Player](https://github.com/kalkih/mini-media-player) for SONOS speakers
 
 ## [Devices](#devices)
 
