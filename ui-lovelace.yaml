@@ -3,7 +3,7 @@ title: Home
 background: center / cover no-repeat url("/local/city-night.jpg") fixed
 
 resources:
-  - url: /local/mini-media-player-bundle.js?v=0.9.1
+  - url: /local/mini-media-player-bundle.js?v=0.9.8
     type: module
 
 views:
@@ -97,6 +97,17 @@ views:
                 hold_action:
                   action: call-service
                   service: script.lower_kitchen_blinds
+          - type: custom:mini-media-player
+            entity: media_player.tv_room
+            name: SONOS
+            hide_power: true
+            artwork: cover
+            show_progress: true
+            sonos_grouping:
+              - entity_id: media_player.tv_room
+                name: TV Room
+              - entity_id: media_player.bathroom
+                name: Bathroom
       - type: vertical-stack
         cards:
           - id: 46961635462048c996587f7ea3db8feb  # Automatically created id

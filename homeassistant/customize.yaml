@@ -64,6 +64,8 @@
     light.utility_room:
       friendly_name: "Utility Room Light"
       icon: mdi:water-pump
-    switch.pc
+    switch.pc:
       friendly_name: "PC"
       icon: mdi:desktop-classic
+    media_player.tv_room:
+      icon: mdi:speaker
