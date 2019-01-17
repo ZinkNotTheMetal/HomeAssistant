@@ -69,3 +69,5 @@
       icon: mdi:desktop-classic
     media_player.tv_room:
       icon: mdi:speaker
+    sensor.tsa_wait_time:
+      icon: mdi:account-clock

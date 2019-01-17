@@ -100,6 +100,15 @@
       - volume_disk_temp_max
       - disk_below_remain_life_thr
       - cpu_total_load
+####################################################
+#                                                  #
+#                    SCRAPE                        #
+#                                                  #
+####################################################
+  - platform: scrape
+    resource: !secret tsa_airport_information_url
+    select: !secret tsa_selector
+    name: TSA wait time
 
 ####################################################
 #                                                  #

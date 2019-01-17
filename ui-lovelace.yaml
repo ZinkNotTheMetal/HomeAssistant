@@ -3,7 +3,7 @@ title: Home
 background: center / cover no-repeat url("/local/city-night.jpg") fixed
 
 resources:
-  - url: /local/mini-media-player-bundle.js?v=0.9.8
+  - url: /local/mini-media-player-bundle.js?v=0.9.9
     type: module
 
 views:
@@ -648,6 +648,7 @@ views:
               - sensor.work_travel_time
               - sensor.costco_travel_time
               - sensor.bna_travel_time
+              - sensor.tsa_wait_time
               - sensor.game_night_travel_time
               - sensor.mqy_travel_time
           - type: entities
