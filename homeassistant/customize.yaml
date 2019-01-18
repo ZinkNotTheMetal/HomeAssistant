@@ -72,3 +72,6 @@
     sensor.tsa_wait_time:
       icon: mdi:account-clock
       friendly_name: !secret tsa_sensor_name
+    sensor.stats_tv:
+      icon: mdi:theater
+      friendly_name: 'TV (7 days)'

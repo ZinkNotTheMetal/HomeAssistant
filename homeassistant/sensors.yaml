@@ -88,6 +88,26 @@
     zip_code: !secret home_zipcode
     monitored_conditions:
       - disease_average_forecasted
+
+####################################################
+#                                                  #
+#                   HISTORY                        #
+#                                                  #
+####################################################
+  - platform: history_stats
+    name: stats_tv
+    entity_id: media_player.lg_webos_smart_tv
+    state: 'playing'
+    type: time
+    end: '{{ now() }}'
+    duration:
+      days: 7
+
+####################################################
+#                                                  #
+#                     NAS                          #
+#                                                  #
+####################################################
   - platform: synologydsm
     host: !secret nas_ip_address
     username: !secret nas_username

@@ -128,6 +128,7 @@ If you found this extremely helpful, feel free to reach out
   * [Windy](https://www.windy.com/)
   * [Open Weather Map](https://www.home-assistant.io/components/sensor.openweathermap/)
   * [Open Weather Map Api for Node-Red](https://openweathermap.org/api)
+  * [Pollen](https://www.home-assistant.io/components/sensor.pollen/) sensor for allergy related information
 * Presence:
   * [Life360](https://github.com/pnbruckner/homeassistant-config/blob/master/docs/life360.md)
   * [iOS app](https://itunes.apple.com/us/app/home-assistant-companion/id1099568401?mt=8)
