@@ -98,8 +98,8 @@ ios:
       - name: Home
         identifier: 'home'
         actions:
-          - identifier: 'LOCK_DOOR'
-            title: 'Lock Door'
+          - identifier: 'NO_MUSIC'
+            title: 'Turn off music'
             activationMode: 'background'
             authenticationRequired: no
             destructive: yes
