@@ -1,0 +1,142 @@
+---
+path: floor_plan  # Automatically created id
+title: Floor Plan
+icon: mdi:floor-plan
+panel: true
+cards:
+  - id: cc60cdc04a1e4bb5b6675fb8724c1fab  # Automatically created id
+    type: vertical-stack
+    cards:
+      - type: picture-elements
+        image: /local/home.png
+        elements:
+          - type: state-icon
+            tap_action:
+              action: toggle
+            entity: light.hallway
+            style:
+              top: 23%
+              left: 20%
+          - type: state-icon
+            tap_action:
+              action: toggle
+            entity: light.living_room
+            style:
+              top: 17%
+              left: 51.2%
+          - type: state-icon
+            tap_action:
+              action: toggle
+            entity: light.closet
+            style:
+              top: 75%
+              left: 14%
+          - type: state-icon
+            tap_action:
+              action: toggle
+            entity: light.utility_room
+            style:
+              top: 47%
+              left: 34%
+          - type: state-icon
+            tap_action:
+              action: toggle
+            entity: light.laundry_room
+            style:
+              top: 60%
+              left: 34%
+          - type: state-icon
+            tap_action:
+              action: toggle
+            entity: lock.august_asl_03_smart_lock_locked
+            style:
+              top: 25%
+              left: 12%
+          - type: state-icon
+            tap_action:
+              action: toggle
+            entity: light.bedroom
+            style:
+              top: 47%
+              left: 16%
+          - type: state-icon
+            tap_action:
+              action: toggle
+            entity: light.bathroom
+            style:
+              top: 73%
+              left: 33%
+          - type: state-icon
+            tap_action:
+              action: toggle
+            entity: light.kitchen
+            style:
+              top: 64%
+              left: 53.5%
+          - type: state-icon
+            entity: media_player.tv_room
+            style:
+              top: 73%
+              left: 43.5%
+          - type: state-label
+            entity: media_player.tv_room
+            style:
+              top: 76%
+              left: 43.5%
+          - type: state-icon
+            entity: media_player.bathroom
+            style:
+              top: 80%
+              left: 24%
+          - type: state-label
+            entity: media_player.bathroom
+            style:
+              top: 83%
+              left: 24%
+          - type: state-icon
+            entity: media_player.lg_webos_smart_tv
+            style:
+              top: 21%
+              left: 51.20%
+          - type: state-label
+            entity: media_player.lg_webos_smart_tv
+            style:
+              top: 23%
+              left: 51.20%
+          - type: state-icon
+            entity: binary_sensor.patio_door
+            style:
+              top: 62%
+              left: 60.5%
+          - type: service-button
+            title: Lower
+            service: ifttt.trigger
+            service_data:
+              event: 'main_blind_down_request'
+            style:
+              top: 40%
+              left: 60.5%
+          - type: service-button
+            title: Raise
+            service: ifttt.trigger
+            service_data:
+              event: 'main_blind_up_request'
+            style:
+              top: 36%
+              left: 60.5%
+          - type: service-button
+            title: Lower
+            service: ifttt.trigger
+            service_data:
+              event: 'kitchen_blind_down_request'
+            style:
+              top: 69%
+              left: 60.5%
+          - type: service-button
+            title: Raise
+            service: ifttt.trigger
+            service_data:
+              event: 'kitchen_blind_up_request'
+            style:
+              top: 66%
+              left: 60.5%

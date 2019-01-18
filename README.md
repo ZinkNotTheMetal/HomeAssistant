@@ -161,14 +161,14 @@ All Automations are using Node-Red (using Hassio Addins). This can be downloaded
 
 
 ## [Dashboard](#dashboard)
-<img src="https://github.com/ZinkNotTheMetal/HomeAssistant/blob/master/Home-Assistant-Lovelace-1.PNG" alt="Home Assistant dashboard 1" />
+<img src="https://github.com/ZinkNotTheMetal/HomeAssistant/blob/master/pictures/Home-Assistant-Lovelace-1.PNG" alt="Home Assistant dashboard 1" />
 
-<img src="https://github.com/ZinkNotTheMetal/HomeAssistant/blob/master/Home-Assistant-Lovelace-2.PNG" alt="Home Assistant dashboard 2" />
+<img src="https://github.com/ZinkNotTheMetal/HomeAssistant/blob/master/pictures/Home-Assistant-Lovelace-2.PNG" alt="Home Assistant dashboard 2" />
 
-<img src="https://github.com/ZinkNotTheMetal/HomeAssistant/blob/master/Home-Assistant-Lovelace-3.PNG" alt="Home Assistant dashboard 3" />
+<img src="https://github.com/ZinkNotTheMetal/HomeAssistant/blob/master/pictures/Home-Assistant-Lovelace-3.PNG" alt="Home Assistant dashboard 3" />
 
-<img src="https://github.com/ZinkNotTheMetal/HomeAssistant/blob/master/Home-Assistant-Lovelace-4.PNG" alt="Home Assistant dashboard 4" />
+<img src="https://github.com/ZinkNotTheMetal/HomeAssistant/blob/master/pictures/Home-Assistant-Lovelace-4.PNG" alt="Home Assistant dashboard 4" />
 
-<img src="https://github.com/ZinkNotTheMetal/HomeAssistant/blob/master/Home-Assistant-Lovelace-5.PNG" alt="Home Assistant dashboard 5" />
+<img src="https://github.com/ZinkNotTheMetal/HomeAssistant/blob/master/pictures/Home-Assistant-Lovelace-5.PNG" alt="Home Assistant dashboard 5" />
 
 -ZinkNotTheMetal

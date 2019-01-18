@@ -1,0 +1,27 @@
+---
+path: lights
+title: Lights
+icon: mdi:lightbulb-on
+cards:
+  - type: vertical-stack
+    cards:
+      - type: light
+        entity: light.hallway
+      - type: light
+        entity: light.living_room
+      - type: light
+        entity: light.kitchen
+      - type: light
+        entity: light.outdoor
+  - type: vertical-stack
+    cards:
+      - type: light
+        entity: light.laundry_room
+      - type: light
+        entity: light.utility_room
+      - type: light
+        entity: light.bedroom
+  - type: vertical-stack
+    cards:
+      - type: light
+        entity: light.bathroom

@@ -1,0 +1,35 @@
+---
+path: bedroom  # Automatically created id
+title: Bedroom
+icon: mdi:hotel
+cards:
+  - id: 75533eeecc5c4622b0a421ca31805aa5  # Automatically created id
+    type: glance
+    show_state: false
+    column_width: calc(100% / 4)
+    entities:
+      - entity: light.bedroom
+        name: Bedroom
+        tap_action:
+          action: toggle
+        hold_action:
+          action: navigate
+          navigation_path: /lovelace/lights
+      - entity: light.closet
+        name: Closet
+        tap_action:
+          action: toggle
+        hold_action:
+          action: navigate
+          navigation_path: /lovelace/lights
+      - entity: script.shower_time
+        name: Shower
+        tap_action:
+          action: toggle
+        hold_action:
+          action: navigate
+          navigation_path: /lovelace/lights
+      - entity: input_boolean.go_to_sleep
+        name: Sleep
+        tap_action:
+          action: toggle

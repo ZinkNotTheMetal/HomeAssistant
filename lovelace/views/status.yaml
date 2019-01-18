@@ -1,0 +1,151 @@
+---
+path: status  # Automatically created id
+title: Status
+icon: mdi:settings
+cards:
+  - type: vertical-stack
+    cards:
+      - id: bef75647a8a54cbe9bd3b9329d46e2f9  # Automatically created id
+        type: entities
+        title: Connectivity
+        show_header_toggle: false
+        entities:
+          - entity: sensor.hallway_nest_protect_smoke_status
+            name: Smoke Status
+            icon: mdi:fire
+          - entity: sensor.hallway_nest_protect_co_status
+            name: Carbon Monoxide Status
+            icon: mdi:gas-cylinder
+          - device_tracker.life360_kelsey
+          - device_tracker.life360_william
+          - sensor.main_shade_position
+          - sensor.kitchen_shade_position
+          - sensor.pi_hole_ads_blocked_today
+          - sensor.pi_hole_ads_percentage_blocked_today
+          - binary_sensor.blind_hub
+          - binary_sensor.hallway_nest_protect_online
+          - zwave.aeotec_zw090_z_stick_gen5_us
+          - media_player.bathroom
+          - media_player.tv_room
+          - entity: sensor.crime_reports
+            name: Crime Reports (1/2 mile)
+            icon: mdi:file-chart
+          - sensor.stats_tv
+      - type: entities
+        title: Home Assistant
+        show_header_toggle: false
+        entities:
+          - entity: sensor.installed_version
+            icon: mdi:harddisk
+          - entity: sensor.hassio_version
+            icon: mdi:package-up
+          - entity: sensor.sensor_count
+            name: Number of Sensors
+            icon: mdi:counter
+          - entity: sensor.lights_count
+            name: Number of Lights
+            icon: mdi:lightbulb-on
+      - id: 7f86f912a32b4e588fef14494727aac2  # Automatically created id
+        type: entities
+        title: Climate
+        show_header_toggle: false
+        entities:
+          - sensor.condo_humidity
+          - sensor.condo_temperature
+          - sensor.kitchen_temperature
+  - type: vertical-stack
+    cards:
+      - type: entities
+        title: NAS
+        show_header_toggle: false
+        entities:
+          - binary_sensor.condo_nas
+          - sensor.status_smart_sda
+          - sensor.status_smart_sdb
+          - sensor.volume_used_volume_1
+      - type: history-graph
+        title: Internet History
+        hours_to_show: 48
+        refresh_interval: 600       
+        entities:
+          - sensor.speedtest_upload
+          - sensor.speedtest_download
+      - id: e2e5acd7d0f14d689dd903e248121bca  # Automatically created id
+        type: entities
+        title: Internet
+        show_header_toggle: false
+        entities:
+          - sensor.speedtest_download
+          - sensor.speedtest_upload
+          - sensor.speedtest_ping
+      - id: c78572bad9874d0f9800371cb6f05ca5  # Automatically created id
+        type: entities
+        title: Raspberry Pi 3 B+
+        show_header_toggle: false
+        entities:
+          - sensor.processor_use
+          - sensor.memory_free
+          - sensor.memory_use
+          - sensor.load_1m
+          - sensor.load_5m
+          - sensor.load_15m
+          - sensor.disk_use_percent_home
+          - sensor.swap_use_percent
+          - sensor.last_boot
+  - type: vertical-stack
+    cards: 
+      - id: df9a207e81ff464e8dd643eef1637200  # Automatically created id
+        type: entities
+        title: Travel Times
+        show_header_toggle: false
+        entities:
+          - sensor.work_travel_time
+          - sensor.costco_travel_time
+          - sensor.bna_travel_time
+          - sensor.tsa_wait_time
+          - sensor.game_night_travel_time
+          - sensor.mqy_travel_time
+      - type: entities
+        title: Currencies
+        show_header_toggle: false
+        entities:
+          - entity: sensor.usd_2
+            name: Dollar to British Pound Sterling
+            icon: mdi:currency-gbp
+          - entity: sensor.usd
+            name: Dollar to Canadian Dollar
+            icon: mdi:currency-usd
+          - entity: sensor.usd_3
+            name: Dollar to Euro
+            icon: mdi:currency-eur
+      - type: entities
+        title: Batteries
+        show_header_toggle: false
+        entities:
+          - entity: sensor.mi_flora_battery
+            name: Plant 1
+            icon: mdi:battery-bluetooth
+          - entity: sensor.mi_flora_battery_2
+            name: Plant 2
+            icon: mdi:battery-bluetooth
+          - sensor.williams_iphone_battery_level
+          - sensor.kelsey_s_iphone_battery_level
+          - entity: sensor.hallway_nest_protect_co_status
+            name: Nest Battery Level (3x AAA)
+            icon: mdi:battery
+      - type: entities
+        title: Switches
+        show_header_toggle: false
+        entities:
+          - switch.boosted_charger
+      - id: 086a6653cdbb4e5689a4d98beb3f5803  # Automatically created id
+        type: entities
+        title: Overrides
+        show_header_toggle: false
+        entities:
+          - input_boolean.go_to_sleep
+          - input_boolean.upstairs
+          - input_boolean.guest_override
+          - input_boolean.blind_override
+          - input_boolean.vacation_mode
+          - input_boolean.authorized_person

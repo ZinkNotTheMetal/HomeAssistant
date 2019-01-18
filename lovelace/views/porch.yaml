@@ -1,0 +1,35 @@
+---
+path: porch  # Automatically created id
+title: Porch
+icon: mdi:flower
+cards:
+  - type: sensor
+    entity: sensor.mi_flora_light_intensity
+    name: Plant 1 - Light Level
+    graph: line
+  - type: sensor
+    entity: sensor.mi_flora_light_intensity_2
+    name: Plant 2 - Light Level
+    graph: line
+  - type: sensor
+    entity: sensor.mi_flora_moisture
+    name: Plant 1 - Moisture Level
+    graph: line
+    icon: mdi:water
+  - type: sensor
+    entity: sensor.mi_flora_moisture_2
+    name: Plant 2 - Moisture Level
+    icon: mdi:water
+    graph: line
+  - type: sensor
+    entity: sensor.mi_flora_conductivity
+    name: Plant 1 - Conductivity Level
+    graph: line
+  - type: sensor
+    entity: sensor.mi_flora_conductivity_2
+    name: Plant 2 - Conductivity Level
+    graph: line
+  - type: entities
+    entities:
+      - sensor.mi_flora_temperature
+      - sensor.mi_flora_temperature_2

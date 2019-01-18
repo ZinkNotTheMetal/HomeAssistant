@@ -1,0 +1,180 @@
+---
+path: overview
+title: Overview
+icon: mdi:home-assistant
+cards:
+  - type: vertical-stack
+    cards:
+      - type: glance
+        show_state: false
+        column_width: calc(100% / 4)
+        entities:
+          - entity: lock.august_asl_03_smart_lock_locked
+            tap_action:
+              action: toggle
+            hold_action:
+              action: more-info
+            name: Door
+          - entity: binary_sensor.patio_door
+            name: Back
+            tap_action:
+              action: more-info
+          - entity: media_player.lg_webos_smart_tv
+            name: TV
+            tap_action:
+              action: toggle
+            hold_action:
+              action: more-info
+          - entity: switch.pc
+            name: PC
+            tap_action:
+              action: toggle
+            hold_action:
+              action: more-info
+      - type: glance
+        show_state: false
+        column_width: calc(100% / 4)
+        entities:
+          - entity: light.hallway
+            icon: mdi:lightbulb
+            tap_action:
+              action: toggle
+            hold_action:
+              action: navigate
+              navigation_path: /lovelace/lights
+            name: Entry
+          - entity: light.living_room
+            name: Living
+            icon: mdi:lightbulb
+            tap_action:
+              action: toggle
+            hold_action:
+              action: navigate
+              navigation_path: /lovelace/lights
+          - entity: light.bedroom
+            name: Bedroom
+            icon: mdi:lightbulb
+            tap_action:
+              action: toggle
+            hold_action:
+              action: navigate
+              navigation_path: /lovelace/lights
+          - entity: light.kitchen
+            name: Kitchen
+            icon: mdi:lightbulb
+            tap_action:
+              action: toggle
+            hold_action:
+              action: navigate
+              navigation_path: /lovelace/lights
+      - type: glance
+        show_state: true
+        column_width: calc(100% / 4)
+        entities:
+          - entity: sensor.main_shade_position
+            name: Main Shade
+            tap_action:
+              action: call-service
+              service: script.raise_main_blinds
+            hold_action:
+              action: call-service
+              service: script.lower_main_blinds
+          - entity: sensor.kitchen_shade_position
+            name: Kitchen Shade
+            tap_action:
+              action: call-service
+              service: script.raise_kitchen_blinds
+            hold_action:
+              action: call-service
+              service: script.lower_kitchen_blinds
+      - type: custom:mini-media-player
+        entity: media_player.tv_room
+        name: SONOS
+        hide_power: true
+        artwork: cover
+        show_progress: true
+        sonos_grouping:
+          - entity_id: media_player.tv_room
+            name: TV Room
+          - entity_id: media_player.bathroom
+            name: Bathroom
+  - type: vertical-stack
+    cards:
+      - id: 46961635462048c996587f7ea3db8feb  # Automatically created id
+        type: weather-forecast
+        title: Weather
+        entity: weather.openweathermap
+      - id: bc9daf3c39c04d66a3fcaf81e41b4942  # Automatically created id
+        type: iframe
+        aspect_ratio: 75%
+        url: https://embed.windy.com/embed2.html?lat=36.076&lon=-86.814&zoom=7&level=surface&overlay=wind&menu=&message=true&marker=true&calendar=&pressure=true&type=map&location=coordinates&detail=&detailLat=36.120&detailLon=-86.814&metricWind=kt&metricTemp=%C2%B0F&radarRange=-1
+  - type: vertical-stack
+    cards:
+      - id: ad3a584234024c138264a636d2e19f85  # Automatically created id
+        type: thermostat
+        entity: climate.condo
+        name: HVAC
+      - type: glance
+        show_state: false
+        column_width: calc(100% / 4)
+        entities:
+          - entity: script.resume_ac
+            name: Resume
+            tap_action:
+              action: toggle
+          - entity: script.set_ac_home
+            name: Home
+            tap_action:
+              action: toggle
+          - entity: script.set_ac_away
+            name: Away
+            tap_action:
+              action: toggle
+          - entity: script.set_ac_sleep
+            name: Sleep
+            tap_action:
+              action: toggle
+        aspect_ratio: 100%
+      - id: c4e87938182444d19ad8bac260c5d528  # Automatically created id
+        type: map
+        entities:
+          - zone.home
+          - zone.school
+          - device_tracker.life360_william
+          - device_tracker.life360_kelsey
+  - type: vertical-stack
+    cards:
+      - type: gauge
+        entity: sensor.condo_humidity
+        name: Indoor Humidity
+        min: 0
+        max: 100
+        severity: 
+          red: 0
+          green: 30
+          yellow: 65
+      - type: gauge
+        entity: sensor.owm_humidity
+        name: Outdoor Humidity
+        min: 0
+        max: 100
+      - type: gauge
+        entity: sensor.cold_flu_forecasted_average
+        name: Cold & Flu
+        unit: 'idx'
+        min: 0
+        max: 12.0
+        severity:
+          green: 0
+          yellow: 4.9
+          red: 9.8
+      - id: 35fbffdc40a14191a29a1d56d2c9a8b0  # Automatically created id
+        type: entities
+        title: Overrides
+        show_header_toggle: false
+        entities:
+          - input_boolean.upstairs
+          - input_boolean.guest_override
+          - input_boolean.blind_override
+          - input_boolean.vacation_mode
+          - input_boolean.authorized_person

@@ -1,0 +1,39 @@
+---
+path: kitchen  # Automatically created id
+title: Kitchen
+icon: mdi:fridge
+cards:
+  - id: 4bb3b38866de4f01991ffa662c2f2bfc  # Automatically created id
+    type: glance
+    column_width: calc(100% / 5)
+    entities:
+      - light.kitchen
+      - media_player.tv_room
+      - entity: binary_sensor.patio_door
+        name: Back Door
+      - sun.sun
+      - entity: script.join_sonos
+        name: Join
+        tap_action:
+          action: toggle
+  - id: 891e2e7291ac4d1c95aa7e57313cfa45  # Automatically created id
+    type: glance
+    column_width: calc(100% / 4)
+    show_state: false
+    entities:
+      - entity: script.lower_kitchen_blinds
+        name: Lower (Kitchen)
+        tap_action:
+          action: toggle
+      - entity: script.raise_kitchen_blinds
+        name: Raise (Kitchen)
+        tap_action:
+          action: toggle
+      - entity: script.lower_main_blinds
+        name: Lower (Main)
+        tap_action:
+          action: toggle
+      - entity: script.raise_main_blinds
+        name: Raise (Main)
+        tap_action:
+          action: toggle

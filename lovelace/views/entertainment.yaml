@@ -1,0 +1,38 @@
+---
+path: entertainment  # Automatically created id
+title: Entertainment
+icon: mdi:television
+cards:
+  - type: vertical-stack
+    cards:
+      - id: a7b4737409ec4fa3be9da3316b2d5124  # Automatically created id
+        type: entity-filter
+        entities:
+          - media_player.lg_webos_smart_tv
+        state_filter:
+          - off
+        card:
+          type: media-control
+          entity: media_player.lg_webos_smart_tv
+      - id: 40fbdf8bfb884292a8b4ecd3c0f140c6  # Automatically created id
+        type: entity-filter
+        entities:
+          - media_player.living_room
+        state_filter:
+          - off
+        card:
+          type: media-control
+          entity: media_player.living_room
+  - type: vertical-stack
+    cards:
+      - type: custom:mini-media-player
+        entity: media_player.tv_room
+        name: SONOS
+        hide_power: true
+        artwork: cover
+        show_progress: true
+        sonos_grouping:
+          - entity_id: media_player.tv_room
+            name: TV Room
+          - entity_id: media_player.bathroom
+            name: Bathroom
