@@ -183,9 +183,10 @@ views:
             title: Overrides
             show_header_toggle: false
             entities:
-              - input_boolean.vacation_mode
+              - input_boolean.upstairs
               - input_boolean.guest_override
               - input_boolean.blind_override
+              - input_boolean.vacation_mode
               - input_boolean.authorized_person
 ##  Floor Plan
   - path: floor_plan  # Automatically created id
@@ -638,6 +639,7 @@ views:
               - sensor.load_15m
               - sensor.disk_use_percent_home
               - sensor.swap_use_percent
+              - sensor.last_boot
       - type: vertical-stack
         cards: 
           - id: df9a207e81ff464e8dd643eef1637200  # Automatically created id
@@ -689,7 +691,9 @@ views:
             title: Overrides
             show_header_toggle: false
             entities:
-              - input_boolean.vacation_mode
+              - input_boolean.go_to_sleep
+              - input_boolean.upstairs
               - input_boolean.guest_override
               - input_boolean.blind_override
-              - input_boolean.go_to_sleep
+              - input_boolean.vacation_mode
+              - input_boolean.authorized_person

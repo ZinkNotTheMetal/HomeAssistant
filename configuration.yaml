@@ -93,6 +93,26 @@ calendar: !include homeassistant/calendars.yaml
 #scene: !include scenes.yaml
 
 ios:
+  push:
+    categories:
+      - name: Home
+        identifier: 'home'
+        actions:
+          - identifier: 'LOCK_DOOR'
+            title: 'Lock Door'
+            activationMode: 'background'
+            authenticationRequired: no
+            destructive: yes
+          - identifier: 'RAISE_BLINDS'
+            title: 'Raise Shades'
+            activationMode: 'background'
+            authenticationRequired: no
+            destructive: no
+          - identifier: 'UPSTAIRS'
+            title: 'Go Upstairs'
+            activationMode: 'background'
+            authenticationRequired: no
+            destructive: no
 
 ifttt:
   key: !secret ifttt_api_key

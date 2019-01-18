@@ -18,3 +18,7 @@
     name: 'Authorized Entry'
     initial: off
     icon: mdi:human-male-female
+  upstairs:
+    name: 'Upstairs'
+    initial: off
+    icon: mdi:stairs
