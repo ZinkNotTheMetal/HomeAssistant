@@ -113,6 +113,20 @@ ios:
             activationMode: 'background'
             authenticationRequired: no
             destructive: no
+      - name: Upstairs
+        identifier: 'upstairs'
+        actions:
+          - identifier: 'UNLOCK_DOOR'
+            title: 'Unlock door'
+            activationMode: 'background'
+            authenticationRequired: no
+            destructive: no
+          - identifier: 'DOWNSTAIRS'
+            title: 'Go Downstairs'
+            activationMode: 'background'
+            authenticationRequired: no
+            destructive: no
+
 
 ifttt:
   key: !secret ifttt_api_key
