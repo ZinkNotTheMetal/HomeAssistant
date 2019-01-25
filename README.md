@@ -42,9 +42,12 @@ If you found this extremely helpful, feel free to reach out
 
 
 ### Equipment running Home Assistant:
-- [Raspberry Pi 3 B+](http://a.co/d/c4m30oN)
-- [Raspberry Pi Zero W]()
-- [64GB SD Card](http://a.co/d/iygZSba)
+- ~~[Raspberry Pi 3 B+](http://a.co/d/c4m30oN)~~
+- ~~[64GB SD Card](http://a.co/d/iygZSba)~~
+- [NUC 8-i3 Short](https://www.amazon.com/gp/product/B07GX54W33/ref=ppx_yo_dt_b_asin_title_o00__o00_s00?ie=UTF8&psc=1)
+- [8GB RAM](https://www.amazon.com/gp/product/B019FRD3SE/ref=ppx_yo_dt_b_asin_title_o00__o00_s00?ie=UTF8&psc=1)
+- [128GB NVME Drive](https://www.amazon.com/Crucial-500GB-NAND-NVMe-PCIe/dp/B07J2WBKXF/ref=sr_1_2_sspa?s=electronics&ie=UTF8&qid=1548438559&sr=1-2-spons&keywords=128+gb+nvme+m.2+ssd&psc=1)
+- [Raspberry Pi Zero W (PiHole)](https://www.raspberrypi.org/products/raspberry-pi-zero-w/)
 
 ### Installation:
 * Computer
