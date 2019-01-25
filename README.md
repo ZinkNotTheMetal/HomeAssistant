@@ -53,18 +53,19 @@ If you found this extremely helpful, feel free to reach out
 * Computer
   * [Etcher](https://etcher.io/) for burning an image to Micro SD (installation following Hass.io documenation)
   * [Sweeet Home 3D](http://www.sweethome3d.com/) for Floor plan picture
-  * [PuTTY](https://www.putty.org/) to SSH into RPi when Home Assistant doesn't respond or to check configs
+  * [PuTTY](https://www.putty.org/) to SSH into NUC
   * [Visual Studio Code](https://code.visualstudio.com/) text editor of choice
-* Raspberry Pi
-  * [Hass.io](https://www.home-assistant.io/hassio/installation/) I used ethernet for speed, but if you need Wifi [check my instructions here](https://github.com/ZinkNotTheMetal/HomeAssistant/wiki/Hass.io-RPi-3-B--Wifi-Connection)
-  * [Node-Red](https://nodered.org/) (using Hassio addins)
-  * [Log Viewer](https://github.com/hassio-addons/addon-log-viewer) (using Hassio addins)
-  * [SSH server](https://github.com/hassio-addons/addon-ssh) (using Hassio addins) to utilize I use [PuTTY](https://www.putty.org/) for Windows
+* NUC 8 - i3 Short
+  * Migration from Raspberry Pi to NUC(https://github.com/ZinkNotTheMetal/HomeAssistant/wiki/Moving-from-Raspberry-Pi-to-NUC-(Docker)-for-HomeAssistant---Hass.io-with-Z-Wave)
+
+* ~~Raspberry Pi~~
+  * ~~[Hass.io](https://www.home-assistant.io/hassio/installation/) I used ethernet for speed, but if you need Wifi [check my instructions here](https://github.com/ZinkNotTheMetal/HomeAssistant/wiki/Hass.io-RPi-3-B--Wifi-Connection)~~
+* Additional Hass.io Addons
   * [Samba Share](https://github.com/home-assistant/hassio-addons/tree/master/samba) (using Hassio addins)
-  * [Duck DNS & Let's Encrypt](https://www.home-assistant.io/addons/duckdns/) (using Hassio addins)
-  * [Pi-hole](https://pi-hole.net/) installed on the Raspberry Pi Zero W [instructions](https://learn.adafruit.com/pi-hole-ad-blocker-with-pi-zero-w/overview-adafruit2)
+  * [Duck DNS & Let's Encrypt](https://www.home-assistant.io/addons/duckdns/) (using Hassio addins)  
 * Lovelace (Custom Components)
   * [Custom Mini Media Player](https://github.com/kalkih/mini-media-player) for SONOS speakers
+* [Pi-hole](https://pi-hole.net/) installed on the Raspberry Pi Zero W [instructions](https://learn.adafruit.com/pi-hole-ad-blocker-with-pi-zero-w/overview-adafruit2)
 
 ## [Devices](#devices)
 
