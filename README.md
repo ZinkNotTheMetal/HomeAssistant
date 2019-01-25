@@ -56,7 +56,7 @@ If you found this extremely helpful, feel free to reach out
   * [PuTTY](https://www.putty.org/) to SSH into NUC
   * [Visual Studio Code](https://code.visualstudio.com/) text editor of choice
 * NUC 8 - i3 Short
-  * Migration from Raspberry Pi to NUC(https://github.com/ZinkNotTheMetal/HomeAssistant/wiki/Moving-from-Raspberry-Pi-to-NUC-(Docker)-for-HomeAssistant---Hass.io-with-Z-Wave)
+  * [Migration from Raspberry Pi to NUC](https://github.com/ZinkNotTheMetal/HomeAssistant/wiki/Moving-from-Raspberry-Pi-to-NUC-(Docker)-for-HomeAssistant---Hass.io-with-Z-Wave)
 
 * ~~Raspberry Pi~~
   * ~~[Hass.io](https://www.home-assistant.io/hassio/installation/) I used ethernet for speed, but if you need Wifi [check my instructions here](https://github.com/ZinkNotTheMetal/HomeAssistant/wiki/Hass.io-RPi-3-B--Wifi-Connection)~~
