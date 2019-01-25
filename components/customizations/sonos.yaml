@@ -1,0 +1,9 @@
+  
+script.play_spotify_sonos:
+  friendly_name: "Play music"
+  icon: mdi:play-circle-outline
+media_player.tv_room:
+  icon: mdi:speaker  
+script.join_sonos:
+  friendly_name: "Join Sonos"
+  icon: mdi:speaker

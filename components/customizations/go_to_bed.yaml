@@ -1,0 +1,3 @@
+script.go_to_bed:
+  friendly_name: "Go to sleep"
+  icon: mdi:hotel

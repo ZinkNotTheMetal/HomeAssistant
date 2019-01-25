@@ -1,0 +1,4 @@
+authorized_entry:
+  name: 'Authorized Entry'
+  initial: off
+  icon: mdi:human-male-female

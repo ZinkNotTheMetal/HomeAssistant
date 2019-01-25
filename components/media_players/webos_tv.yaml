@@ -1,0 +1,7 @@
+- platform: webostv
+  host: !secret tv_ip_address
+  #other settings
+  turn_on_action:
+    service: wake_on_lan.send_magic_packet
+    data:
+      mac: !secret tv_mac_address

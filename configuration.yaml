@@ -9,11 +9,9 @@ homeassistant:
   # metric for Metric, imperial for Imperial
   unit_system: imperial
   # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-  time_zone: America/Chicago
+  time_zone: !secret home_time_zone
   # Customization file
-  customize: !include homeassistant/customize.yaml
-
-  #packages: !include_dir_named components/packages
+  customize: !include_dir_merge_named components/customizations
 
 # Enables the frontend
 frontend:
@@ -22,26 +20,16 @@ frontend:
 lovelace:
   mode: yaml
 
+panel_iframe: !include components/panel.yaml
+
 # Enables configuration UI
 config:
 
-panel_iframe:
-  nodered_flows:
-    title: 'Node-RED Flows'
-    url: !secret node_red_url
-    icon: mdi:nodejs
-#  influx_db:
-#    title: 'InfluxDB'
-#    url: 'http://hassio.local:8888'
-#    icon: mdi:chart-areaspline
-    
+# SSL Enabled using (Hass.io plugin - Duck DNS)
 http:
   base_url: !secret ha_base_url
   ssl_certificate: /ssl/fullchain.pem
   ssl_key: /ssl/privkey.pem
-  # Secrets are defined in the file secrets.yaml
-  # api_password: !secret homeassistant_api_password
-  # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
 
 # Checks for available updates
 # Note: This component will send some information about your system to
@@ -55,9 +43,6 @@ updater:
 # Discover some devices automatically
 discovery:
 
-# Allows you to issue voice commands from the frontend in enabled browsers
-conversation:
-
 # Enables support for tracking state changes over time
 history:
 
@@ -67,34 +52,35 @@ logbook:
 # Enables a map showing the location of tracked devices
 map:
 
-# Track the sun
-sun:
-
-# Text to speech
-tts:
-  - platform: google
-
 # Cloud
 cloud:
 
-group: !include homeassistant/groups.yaml
-automation: !include homeassistant/automations.yaml
-script: !include homeassistant/scripts.yaml
-notify: !include homeassistant/notify.yaml
-zone: !include homeassistant/zones.yaml
-device_tracker: !include homeassistant/device_tracker.yaml
-sensor: !include homeassistant/sensors.yaml
-media_player: !include homeassistant/media_players.yaml
-switch: !include homeassistant/switches.yaml
-binary_sensor: !include homeassistant/binary_sensors.yaml
-input_boolean: !include homeassistant/input_booleans.yaml
-history_graph: !include homeassistant/history_graphs.yaml
-calendar: !include homeassistant/calendars.yaml
+sun:
+
+#######################################################################################
+#                                                                                     #
+#                       COMPONENTS                                                    #
+#                                                                                     #
+#######################################################################################
+# Using IFTTT for quite a few components that support this more than home assistant
+#
+# https://www.home-assistant.io/components/ifttt/
+ifttt:
+  key: !secret ifttt_api_key
+#######################################################################################
+
+#######################################################################################
+# HVAC system
+#
+# https://www.home-assistant.io/components/ecobee/
+ecobee:
+  api_key: !secret ecobee_api_key
+#######################################################################################
 
 
-## Do not use scenes - prefer scripts w/ customize
-#scene: !include scenes.yaml
-
+#######################################################################################
+# Customized iOS push Notifications for Home Assistant / Node-Red
+# TODO: File Structure
 ios:
   push:
     categories:
@@ -129,32 +115,140 @@ ios:
             activationMode: 'background'
             authenticationRequired: no
             destructive: no
+#######################################################################################
 
 
-ifttt:
-  key: !secret ifttt_api_key
-
-ecobee:
-  api_key: !secret ecobee_api_key
-
-#https://www.home-assistant.io/components/sensor.nest/
+#######################################################################################
+# Nest Components
+# - smoke detector / CO detector
 nest:
   client_id: !secret nest_client_id
   client_secret: !secret nest_client_secret
+#######################################################################################
 
-wemo:
 
-weather: !include_dir_list weather/
+#######################################################################################
+# The input_boolean component allows the user to define boolean values that
+# can be controlled via the frontend and can be used within conditions of
+# automation. This can for example be used to disable or enable certain
+# automations.
+#
+# https://www.home-assistant.io/components/input_boolean/
+#
+input_boolean: !include_dir_merge_named components/input_booleans
+#######################################################################################
 
-wake_on_lan: # enables `wake_on_lan` domain
 
-zwave:
-  usb_path: /dev/ttyACM0
-  network_key: !secret z_wave_network_key
-  polling_interval: 10000
-  autoheal: false
+#######################################################################################
+# This handles my automations within Home Assistant
+#   almost all my automations are handled within Node-Red
+# https://www.home-assistant.io/docs/automation/
+#
+automation: !include_dir_merge_list components/automations
+#######################################################################################
 
+
+#######################################################################################
+# Binary sensors in Home Assistant
+#
+# https://www.home-assistant.io/components/binary_sensor/
+binary_sensor: !include_dir_list components/binary_sensors
+#######################################################################################
+
+
+#######################################################################################
+# Tracking all devices through Home Assistant
+#  - Bluetooth
+#  - Router
+#  - GPS
+# https://www.home-assistant.io/components/device_tracker/
+device_tracker: !include components/device_tracker.yaml
+#######################################################################################
+
+
+#######################################################################################
+# Asus Router utilized for device_tracker
+#
+# https://www.home-assistant.io/components/asuswrt/
 asuswrt:
   host: !secret router_ip_address
   username: !secret router_username
   password: !secret router_password
+#######################################################################################
+
+
+#######################################################################################
+# Media players in Home Assistant
+#
+# https://www.home-assistant.io/components/media_player/
+media_player: !include_dir_merge_list components/media_players
+#######################################################################################
+
+#######################################################################################
+# All custom scripts that do multiple actions with one call
+#
+# https://www.home-assistant.io/components/script
+script: !include_dir_merge_named components/scripts
+#######################################################################################
+
+
+#######################################################################################
+# All Sensors that are in Home Assistant
+#
+# https://www.home-assistant.io/components/sensor
+sensor: !include_dir_merge_list components/sensors
+#######################################################################################
+
+
+#######################################################################################
+# Custom Switches in Home Assistant
+#
+# https://www.home-assistant.io/components/switch/
+switch: !include_dir_merge_list components/switches
+#######################################################################################
+
+#######################################################################################
+# Weather configuration in Home Assistant
+#
+# https://www.home-assistant.io/components/weather/
+weather: !include_dir_list components/weather
+#######################################################################################
+
+#######################################################################################
+# WeMo Plugs and Misc
+#
+# https://www.home-assistant.io/components/wemo/
+wemo:
+#######################################################################################
+
+
+#######################################################################################
+# Enables Wake on LAN domain
+#
+# https://www.home-assistant.io/components/wake_on_lan/
+wake_on_lan:
+#######################################################################################
+
+
+#######################################################################################
+# Zones allow you to specify certain regions on earth (for now).
+#
+# https://www.home-assistant.io/components/zone/
+#
+zone: !include_dir_merge_list components/zones
+#######################################################################################
+
+
+
+
+
+
+
+#######################################################################################
+#
+#                      NOT USED COMPONENTS
+#
+#######################################################################################
+#Not Used
+group:
+scene:

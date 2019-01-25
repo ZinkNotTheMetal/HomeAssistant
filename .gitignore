@@ -20,3 +20,13 @@ life360.conf
 home-assistant_v2.db-shm
 home-assistant_v2.db-wal
 lovelace/views/travel.yaml
+components/sensors/travel_time_bna.yaml
+components/sensors/travel_time_costco.yaml
+components/sensors/travel_time_game_night.yaml
+components/sensors/travel_time_mqy.yaml
+components/zones/bna.yaml
+components/zones/chipotle.yaml
+components/zones/costco.yaml
+components/zones/game_night.yaml
+components/zones/mqy.yaml
+components/zones/yoga.yaml

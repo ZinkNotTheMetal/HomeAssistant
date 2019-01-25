@@ -1,0 +1,13 @@
+####################################################
+#                                                  #
+#                    SCRAPE                        #
+#                                                  #
+####################################################
+- platform: scrape
+  resource: !secret tsa_airport_information_url
+  select: !secret tsa_selector
+  name: TSA wait time
+- platform: scrape
+  resource: !secret pe_url
+  select: !secret pe_availability_selector
+  name: PE Availability

@@ -1,0 +1,3 @@
+script.shower_time:
+  friendly_name: "Shower Time"
+  icon: mdi:shower-head

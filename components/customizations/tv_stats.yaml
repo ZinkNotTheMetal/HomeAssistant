@@ -1,0 +1,3 @@
+sensor.stats_tv:
+  icon: mdi:theater
+  friendly_name: 'TV (7 days)'

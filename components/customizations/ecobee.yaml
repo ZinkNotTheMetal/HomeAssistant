@@ -1,0 +1,12 @@
+  script.set_ac_sleep:
+    friendly_name: "Set AC to Sleep"
+    icon: mdi:air-conditioner
+  script.set_ac_away:
+    friendly_name: "Set AC to Away"
+    icon: mdi:air-conditioner
+  script.resume_ac:
+    friendly_name: "Resume AC"
+    icon: mdi:air-conditioner
+  script.set_ac_home:
+    friendly_name: "Set AC to Home"
+    icon: mdi:air-conditioner

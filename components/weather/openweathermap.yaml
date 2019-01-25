@@ -1,3 +1,4 @@
+# https://www.home-assistant.io/components/sensor.openweathermap/
 platform: openweathermap
 api_key: !secret openweather_api_key
 latitude: !secret home_latitude

@@ -1,0 +1,3 @@
+switch.pc:
+  friendly_name: "PC"
+  icon: mdi:desktop-classic

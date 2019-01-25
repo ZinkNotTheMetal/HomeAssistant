@@ -1,0 +1,26 @@
+set_ac_away:
+  sequence:
+    - service: climate.set_hold_mode
+      data:
+        entity_id: climate.condo
+        hold_mode: away
+set_ac_sleep:
+  sequence:
+    - service: climate.ecobee_resume_program
+      entity_id: climate.condo
+    - service: climate.set_hold_mode
+      data:
+        entity_id: climate.condo
+        hold_mode: sleep
+resume_ac:
+  sequence:
+    - service: climate.ecobee_resume_program
+      entity_id: climate.condo
+set_ac_home:
+  sequence:
+    - service: climate.ecobee_resume_program
+      entity_id: climate.condo
+    - service: climate.set_hold_mode
+      data:
+        entity_id: cilmate.condo
+        hold_mode: home

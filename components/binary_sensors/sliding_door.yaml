@@ -1,0 +1,7 @@
+---
+platform: template
+sensors: 
+  patio_door:
+    friendly_name: 'Sliding glass door'
+    device_class: door
+    value_template: "{{ is_state('sensor.hank_hkzw_dws01_door_window_sensor_access_control_2', '22') }}"

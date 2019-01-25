@@ -1,0 +1,5 @@
+# Allergy Flu Index on main screen
+- platform: pollen
+  zip_code: !secret home_zipcode
+  monitored_conditions:
+    - disease_average_forecasted

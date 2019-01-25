@@ -1,0 +1,30 @@
+raise_kitchen_blinds:
+  sequence:
+    - service: ifttt.trigger
+      data:
+        event: 'kitchen_blind_up_request'
+lower_kitchen_blinds:
+  sequence:
+    - service: ifttt.trigger
+      data:
+        event: 'kitchen_blind_down_request'
+raise_main_blinds:
+  sequence:
+    - service: ifttt.trigger
+      data:
+        event: 'main_blind_up_request'
+lower_main_blinds:
+  sequence:
+    - service: ifttt.trigger
+      data:
+        event: 'main_blind_down_request'
+raise_all_blinds:
+  sequence:
+    - service: ifttt.trigger
+      data:
+        event: 'all_blinds_up_request'
+lower_all_blinds:
+  sequence:
+    - service: ifttt.trigger
+      data:
+        event: 'all_blinds_down_request'

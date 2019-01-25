@@ -1,0 +1,5 @@
+- name: Publix
+  latitude: !secret publix_latitude
+  longitude: !secret publix_longitude
+  radius: 150
+  icon: mdi:cart

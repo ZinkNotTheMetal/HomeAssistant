@@ -1,0 +1,5 @@
+- platform: waze_travel_time
+  name: Work Travel Time
+  origin: !secret home_address
+  destination: !secret work_address
+  region: 'US'

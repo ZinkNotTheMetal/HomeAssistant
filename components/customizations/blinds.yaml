@@ -1,0 +1,27 @@
+# Kitchen Shade
+script.raise_kitchen_blinds:
+  friendly_name: "Raise Kitchen Blinds"
+  icon: mdi:blinds
+script.lower_kitchen_blinds:
+  friendly_name: "Lower Kitchen Blinds"
+  icon: mdi:blinds
+
+
+# Main Shade
+script.lower_main_blinds:
+  friendly_name: "Lower Main Blinds"
+  icon: mdi:blinds
+script.raise_main_blinds:
+  friendly_name: "Raise Main Blinds"
+  icon: mdi:blinds
+
+
+# All Shades
+script.raise_all_blinds:
+  friendly_name: "Raise All Blinds"
+  icon: mdi:blinds    
+script.lower_all_blinds:
+  friendly_name: "Lower All Blinds"
+  icon: mdi:blinds
+
+    

@@ -1,0 +1,24 @@
+- platform: template
+  sensors:     
+    main_shade_position:
+      friendly_name: Main Shade Position
+      icon_template: mdi:blinds
+      value_template: >
+        {% if states.sensor.shade_positions.attributes.shadeData[1].positions.position1 == 65535 %}
+          Open
+        {% elif states.sensor.shade_positions.attributes.shadeData[1].positions.position1 == 0 %}
+          Closed
+        {% else %}
+          {{ ((1 - (states.sensor.shade_positions.attributes.shadeData[1].positions.position1 / 65535)) * 100) | round(0) }}%
+        {% endif %}
+    kitchen_shade_position:
+      friendly_name: Kitchen Shade Position
+      icon_template: mdi:blinds
+      value_template: >
+        {% if states.sensor.shade_positions.attributes.shadeData[0].positions.position1 == 65535 %}
+          Open
+        {% elif states.sensor.shade_positions.attributes.shadeData[0].positions.position1 == 0 %}
+          Closed
+        {% else %}
+          {{ ((1 - (states.sensor.shade_positions.attributes.shadeData[0].positions.position1 / 65535)) * 100) | round(0) }}%
+        {% endif %}

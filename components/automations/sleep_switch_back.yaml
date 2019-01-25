@@ -1,0 +1,12 @@
+- id: sleep_switch
+  alias: Switch to off after 10 seconds
+  initial_state: 'on'
+  trigger:
+    platform: state
+    entity_id: input_boolean.go_to_sleep
+    from: 'off'
+    to: 'on'
+  action:
+    - delay: '00:00:10'
+    - service: homeassistant.turn_off
+      entity_id: input_boolean.go_to_sleep

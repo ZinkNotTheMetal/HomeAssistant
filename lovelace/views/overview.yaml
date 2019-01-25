@@ -177,4 +177,4 @@ cards:
           - input_boolean.guest_override
           - input_boolean.blind_override
           - input_boolean.vacation_mode
-          - input_boolean.authorized_person
+          - input_boolean.authorized_entry

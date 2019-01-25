@@ -1,0 +1,8 @@
+---
+platform: template
+sensors: 
+  blind_hub:
+    friendly_name: 'Blind Hub Status'
+    device_class: connectivity
+    value_template: "{{ is_state('device_tracker.powerview_hub', 'home') }}"
+  

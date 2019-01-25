@@ -1,4 +1,4 @@
-title: Home
+title: !secret home_name
 
 background: center / cover no-repeat url("/local/city-night.jpg") fixed
 
@@ -6,12 +6,7 @@ resources: !include_dir_list lovelace/resources
 
 views:
   - !include lovelace/views/overview.yaml
- # - !include lovelace/views/floorplan.yaml
- # - !include lovelace/views/kitchen.yaml
- # - !include lovelace/views/porch.yaml
- # - !include lovelace/views/bedroom.yaml
   - !include lovelace/views/entertainment.yaml
   - !include lovelace/views/lights.yaml
-  - !include lovelace/views/bathroom.yaml
   - !include lovelace/views/travel.yaml
   - !include lovelace/views/status.yaml

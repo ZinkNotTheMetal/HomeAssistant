@@ -1,0 +1,7 @@
+- platform: currencylayer
+  api_key: !secret currency_api_key
+  base: USD
+  quote:
+    - EUR
+    - GBP
+    - CAD
