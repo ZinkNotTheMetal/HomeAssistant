@@ -145,22 +145,36 @@ If you found this extremely helpful, feel free to reach out
 All Automations are using Node-Red (using Hassio Addins). This can be downloaded from my [scrubbed file](https://github.com/ZinkNotTheMetal/HomeAssistant/blob/master/Node-Red-Scrubbed-Automations.js)
 ### Time Automations
 1) At 4AM (when everyone is sleeping) raise the bilnds to allow more light in, in the morning.
-2) When light comes through the living room time (around 1:30) lower the blinds to 50%
-3) At sunset raise the blinds
+2) When light comes through the living room time (around 1:30pm) lower the blinds to 75%
+3) At sunset, raise the blinds
 4) Notify if the low tonight is below freezing
+
+<img src="https://github.com/ZinkNotTheMetal/HomeAssistant/blob/master/misc/pictures/NR-Blinding-Time.PNG" alt="Switch Node-Red Screenshot">
+
+
 ### Hue Switch Automations
-1) When the Tap is pressed, turn off all lights, Set AC to sleep mode, turn off TV, turn off Sonos, lock the door (this is using hue-magic)
+1) When the Tap is pressed, turn off all lights, Set AC to sleep mode, turn off TV, turn off Sonos, lock the door...
 2) When any of the Dimmer switches are held on, raise the blinds
 3) When any of the Dimmer switches are held off, lower the blinds
+
+<img src="https://github.com/ZinkNotTheMetal/HomeAssistant/blob/master/misc/pictures/NR-Switches.PNG" alt="Switch Node-Red Screenshot">
+
+
 ### Device Change automations
 1) If the back door opens, turn on the Hue Outdoor lights
 2) Notify if any device on the network fails to connect
 3) Notify if the humidity is above or below a certain amount
 4) Notify if the back door opened when no one is home
 5) If no one is home, set AC to away
+
+<img src="https://github.com/ZinkNotTheMetal/HomeAssistant/blob/master/misc/pictures/NR-Away.PNG" alt="Away Node-Red Screenshot">
+
+
 ### Weather Automations
 1) Do not lower the blinds if the cloud cover is more than 60% (using open weather map api)
 2) Notify if it begins to rain and back door is open
+
+<img src="https://github.com/ZinkNotTheMetal/HomeAssistant/blob/master/misc/pictures/NR-Home.PNG" alt="Home Node-Red Screenshot">
 
 
 
