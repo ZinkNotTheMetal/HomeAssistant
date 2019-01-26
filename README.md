@@ -177,6 +177,8 @@ All Automations are using Node-Red (using Hassio Addins). This can be downloaded
 <img src="https://github.com/ZinkNotTheMetal/HomeAssistant/blob/master/misc/pictures/NR-Home.PNG" alt="Home Node-Red Screenshot">
 
 
+<img src="https://github.com/ZinkNotTheMetal/HomeAssistant/blob/master/misc/pictures/NR-Links.PNG" alt="Home Node-Red Screenshot">
+
 
 ## [Dashboard](#dashboard)
 <img src="https://github.com/ZinkNotTheMetal/HomeAssistant/blob/master/misc/pictures/Home-Assistant-Lovelace-1.PNG" alt="Home Assistant dashboard 1" />
