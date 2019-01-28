@@ -47,6 +47,7 @@
     wind_speed_knots:
       friendly_name: Wind Speed
       icon_template: mdi:weather-windy
+      unit_of_measurement: knots
       value_template: >
         {% set result = float(states("sensor.owm_wind_speed")) * 1.94384 %}
         {{ result | round() }}
