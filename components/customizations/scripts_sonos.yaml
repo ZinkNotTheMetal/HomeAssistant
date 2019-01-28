@@ -1,4 +1,3 @@
-  
 script.play_spotify_sonos:
   friendly_name: "Play music"
   icon: mdi:play-circle-outline

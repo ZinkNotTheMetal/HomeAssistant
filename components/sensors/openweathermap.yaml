@@ -1,8 +1,11 @@
 # The Humidity sensor on main screen
 - platform: openweathermap
   api_key: !secret openweather_api_key
+  forecast: true
   monitored_conditions:
     - humidity
     - wind_speed
     - wind_bearing
     - temperature
+    - clouds
+    - weather_code
