@@ -15,4 +15,4 @@
   json_attributes:
     - shadeData
   value_template: "{{ value_json.value }}"
-  scan_interval: 20
+  scan_interval: 15

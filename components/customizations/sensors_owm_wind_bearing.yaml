@@ -1,0 +1,3 @@
+sensor.owm_wind_bearing:
+  friendly_name: "Wind bearing"
+  icon: mdi:sign-direction
