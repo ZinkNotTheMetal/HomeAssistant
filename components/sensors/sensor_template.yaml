@@ -45,7 +45,7 @@
           {{ ((1 - (states.sensor.shade_positions.attributes.shadeData[0].positions.position1 / 65535)) * 100) | round(0) }}%
         {% endif %}
     wind_speed_knots:
-      friendly_name: Kitchen Shade Position
+      friendly_name: Wind Speed
       icon_template: mdi:weather-windy
       value_template: >
         {% set result = float(states("sensor.owm_wind_speed")) * 1.94384 %}
