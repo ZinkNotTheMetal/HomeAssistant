@@ -177,7 +177,21 @@ All Automations are using Node-Red (using Hassio Addins). This can be downloaded
 <img src="https://github.com/ZinkNotTheMetal/HomeAssistant/blob/master/misc/pictures/NR-Home.PNG" alt="Home Node-Red Screenshot">
 
 
-<img src="https://github.com/ZinkNotTheMetal/HomeAssistant/blob/master/misc/pictures/NR-Links.PNG" alt="Home Node-Red Screenshot">
+<img src="https://github.com/ZinkNotTheMetal/HomeAssistant/blob/master/misc/pictures/NR-Links.PNG" alt="Links Node-Red Screenshot">
+
+### Useful Notification Automations
+1) Notify when the windspeed is over 20 miles per hour
+2) Notify airport travel and TSA wait time when vacation mode is set
+3) Notify when Humidity is too high or too low
+
+<img src="https://github.com/ZinkNotTheMetal/HomeAssistant/blob/master/misc/pictures/NR-Windspeed-Notification.PNG" alt="Windspeed Node-Red Screenshot">
+
+
+<img src="https://github.com/ZinkNotTheMetal/HomeAssistant/blob/master/misc/pictures/NR-Vacation-Notification.PNG" alt="Vacation Node-Red Screenshot">
+
+
+<img src="https://github.com/ZinkNotTheMetal/HomeAssistant/blob/master/misc/pictures/NR-Humidity-Notification.PNG" alt="Humidity Node-Red Screenshot">
+
 
 
 ## [Dashboard](#dashboard)

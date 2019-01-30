@@ -97,11 +97,6 @@ ios:
             activationMode: 'background'
             authenticationRequired: no
             destructive: no
-          - identifier: 'UPSTAIRS'
-            title: 'Go Upstairs'
-            activationMode: 'background'
-            authenticationRequired: no
-            destructive: no
       - name: Upstairs
         identifier: 'upstairs'
         actions:

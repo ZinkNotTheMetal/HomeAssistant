@@ -144,7 +144,6 @@ cards:
         show_header_toggle: false
         entities:
           - input_boolean.go_to_sleep
-          - input_boolean.upstairs
           - input_boolean.guest_override
           - input_boolean.blind_override
           - input_boolean.vacation_mode
