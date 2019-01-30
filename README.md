@@ -144,12 +144,18 @@ If you found this extremely helpful, feel free to reach out
 ## [Automations](#automations)
 All Automations are using Node-Red (using Hassio Addins). This can be downloaded from my [scrubbed file](https://github.com/ZinkNotTheMetal/HomeAssistant/blob/master/Node-Red-Scrubbed-Automations.js)
 ### Time Automations
-1) At 4AM (when everyone is sleeping) raise the bilnds to allow more light in, in the morning.
-2) When light comes through the living room time (around 1:30pm) lower the blinds to 75%
-3) At sunset, raise the blinds
+1) At 4AM (when everyone is sleeping) raise the shades (blinds) to allow more light in, in the morning.
 
-<img src="https://github.com/ZinkNotTheMetal/HomeAssistant/blob/master/misc/pictures/NR-Blinding-Time.PNG" alt="Switch Node-Red Screenshot">
+<img src="https://github.com/ZinkNotTheMetal/HomeAssistant/blob/master/misc/pictures/NR-Timed-Shade-Raise.PNG" alt="Timed Shade Raise">
 
+### The most intelligent blinds
+* When the proper elevation and azimuth is set to a blinding sun. Shut the blinds (with some follow the sun features), once the sun is not a factor open the shades again.
+
+<img src="https://github.com/ZinkNotTheMetal/HomeAssistant/blob/master/misc/pictures/NR-SmartShades-1.PNG" alt="Smart Shades pt.1">
+
+<img src="https://github.com/ZinkNotTheMetal/HomeAssistant/blob/master/misc/pictures/NR-SmartShades-2.PNG" alt="Smart Shades pt.2">
+
+<img src="https://github.com/ZinkNotTheMetal/HomeAssistant/blob/master/misc/pictures/NR-SmartShades-3.PNG" alt="Smart Shades pt.3">
 
 ### Hue Switch Automations
 1) When the Tap is pressed, turn off all lights, Set AC to sleep mode, turn off TV, turn off Sonos, lock the door...

@@ -1,0 +1,5 @@
+- name: Dentist
+  latitude: !secret dentist_latitude
+  longitude: !secret dentist_longitude
+  radius: 100
+  icon: mdi:account-clock
