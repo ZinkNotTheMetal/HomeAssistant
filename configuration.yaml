@@ -97,16 +97,16 @@ ios:
             activationMode: 'background'
             authenticationRequired: no
             destructive: no
-      - name: Upstairs
-        identifier: 'upstairs'
+      - name: Laundry Notification
+        identifier: 'laundry'
         actions:
-          - identifier: 'UNLOCK_DOOR'
-            title: 'Unlock door'
+          - identifier: 'REMIND_ME_30'
+            title: 'Remind me in 30 minutes'
             activationMode: 'background'
             authenticationRequired: no
             destructive: no
-          - identifier: 'DOWNSTAIRS'
-            title: 'Go Downstairs'
+          - identifier: 'TELL_OTHER_PERSON'
+            title: 'Ask them to do it'
             activationMode: 'background'
             authenticationRequired: no
             destructive: no
