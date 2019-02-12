@@ -1,0 +1,20 @@
+---
+categories:
+  name: Home
+  identifier: 'home'
+  actions:
+    - identifier: 'NO_MUSIC'
+      title: 'Turn off music'
+      activationMode: 'background'
+      authenticationRequired: no
+      destructive: yes
+    - identifier: 'RAISE_BLINDS'
+      title: 'Raise Shades'
+      activationMode: 'background'
+      authenticationRequired: no
+      destructive: no
+    - identifier: 'UPSTAIRS'
+      title: 'Go Upstairs'
+      activationMode: 'background'
+      authenticationRequired: no
+      destructive: no
