@@ -80,7 +80,7 @@ cards:
           - sensor.speedtest_ping
       - id: c78572bad9874d0f9800371cb6f05ca5  # Automatically created id
         type: entities
-        title: Raspberry Pi 3 B+
+        title: NUC 8 - i3 Short
         show_header_toggle: false
         entities:
           - sensor.processor_use
