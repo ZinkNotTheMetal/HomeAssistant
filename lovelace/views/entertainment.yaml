@@ -14,15 +14,6 @@ cards:
         card:
           type: media-control
           entity: media_player.lg_webos_smart_tv
-      - id: 40fbdf8bfb884292a8b4ecd3c0f140c6  # Automatically created id
-        type: entity-filter
-        entities:
-          - media_player.living_room
-        state_filter:
-          - off
-        card:
-          type: media-control
-          entity: media_player.living_room
   - type: vertical-stack
     cards:
       - type: custom:mini-media-player

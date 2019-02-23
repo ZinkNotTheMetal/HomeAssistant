@@ -90,14 +90,34 @@ cards:
       - type: custom:mini-media-player
         entity: media_player.tv_room
         name: SONOS
-        hide_power: true
         artwork: cover
+        source: icon
+        hide:
+          power: true
         show_progress: true
-        sonos_grouping:
+        sonos:
+          show_group_count: true
+          entities:
           - entity_id: media_player.tv_room
             name: TV Room
           - entity_id: media_player.bathroom
             name: Bathroom
+        shortcuts:
+          columns: 4
+          buttons:
+          # My Music
+          - icon: mdi:music
+            type: source
+            id: All my Songs
+          - icon: mdi:television
+            type: source
+            id: TV
+          - icon: mdi:guitar-electric
+            type: source
+            id: The best classics
+          - icon: mdi:playlist-music-outline
+            type: source
+            id: Chill Hits
   - type: vertical-stack
     cards:
       - id: 46961635462048c996587f7ea3db8feb  # Automatically created id
