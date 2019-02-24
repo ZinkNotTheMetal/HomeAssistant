@@ -17,7 +17,7 @@ cards:
             name: Carbon Monoxide Status
             icon: mdi:gas-cylinder
           - device_tracker.life360_kelsey
-          - device_tracker.life360_william
+          - person.william
           - sensor.main_shade_position
           - sensor.kitchen_shade_position
           - sensor.pi_hole_ads_blocked_today

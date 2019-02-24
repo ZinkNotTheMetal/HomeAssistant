@@ -32,3 +32,5 @@ components/zones/mqy.yaml
 components/zones/yoga.yaml
 custom_components/device_tracker/__pycache__/life360.cpython-36.pyc
 usps_cache.sqlite
+people/william.yaml
+custom_components/device_tracker/__pycache__/life360.cpython-37.pyc

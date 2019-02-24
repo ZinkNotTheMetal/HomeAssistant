@@ -118,7 +118,7 @@ If you found this extremely helpful, feel free to reach out
 ### Sensors
 | Device  | Quantity | Connection | Component | Notes |
 | ------------- | :---: | ------------- | ------------- | ------------- |
-| <a href="https://www.monoprice.com/product?p_id=24259"><img src="https://images.monoprice.com/productlargeimages/242591.jpg" width="270px" height="160px" /></a><br> [Monoprice Z-Wave Plus Door Sensor](https://www.monoprice.com/product?p_id=24259) | 1 | Z-Wave | [Z-Wave](https://www.home-assistant.io/components/zwave/) | Currently on my back door, to trigger a few automations |
+| <a href="https://www.monoprice.com/product?p_id=24259"><img src="https://images.monoprice.com/productlargeimages/242591.jpg" width="270px" height="160px" /></a><br> [Monoprice Z-Wave Plus Door Sensor](https://www.monoprice.com/product?p_id=24259) | 2 | Z-Wave | [Z-Wave](https://www.home-assistant.io/components/zwave/) | Locations: Washer door / Back door |
 
 ### Plugs and Misc
 | Device  | Quantity | Connection | Component | Notes |
