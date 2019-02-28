@@ -42,8 +42,6 @@ If you found this extremely helpful, feel free to reach out
 
 
 ### Equipment running Home Assistant:
-- ~~[Raspberry Pi 3 B+](http://a.co/d/c4m30oN)~~
-- ~~[64GB SD Card](http://a.co/d/iygZSba)~~
 - [NUC 8-i3 Short](https://www.amazon.com/gp/product/B07GX54W33/ref=ppx_yo_dt_b_asin_title_o00__o00_s00?ie=UTF8&psc=1)
 - [8GB RAM](https://www.amazon.com/gp/product/B019FRD3SE/ref=ppx_yo_dt_b_asin_title_o00__o00_s00?ie=UTF8&psc=1)
 - [128GB NVME Drive](https://www.amazon.com/Crucial-500GB-NAND-NVMe-PCIe/dp/B07J2WBKXF/ref=sr_1_2_sspa?s=electronics&ie=UTF8&qid=1548438559&sr=1-2-spons&keywords=128+gb+nvme+m.2+ssd&psc=1)
@@ -58,14 +56,18 @@ If you found this extremely helpful, feel free to reach out
 * NUC 8 - i3 Short
   * [Migration from Raspberry Pi to NUC](https://github.com/ZinkNotTheMetal/HomeAssistant/wiki/Moving-from-Raspberry-Pi-to-NUC-(Docker)-for-HomeAssistant---Hass.io-with-Z-Wave)
 
-* ~~Raspberry Pi~~
-  * ~~[Hass.io](https://www.home-assistant.io/hassio/installation/) I used ethernet for speed, but if you need Wifi [check my instructions here](https://github.com/ZinkNotTheMetal/HomeAssistant/wiki/Hass.io-RPi-3-B--Wifi-Connection)~~
 * Additional Hass.io Addons
   * [Samba Share](https://github.com/home-assistant/hassio-addons/tree/master/samba) (using Hassio addins)
   * [Duck DNS & Let's Encrypt](https://www.home-assistant.io/addons/duckdns/) (using Hassio addins)  
 * Lovelace (Custom Components)
   * [Custom Mini Media Player](https://github.com/kalkih/mini-media-player) for SONOS speakers
 * [Pi-hole](https://pi-hole.net/) installed on the Raspberry Pi Zero W [instructions](https://learn.adafruit.com/pi-hole-ad-blocker-with-pi-zero-w/overview-adafruit2)
+
+### Useful Documentation:
+- [Raspberry Pi 3 B+ Migration to NUC 8-i3](https://github.com/ZinkNotTheMetal/HomeAssistant/wiki/Moving-from-Raspberry-Pi-to-NUC-(Docker)-for-HomeAssistant---Hass.io-with-Z-Wave)
+- [Raspberry Pi 3 B+ Hass.io WIFI setup](https://github.com/ZinkNotTheMetal/HomeAssistant/wiki/Hass.io-RPi-3-B--Wifi-Connection)
+- [Home Assistant Releases](https://github.com/home-assistant/home-assistant/releases)
+- [Awesome Home Assistant](https://www.awesome-ha.com/)
 
 ## [Devices](#devices)
 
