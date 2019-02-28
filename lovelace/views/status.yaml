@@ -123,23 +123,20 @@ cards:
         title: Batteries
         show_header_toggle: false
         entities:
-          - entity: sensor.mi_flora_battery
-            name: Plant 1
-            icon: mdi:battery-bluetooth
-          - entity: sensor.mi_flora_battery_2
-            name: Plant 2
-            icon: mdi:battery-bluetooth
-          - sensor.williams_iphone_battery_level
-          - sensor.kelsey_s_iphone_battery_level
-          - entity: sensor.hallway_nest_protect_co_status
-            name: Nest Battery Level (3x AAA)
-            icon: mdi:battery
+          - sensor.august_lock_battery
           - sensor.closet_motion_sensor_battery
           - sensor.laundry_motion_sensor_battery
           - sensor.utility_motion_sensor_battery
           - sensor.hallway_switch_battery
           - sensor.bedroom_switch_battery
           - sensor.kitchen_switch_battery
+          - entity: sensor.hallway_nest_protect_battery_health
+            name: Nest Battery Level (3x AAA)
+            icon: mdi:battery
+          - sensor.williams_iphone_battery_level            
+          - entity: sensor.mi_flora_battery_2
+            name: Plant 2
+            icon: mdi:battery-bluetooth
       - type: entities
         title: Switches
         show_header_toggle: false
