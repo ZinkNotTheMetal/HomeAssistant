@@ -108,7 +108,7 @@ cards:
           # My Music
           - icon: mdi:music
             type: source
-            id: All my Songs
+            id: All my songs
           - icon: mdi:television
             type: source
             id: TV

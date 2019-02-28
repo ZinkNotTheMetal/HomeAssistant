@@ -51,3 +51,53 @@
       value_template: >
         {% set result = float(states("sensor.owm_wind_speed")) * 1.94384 %}
         {{ result | round() }}
+    github_stargazers:
+      friendly_name: HomeAssistant Stars
+      icon_template: mdi:github-circle
+      value_template: >
+        {{ state_attr("sensor.homeassistant", "stargazers") }}
+    closet_motion_sensor_battery:
+      friendly_name: "Closet Motion Sensor Battery"
+      unit_of_measurement: "%"
+      value_template: >
+        {{ state_attr("binary_sensor.closet_motion_sensor", "battery") }}
+      icon_template: >-
+        {%- if is_state("states.binary_sensor.closet_motion_sensor.attributes.battery", "unknown") %}
+          mdi:battery-unknown
+        {% elif state_attr("binary_sensor.closet_motion_sensor", "battery") | float <= 5 %}
+          mdi:battery-outline
+        {% elif state_attr("binary_sensor.closet_motion_sensor", "battery") | float >= 95 %}
+          mdi:battery
+        {% else %}
+          mdi:battery-{{state_attr("binary_sensor.closet_motion_sensor", "battery") | float / 10 | round * 10}}
+        {%- endif %}
+    laundry_motion_sensor_battery:
+      friendly_name: "Laundry Motion Sensor Battery"
+      unit_of_measurement: "%"
+      value_template: >
+        {{ state_attr("binary_sensor.laundry_motion_motion_sensor", "battery") }}
+      icon_template: >-
+        {%- if is_state("states.binary_sensor.laundry_motion_motion_sensor.attributes.battery", "unknown") %}
+          mdi:battery-unknown
+        {% elif state_attr("binary_sensor.laundry_motion_motion_sensor", "battery") | float <= 5 %}
+          mdi:battery-outline
+        {% elif state_attr("binary_sensor.laundry_motion_motion_sensor", "battery") | float >= 95 %}
+          mdi:battery
+        {% else %}
+          mdi:battery-{{state_attr("binary_sensor.laundry_motion_motion_sensor", "battery") | float / 10 | round * 10}}
+        {%- endif %}
+    utility_motion_sensor_battery:
+      friendly_name: "Utility Room Motion Sensor Battery"
+      unit_of_measurement: "%"
+      value_template: >
+        {{ state_attr("binary_sensor.utility_room_motion_sensor", "battery") }}
+      icon_template: >-
+        {%- if is_state("states.binary_sensor.utility_room_motion_sensor.attributes.battery", "unknown") %}
+          mdi:battery-unknown
+        {% elif state_attr("binary_sensor.utility_room_motion_sensor", "battery") | float <= 5 %}
+          mdi:battery-outline
+        {% elif state_attr("binary_sensor.utility_room_motion_sensor", "battery") | float >= 95 %}
+          mdi:battery
+        {% else %}
+          mdi:battery-{{state_attr("binary_sensor.utility_room_motion_sensor", "battery") | float / 10 | round * 10}}
+        {%- endif %}
