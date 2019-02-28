@@ -137,6 +137,9 @@ cards:
           - sensor.closet_motion_sensor_battery
           - sensor.laundry_motion_sensor_battery
           - sensor.utility_motion_sensor_battery
+          - sensor.hallway_switch_battery
+          - sensor.bedroom_switch_battery
+          - sensor.kitchen_switch_battery
       - type: entities
         title: Switches
         show_header_toggle: false

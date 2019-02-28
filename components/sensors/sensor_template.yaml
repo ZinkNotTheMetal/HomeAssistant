@@ -101,3 +101,48 @@
         {% else %}
           mdi:battery-{{state_attr("binary_sensor.utility_room_motion_sensor", "battery") | float / 10 | round * 10}}
         {%- endif %}
+    hallway_switch_battery:
+      friendly_name: "Hallway Switch Battery"
+      unit_of_measurement: "%"
+      value_template: >
+        {{ state_attr("sensor.hallway_switch", "battery") }}
+      icon_template: >-
+        {%- if is_state("states.sensor.hallway_switch.attributes.battery", "unknown") %}
+          mdi:battery-unknown
+        {% elif state_attr("sensor.hallway_switch", "battery") | float <= 5 %}
+          mdi:battery-outline
+        {% elif state_attr("sensor.hallway_switch", "battery") | float >= 95 %}
+          mdi:battery
+        {% else %}
+          mdi:battery-{{state_attr("sensor.hallway_switch", "battery") | float / 10 | round * 10}}
+        {%- endif %}
+    bedroom_switch_battery:
+      friendly_name: "Bedroom Switch Battery"
+      unit_of_measurement: "%"
+      value_template: >
+        {{ state_attr("sensor.bedroom_switch", "battery") }}
+      icon_template: >-
+        {%- if is_state("states.sensor.bedroom_switch.attributes.battery", "unknown") %}
+          mdi:battery-unknown
+        {% elif state_attr("sensor.bedroom_switch", "battery") | float <= 5 %}
+          mdi:battery-outline
+        {% elif state_attr("sensor.bedroom_switch", "battery") | float >= 95 %}
+          mdi:battery
+        {% else %}
+          mdi:battery-{{state_attr("sensor.bedroom_switch", "battery") | float / 10 | round * 10}}
+        {%- endif %}
+    kitchen_switch_battery:
+      friendly_name: "Kitchen Switch Battery"
+      unit_of_measurement: "%"
+      value_template: >
+        {{ state_attr("sensor.kitchen_switch", "battery") }}
+      icon_template: >-
+        {%- if is_state("states.sensor.kitchen_switch.attributes.battery", "unknown") %}
+          mdi:battery-unknown
+        {% elif state_attr("sensor.kitchen_switch", "battery") | float <= 5 %}
+          mdi:battery-outline
+        {% elif state_attr("sensor.kitchen_switch", "battery") | float >= 95 %}
+          mdi:battery
+        {% else %}
+          mdi:battery-{{state_attr("sensor.kitchen_switch", "battery") | float / 10 | round * 10}}
+        {%- endif %}
