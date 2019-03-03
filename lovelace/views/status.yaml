@@ -16,7 +16,6 @@ cards:
           - entity: sensor.hallway_nest_protect_co_status
             name: Carbon Monoxide Status
             icon: mdi:gas-cylinder
-          - device_tracker.life360_kelsey
           - person.william
           - sensor.main_shade_position
           - sensor.kitchen_shade_position
@@ -101,6 +100,7 @@ cards:
         show_header_toggle: false
         entities:
           - sensor.work_travel_time
+          - sensor.lyft_price
           - sensor.costco_travel_time
           - sensor.bna_travel_time
           - sensor.tsa_wait_time

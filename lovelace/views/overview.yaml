@@ -173,7 +173,6 @@ cards:
           - zone.home
           - zone.school
           - device_tracker.life360_william
-          - device_tracker.life360_kelsey
   - type: vertical-stack
     cards:
       - type: gauge
