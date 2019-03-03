@@ -37,3 +37,5 @@ custom_components/device_tracker/__pycache__/life360.cpython-37.pyc
 custom_components/hue/__pycache__/binary_sensor.cpython-37.pyc
 custom_components/hue/__pycache__/device_tracker.cpython-37.pyc
 custom_components/hue/__pycache__/sensor.cpython-37.pyc
+.google.token
+google_calendars.yaml

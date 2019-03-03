@@ -118,6 +118,18 @@ cards:
           - icon: mdi:playlist-music-outline
             type: source
             id: Chill Hits
+      - type: "custom:atomic-calendar"
+        title: "Calendar"
+        enableModeChange: true
+        defaultMode: 1
+        entities:
+          - entity: calendar.work
+          - entity: calendar.personal
+          - entity: calendar.contractors
+          - entity: calendar.travel
+        maxDaysToShow: 3
+        showLocation: true
+
   - type: vertical-stack
     cards:
       - id: 46961635462048c996587f7ea3db8feb  # Automatically created id

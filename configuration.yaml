@@ -94,6 +94,16 @@ binary_sensor: !include_dir_list components/binary_sensors
 
 
 #######################################################################################
+# Google Component - only used for calendar in Home Assistant
+#
+# https://www.home-assistant.io/components/calendar.google/
+google:
+  client_id: !secret google_client_id
+  client_secret: !secret google_client_secret
+#######################################################################################
+
+
+#######################################################################################
 # Using IFTTT for quite a few components that support this more than home assistant
 #
 # https://www.home-assistant.io/components/ifttt/
