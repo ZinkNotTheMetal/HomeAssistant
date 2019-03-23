@@ -120,15 +120,16 @@ cards:
             id: Chill Hits
       - type: "custom:atomic-calendar"
         title: "Calendar"
-        enableModeChange: true
-        defaultMode: 1
         entities:
           - entity: calendar.work
           - entity: calendar.personal
           - entity: calendar.contractors
           - entity: calendar.travel
+          - entity: calendar.appointments
         maxDaysToShow: 3
-        showLocation: true
+        showColors: true
+        showProgressBar: true
+        progressBarColor: orange
 
   - type: vertical-stack
     cards:
