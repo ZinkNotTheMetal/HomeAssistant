@@ -1,3 +1,0 @@
-# Custom Hue Component for Sensor information in HASS
-# https://github.com/robmarkcole/Hue-sensors-HASS
-- platform: hue
