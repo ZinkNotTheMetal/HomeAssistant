@@ -22,4 +22,3 @@
     interval_seconds: 15
     consider_home: 150
     track_new_devices: yes
-  - platform: hue_custom
