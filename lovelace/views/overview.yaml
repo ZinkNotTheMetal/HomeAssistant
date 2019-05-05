@@ -108,13 +108,13 @@ cards:
           # My Music
           - icon: mdi:music
             type: source
-            id: All my songs
+            id: DJ Dooya - HipHop
           - icon: mdi:television
             type: source
             id: TV
           - icon: mdi:guitar-electric
             type: source
-            id: The best classics
+            id: DJ Dooya - Oldies
           - icon: mdi:playlist-music-outline
             type: source
             id: Chill Hits
