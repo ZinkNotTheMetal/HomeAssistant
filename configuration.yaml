@@ -111,6 +111,17 @@ ifttt:
   key: !secret ifttt_api_key
 #######################################################################################
 
+#######################################################################################
+# Using IQVIA for the disease and allergy index
+#
+# https://www.home-assistant.io/components/iqvia/
+iqvia:
+  zip_code: !secret home_zipcode
+  monitored_conditions:
+    - allergy_average_forecasted
+    - disease_average_forecasted
+#######################################################################################    
+
 
 #######################################################################################
 # The input_boolean component allows the user to define boolean values that

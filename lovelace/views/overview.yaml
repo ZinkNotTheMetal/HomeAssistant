@@ -191,8 +191,8 @@ cards:
         min: 0
         max: 100
       - type: gauge
-        entity: sensor.cold_flu_forecasted_average
-        name: Cold & Flu
+        entity: sensor.allergy_index_forecasted_average
+        name: Allergy Index
         unit: 'idx'
         min: 0
         max: 12.0
@@ -200,6 +200,16 @@ cards:
           green: 0
           yellow: 4.9
           red: 9.8
+      - type: gauge
+        entity: sensor.cold_flu_forecasted_average_2
+        name: Cold & Flu Index
+        unit: 'idx'
+        min: 0
+        max: 12.0
+        severity:
+          green: 0
+          yellow: 4.9
+          red: 9.8          
       - id: 35fbffdc40a14191a29a1d56d2c9a8b0  # Automatically created id
         type: entities
         title: Overrides
