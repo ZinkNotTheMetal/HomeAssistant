@@ -49,6 +49,9 @@ history:
 # View all events in a logbook
 logbook:
 
+logger:
+  default: warning
+
 # Enables a map showing the location of tracked devices
 map:
 
@@ -59,6 +62,7 @@ cloud:
 system_health:
 
 sun:
+  scan_interval: 60
 
 #######################################################################################
 #                                                                                     #
@@ -110,6 +114,7 @@ google:
 ifttt:
   key: !secret ifttt_api_key
 #######################################################################################
+
 
 #######################################################################################
 # Using IQVIA for the disease and allergy index
@@ -194,6 +199,19 @@ nest:
 #  - GPS
 # https://www.home-assistant.io/components/device_tracker/
 device_tracker: !include components/device_tracker.yaml
+#######################################################################################
+
+#######################################################################################
+# Life 360 component for reliable GPS location for the house (added in 0.95.0)
+#
+# https://deploy-preview-9539--home-assistant-docs.netlify.com/components/life360/
+life360:
+  accounts:
+    - username: !secret life360_username
+      password: !secret life360_password
+  driving_speed: 16
+  max_update_wait:
+    minutes: 40
 #######################################################################################
 
 

@@ -24,8 +24,10 @@ cards:
           - binary_sensor.blind_hub
           - binary_sensor.hallway_nest_protect_online
           - zwave.aeotec_zw090_z_stick_gen5_us
-          - media_player.bathroom
+          - device_tracker.august_connect
           - media_player.tv_room
+          - media_player.bathroom
+          - media_player.bedroom
           - entity: sensor.crime_reports
             name: Crime Reports (1/2 mile)
             icon: mdi:file-chart

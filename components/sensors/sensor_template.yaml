@@ -150,14 +150,14 @@
       friendly_name: "August Lock Battery"
       unit_of_measurement: "%"
       value_template: >
-        {{ state_attr("zwave.august_asl_03_smart_lock", "battery_level") }}
+        {{ state_attr("zwave.august_asl_03_smart_lock_2", "battery_level") }}
       icon_template: >-
-        {%- if is_state("states.zwave.august_asl_03_smart_lock.attributes.battery_level", "unknown") %}
+        {%- if is_state("states.zwave.august_asl_03_smart_lock_2.attributes.battery_level", "unknown") %}
           mdi:battery-unknown
-        {% elif state_attr("zwave.august_asl_03_smart_lock", "battery_level") | float <= 5 %}
+        {% elif state_attr("zwave.august_asl_03_smart_lock_2", "battery_level") | float <= 5 %}
           mdi:battery-outline
-        {% elif state_attr("zwave.august_asl_03_smart_lock", "battery_level") | float >= 95 %}
+        {% elif state_attr("zwave.august_asl_03_smart_lock_2", "battery_level") | float >= 95 %}
           mdi:battery
         {% else %}
-          mdi:battery-{{state_attr("zwave.august_asl_03_smart_lock", "battery_level") | float / 10 | round * 10}}
+          mdi:battery-{{state_attr("zwave.august_asl_03_smart_lock_2", "battery_level") | float / 10 | round * 10}}
         {%- endif %}

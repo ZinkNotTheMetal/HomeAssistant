@@ -1,12 +1,3 @@
-  - platform: life360
-    username: !secret life360_username
-    password: !secret life360_password
-    prefix: life360
-    interval_seconds: 10
-    driving_speed: 16
-    show_as_state: places, driving, moving
-    max_update_wait:
-      minutes: 30
   # Router
   - platform: asuswrt
     host: !secret router_ip_address

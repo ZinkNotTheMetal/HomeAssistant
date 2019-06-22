@@ -9,7 +9,7 @@ cards:
         show_state: false
         column_width: calc(100% / 4)
         entities:
-          - entity: lock.august_asl_03_smart_lock_locked
+          - entity: lock.august_lock
             tap_action:
               action: toggle
             hold_action:
@@ -102,6 +102,8 @@ cards:
             name: TV Room
           - entity_id: media_player.bathroom
             name: Bathroom
+          - entity_id: media_player.bedroom
+            name: Bedroom
         shortcuts:
           columns: 4
           buttons:
