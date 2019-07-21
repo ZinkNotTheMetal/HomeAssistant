@@ -57,14 +57,16 @@ cards:
           - sensor.kitchen_temperature
   - type: vertical-stack
     cards:
-      - type: entities
-        title: NAS
+      - id: 086a6653cdbb4e5689a4d98beb3f5803  # Automatically created id
+        type: entities
+        title: Overrides
         show_header_toggle: false
         entities:
-          - binary_sensor.condo_nas
-          - sensor.status_smart_sda
-          - sensor.status_smart_sdb
-          - sensor.volume_used_volume_1
+          - input_boolean.go_to_sleep
+          - input_boolean.guest_override
+          - input_boolean.blind_override
+          - input_boolean.vacation_mode
+          - input_boolean.authorized_entry
       - type: history-graph
         title: Internet History
         hours_to_show: 48
@@ -144,13 +146,3 @@ cards:
         show_header_toggle: false
         entities:
           - switch.boosted_charger
-      - id: 086a6653cdbb4e5689a4d98beb3f5803  # Automatically created id
-        type: entities
-        title: Overrides
-        show_header_toggle: false
-        entities:
-          - input_boolean.go_to_sleep
-          - input_boolean.guest_override
-          - input_boolean.blind_override
-          - input_boolean.vacation_mode
-          - input_boolean.authorized_entry
