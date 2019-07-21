@@ -1,9 +1,0 @@
-- platform: lyft
-  client_id: !secret lyft_client_id
-  client_secret: !secret lyft_client_secret
-  start_latitude: !secret home_latitude
-  start_longitude: !secret home_longitude
-  end_latitude: !secret work_latitude
-  end_longitude: !secret work_longitude
-  product_ids:
-    - 'lyft'

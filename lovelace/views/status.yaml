@@ -104,7 +104,6 @@ cards:
         show_header_toggle: false
         entities:
           - sensor.work_travel_time
-          - sensor.lyft_price
           - sensor.costco_travel_time
           - sensor.bna_travel_time
           - sensor.tsa_wait_time
