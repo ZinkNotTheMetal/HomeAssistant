@@ -31,6 +31,21 @@ cards:
               action: toggle
             hold_action:
               action: more-info
+      - type: custom:banner-card
+        heading: Living Room
+        entities:
+          - entity: light.living_room
+            name: Lights
+          - entity: light.living_room
+            name: Movie Time
+            value: mdi:book-open-page-variant
+            action:
+              service: light.turn_on
+              brightness: 50
+          - media_player.lg_webos_smart_tv
+          - entity: cover.main_shade
+            name: Living Room Shade
+            icon: mdi:shade
       - type: glance
         show_state: false
         column_width: calc(100% / 4)
@@ -149,6 +164,46 @@ cards:
         type: thermostat
         entity: climate.condo
         name: HVAC
+      - type: horizontal-stack
+        cards:
+        - type: custom:mini-graph-card
+          entities: 
+          - sensor.laundry_motion_sensor_temperature
+          name: Kitchen
+          height: 74
+          line_width: 2
+          font_size: 65
+          hours_to_show: 168
+          points_per_hour: 1
+          show:
+            icon: false
+            extrema: true
+          color_thresholds:
+            - value: 77
+              color: "#e74c3c"
+            - value: 73
+              color: "#1db954"
+            - value: 68
+              color: "#3498db"
+        - type: custom:mini-graph-card
+          entities: 
+          - sensor.closet_sensor_temperature
+          name: Bedroom
+          height: 74
+          line_width: 2
+          font_size: 65
+          hours_to_show: 168
+          points_per_hour: 1
+          show:
+            icon: false
+            extrema: true
+          color_thresholds:
+            - value: 77
+              color: "#e74c3c"
+            - value: 73
+              color: "#1db954"
+            - value: 68
+              color: "#3498db"
       - type: glance
         show_state: false
         column_width: calc(100% / 4)
