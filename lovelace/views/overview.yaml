@@ -31,77 +31,48 @@ cards:
               action: toggle
             hold_action:
               action: more-info
-      - type: custom:banner-card
-        heading: Living Room
+      - type: entities
+        show_header_toggle: false
         entities:
-          - entity: light.living_room
-            name: Lights
-          - entity: light.living_room
-            name: Movie Time
-            value: mdi:book-open-page-variant
-            action:
-              service: light.turn_on
-              brightness: 50
-          - media_player.lg_webos_smart_tv
-          - entity: cover.main_shade
-            name: Living Room Shade
-            icon: mdi:shade
-      - type: glance
-        show_state: false
-        column_width: calc(100% / 4)
-        entities:
-          - entity: light.hallway
+          - type: custom:slider-entity-row
+            entity: light.living_room
+            name: Living Room
             icon: mdi:lightbulb
-            tap_action:
-              action: toggle
-            hold_action:
-              action: navigate
-              navigation_path: /lovelace/lights
-            name: Entry
-          - entity: light.living_room
-            name: Living
-            icon: mdi:lightbulb
-            tap_action:
-              action: toggle
-            hold_action:
-              action: navigate
-              navigation_path: /lovelace/lights
-          - entity: light.bedroom
-            name: Bedroom
-            icon: mdi:lightbulb
-            tap_action:
-              action: toggle
-            hold_action:
-              action: navigate
-              navigation_path: /lovelace/lights
-          - entity: light.kitchen
+            hide_when_off: true
+            toggle: true
+          - type: custom:slider-entity-row
+            entity: light.kitchen
             name: Kitchen
             icon: mdi:lightbulb
-            tap_action:
-              action: toggle
-            hold_action:
-              action: navigate
-              navigation_path: /lovelace/lights
-      - type: glance
-        show_state: true
-        column_width: calc(100% / 4)
-        entities:
-          - entity: sensor.main_shade_position
-            name: Main Shade
-            tap_action:
-              action: call-service
-              service: script.raise_main_blinds
-            hold_action:
-              action: call-service
-              service: script.lower_main_blinds
-          - entity: sensor.kitchen_shade_position
+            hide_when_off: true
+            toggle: true
+          - type: custom:slider-entity-row
+            entity: light.hallway
+            name: Hallway
+            icon: mdi:lightbulb
+            hide_when_off: true
+            toggle: true
+          - type: custom:slider-entity-row
+            entity: light.bedroom
+            name: Bedroom
+            icon: mdi:lightbulb
+            hide_when_off: true
+            toggle: true
+          - type: custom:slider-entity-row
+            entity: light.bathroom
+            name: Bathroom
+            icon: mdi:lightbulb
+            hide_when_off: true
+            toggle: true
+          - type: divider
+          - type: custom:slider-entity-row
+            entity: cover.main_shade
+            name: Living Room Shade
+            icon: mdi:blinds
+          - type: custom:slider-entity-row
+            entity: cover.kitchen
             name: Kitchen Shade
-            tap_action:
-              action: call-service
-              service: script.raise_kitchen_blinds
-            hold_action:
-              action: call-service
-              service: script.lower_kitchen_blinds
+            icon: mdi:blinds
       - type: custom:mini-media-player
         entity: media_player.tv_room
         name: SONOS
@@ -164,6 +135,18 @@ cards:
         type: thermostat
         entity: climate.condo
         name: HVAC
+      - type: custom:mini-graph-card
+        entities: 
+        - sensor.owm_temperature
+        name: Outside
+        height: 74
+        line_width: 2
+        font_size: 65
+        hours_to_show: 168
+        points_per_hour: 1
+        show:
+          icon: false
+          extrema: true
       - type: horizontal-stack
         cards:
         - type: custom:mini-graph-card
@@ -204,26 +187,6 @@ cards:
               color: "#1db954"
             - value: 68
               color: "#3498db"
-      - type: glance
-        show_state: false
-        column_width: calc(100% / 4)
-        entities:
-          - entity: script.resume_ac
-            name: Resume
-            tap_action:
-              action: toggle
-          - entity: script.set_ac_home
-            name: Home
-            tap_action:
-              action: toggle
-          - entity: script.set_ac_away
-            name: Away
-            tap_action:
-              action: toggle
-          - entity: script.set_ac_sleep
-            name: Sleep
-            tap_action:
-              action: toggle
         aspect_ratio: 100%
       - id: c4e87938182444d19ad8bac260c5d528  # Automatically created id
         type: map
@@ -242,31 +205,50 @@ cards:
           red: 0
           green: 30
           yellow: 65
-      - type: gauge
-        entity: sensor.owm_humidity
-        name: Outdoor Humidity
-        min: 0
-        max: 100
-      - type: gauge
-        entity: sensor.allergy_index_forecasted_average
-        name: Allergy Index
-        unit: 'idx'
-        min: 0
-        max: 12.0
-        severity:
-          green: 0
-          yellow: 4.9
-          red: 9.8
-      - type: gauge
-        entity: sensor.cold_flu_forecasted_average_2
-        name: Cold & Flu Index
-        unit: 'idx'
-        min: 0
-        max: 12.0
-        severity:
-          green: 0
-          yellow: 4.9
-          red: 9.8          
+      - type: horizontal-stack
+        cards:
+        - type: custom:mini-graph-card
+          entities: 
+          - sensor.allergy_index_forecasted_average
+          name: Allergy Index
+          align_state: center
+          decimals: 1
+          height: 74
+          line_width: 2
+          font_size: 65
+          hours_to_show: 168
+          points_per_hour: 1
+          show:
+            icon: false
+            extrema: false
+          color_thresholds:
+            - value: 9.8
+              color: "#e74c3c"
+            - value: 4.9
+              color: "#1db954"
+            - value: 0
+              color: "#3498db"
+        - type: custom:mini-graph-card
+          entities: 
+          - sensor.cold_flu_forecasted_average_2
+          name: Flu Index
+          align_state: center
+          decimals: 1
+          height: 74
+          line_width: 2
+          font_size: 65
+          hours_to_show: 168
+          points_per_hour: 1
+          show:
+            icon: false
+            extrema: false
+          color_thresholds:
+            - value: 77
+              color: "#e74c3c"
+            - value: 73
+              color: "#1db954"
+            - value: 68
+              color: "#3498db"
       - id: 35fbffdc40a14191a29a1d56d2c9a8b0  # Automatically created id
         type: entities
         title: Overrides
