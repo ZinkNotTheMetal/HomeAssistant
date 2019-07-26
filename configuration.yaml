@@ -64,6 +64,9 @@ system_health:
 sun:
   scan_interval: 60
 
+# https://www.home-assistant.io/components/wwlln/
+wwlln: 
+
 # https://www.home-assistant.io/components/recorder/
 recorder:
   purge_keep_days: 14
