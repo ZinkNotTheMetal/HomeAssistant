@@ -1,0 +1,25 @@
+movie_time:
+  sequence:
+    - service: input_boolean.turn_off
+      data:
+        entity_id: input_boolean.blind_override
+    - service: cover.close_cover
+      data:
+        entity_id: cover.main_shade
+    - service: cover.close_cover
+      data:
+        entity_id: cover.kitchen
+    - service: media_player.turn_on
+      data:
+        entity_id: media_player.lg_webos_smart_tv
+    - condition: state
+      entity_id: sun.sun
+      state: 'below_horizon'
+    - service: light.turn_on
+      data:
+        entity_id: light.kitchen
+        brightness: 20
+    - service: light.turn_on
+      data:
+        entity_id: light.living_room
+        brightness: 15
