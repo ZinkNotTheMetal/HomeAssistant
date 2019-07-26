@@ -58,11 +58,64 @@ map:
 # Cloud
 cloud:
 
-#https://www.home-assistant.io/components/system_health/
+# https://www.home-assistant.io/components/system_health/
 system_health:
 
 sun:
   scan_interval: 60
+
+# https://www.home-assistant.io/components/recorder/
+recorder:
+  purge_keep_days: 14
+  include:
+    entities:
+      - binary_sensor.patio_door
+      - binary_sensor.washing_machine
+      - calendar.appointments
+      - climate.domain
+      - device_tracker.lgwebostv
+      - person.william
+      - device_tracker.powerview_hub
+      - device_tracker.august_lock
+      - lock.august_lock
+    domains:
+      - light
+      - media_player
+      - sensor
+  exclude:
+    entities:
+      - sun.sun
+      - sensor.last_boot
+      - sensor.installed_version
+      - sensor.homeassistant
+      - sensor.hassio_version
+      - sensor.iphone_battery_level
+      - sensor.iphone_battery_state
+      - sensor.kitchen_shade_position
+      - sensor.kitchen_switch_battery
+      - sensor.load_15m
+      - sensor.load_1m
+      - sensor.load_5m
+      - sensor.main_shade_position
+      - sensor.owm_weather_code
+      - sensor.owm_wind_bearing
+      - sensor.owm_wind_speed
+      - sensor.pe_availability
+      - sensor.pi_hole_ads_blocked_today
+      - sensor.pi_hole_ads_percentage_blocked_today
+      - sensor.rt_ac3100_bytes_received
+      - sensor.rt_ac3100_bytes_sent
+      - sensor.rt_ac3100_kbyte_sec_received
+      - sensor.rt_ac3100_kbyte_sec_sent
+      - sensor.rt_ac3100_packets_received
+      - sensor.rt_ac3100_packets_sec_received
+      - sensor.rt_ac3100_packets_sec_sent
+      - sensor.rt_ac3100_kbyte_packets_sent
+      - sensor.shade_positions
+      - sensor.swap_use_percentage
+      - sensor.washer_door_sensor
+      - sensor.williams_iphone_battery_level
+      - sensor.williams_iphone_battery_state
 
 #######################################################################################
 #                                                                                     #
