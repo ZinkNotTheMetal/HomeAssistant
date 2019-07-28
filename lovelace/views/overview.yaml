@@ -151,7 +151,7 @@ cards:
         cards:
         - type: custom:mini-graph-card
           entities: 
-          - sensor.laundry_motion_sensor_temperature
+          - sensor.kitchen_temperature
           name: Kitchen
           height: 74
           line_width: 2
@@ -170,7 +170,7 @@ cards:
               color: "#3498db"
         - type: custom:mini-graph-card
           entities: 
-          - sensor.closet_sensor_temperature
+          - sensor.condo_temperature
           name: Bedroom
           height: 74
           line_width: 2
