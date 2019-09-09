@@ -1,0 +1,4 @@
+upstairs_mode:
+  name: 'Upstairs Mode'
+  initial: off
+  icon: mdi:stairs

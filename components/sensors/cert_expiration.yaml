@@ -1,0 +1,5 @@
+# Cert Expiration Sensor
+# https://www.home-assistant.io/components/cert_expiry/
+- platform: cert_expiry
+  host: !secret home_assistant_base_url
+  port: !secret home_assistant_port

@@ -68,9 +68,10 @@ cards:
         title: Overrides
         show_header_toggle: false
         entities:
-          - input_boolean.go_to_sleep
           - input_boolean.guest_override
           - input_boolean.blind_override
+          - input_boolean.gym_mode
+          - input_boolean.upstairs_mode
           - input_boolean.vacation_mode
           - input_boolean.authorized_entry
       - type: history-graph
