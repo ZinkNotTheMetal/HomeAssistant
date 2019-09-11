@@ -1,0 +1,4 @@
+late_asleep_mode:
+  name: 'Late Night Mode'
+  initial: off
+  icon: mdi:sleep

@@ -1,6 +1,6 @@
 # Here's my [Home Assistant (HA)](https://home-assistant.io/) configuration. 
 
-| ![](https://img.shields.io/badge/Home%20Assistant-0.98.2-blue.svg) | ![](https://img.shields.io/github/stars/zinknotthemetal/homeassistant.svg?label=Stars)|
+| ![](https://img.shields.io/badge/Home%20Assistant-0.98.5-blue.svg) | ![](https://img.shields.io/github/stars/zinknotthemetal/homeassistant.svg?label=Stars)|
 |:---:|:---:|
 | Configuration for Home Assistant version | Please :star: this repo if you found it useful! (Click Star in the top right) |
 | [![](https://img.shields.io/github/issues-raw/zinknotthemetal/homeassistant.svg)](https://github.com/ZinkNotTheMetal/HomeAssistant/issues) | ![](https://img.shields.io/github/last-commit/zinknotthemetal/homeassistant.svg) |
@@ -80,15 +80,17 @@ If you found this extremely helpful, feel free to reach out
 ### Lighting
 | Device  | Quantity | Connection | Component | Notes |
 | ------------- | :---: | ------------- | ------------- | ------------- |
-| <a href="http://a.co/d/a54cHvp"><img src="https://images.homedepot-static.com/productImages/7d8edcf4-11b5-4cf1-8747-7ba637f618d1/svn/philips-led-bulbs-530210-64_1000.jpg" width="185px" height="180px" /></a><br> [Philips Hue A19 Bulb](http://a.co/d/a54cHvp) | 26 | Hue Bridge | [Philips Hue](https://www.home-assistant.io/components/hue/) | Color changing smart bulbs developed by Philips ($40-$50) |
-| <a href="http://a.co/d/6OUFPsd"><img  src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/4373/4373913_sd.jpg;maxHeight=640;maxWidth=550" width="185px" height="180px" /></a><br> [Philips Hue Indoor Light Strip](http://a.co/d/6OUFPsd) | 2 | Hue Bridge | [Philips Hue](https://www.home-assistant.io/components/hue/) | Color changing LED indoor light Strips ($60-$80) I have one over the kitchen cabinet with an extension |
+| <a href="http://a.co/d/a54cHvp"><img src="https://images.homedepot-static.com/productImages/7d8edcf4-11b5-4cf1-8747-7ba637f618d1/svn/philips-led-bulbs-530210-64_1000.jpg" width="185px" height="180px" /></a><br> [Philips Hue A19 Bulb](http://a.co/d/a54cHvp) | 24 | Hue Bridge | [Philips Hue](https://www.home-assistant.io/components/hue/) | Color changing smart bulbs developed by Philips ($40-$50) |
+| <a href="http://a.co/d/a54cHvp"><img src="https://images-na.ssl-images-amazon.com/images/I/41LOPIeIkBL.jpg" width="185px" height="180px" /></a><br> [Philips Hue Bloom](https://amzn.to/2lPkEY8) | 2 | Hue Bridge | [Philips Hue](https://www.home-assistant.io/components/hue/) | Color changing smart lamps developed by Philips ($60) |
+| <a href="http://a.co/d/6OUFPsd"><img src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/4373/4373913_sd.jpg;maxHeight=640;maxWidth=550" width="185px" height="180px" /></a><br> [Philips Hue Indoor Light Strip](http://a.co/d/6OUFPsd) | 2 | Hue Bridge | [Philips Hue](https://www.home-assistant.io/components/hue/) | Color changing LED indoor light Strips ($60-$80) I have one over the kitchen cabinet with an extension |
 | <a href="http://a.co/d/7N361Gx"><img  src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6284/6284603_sd.jpg;maxHeight=640;maxWidth=550" width="185px" height="180px" /></a><br> [Philips Hue Outdoor Light Strip](http://a.co/d/7N361Gx) | 4 | Hue Bridge | [Philips Hue](https://www.home-assistant.io/components/hue/) | Color changing LED outdoor light Strips ($160) |
 
-### Switches
+### Hue Devices
 | Device  | Quantity | Connection | Component | Notes |
 | ------------- | :---: | ------------- | ------------- | ------------- |
-| <a href="http://a.co/d/fv4wwLC"><img src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/7863/7863116_sa.jpg;maxHeight=1000;maxWidth=1000" width="185px" height="130px" /></a><br> [Philips Tap Switch](http://a.co/d/fv4wwLC) | 1 | Hue Bridge | [Philips Hue](https://www.home-assistant.io/components/hue/) | Switch that requires no batteries developed by Philips ($40-$50). Useful since it has 4 total buttons |
-| <a href="http://a.co/d/6DmlQdy"><img src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/4373/4373904_sd.jpg;maxHeight=1000;maxWidth=1000" width="185px" height="150px" /></a><br> [Philips Dimmer Switch](http://a.co/d/6DmlQdy) | 3 | Hue Bridge | [Philips Hue](https://www.home-assistant.io/components/hue/) | Dimmer switch that requires batteries developed by Philips ($25) |
+| <a href="http://a.co/d/fv4wwLC"><img src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/7863/7863116_sa.jpg;maxHeight=1000;maxWidth=1000" width="185px" height="130px" /></a><br> [Tap Switch](http://a.co/d/fv4wwLC) | 1 | Hue Bridge | [Philips Hue](https://www.home-assistant.io/components/hue/) | Switch that requires no batteries developed by Philips ($40-$50). Useful since it has 4 total buttons |
+| <a href="http://a.co/d/6DmlQdy"><img src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/4373/4373904_sd.jpg;maxHeight=1000;maxWidth=1000" width="185px" height="150px" /></a><br> [Dimmer Switch](http://a.co/d/6DmlQdy) | 5 | Hue Bridge | [Philips Hue](https://www.home-assistant.io/components/hue/) | Dimmer switch that requires batteries developed by Philips ($25) |
+| <a href="https://amzn.to/2m4XRHY"><img src="https://images-na.ssl-images-amazon.com/images/I/81agAEV1VVL._SL1500_.jpg" width="185px" height="150px" /></a><br> [Motion Sensor](http://a.co/d/6DmlQdy) | 3 | Hue Bridge | [Philips Hue](https://www.home-assistant.io/components/hue/) | Motion Sensor that has temperature sensor built in ($40) |
 
 ### Blinds
 | Device  | Quantity | Connection | Component | Notes |
@@ -99,7 +101,6 @@ If you found this extremely helpful, feel free to reach out
 | Device  | Quantity | Connection | Component | Notes |
 | ------------- | :---: | ------------- | ------------- | ------------- |
 | <a href="http://a.co/d/9L8AI94"><img src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6085/6085415_sd.jpg;maxHeight=1000;maxWidth=1000" width="210px" height="80px" /></a><br> [August Smart Lock Pro](http://a.co/d/9L8AI94) | 1 | Z-Wave / Wi-Fi | [Z-Wave](https://www.home-assistant.io/components/zwave/) | I found using Z-Wave worked better than using the actual component. Luckily this lock supports both $200 |
-
 
 ### Indoor Climate 
 | Device  | Quantity | Connection | Component | Notes |
@@ -115,19 +116,22 @@ If you found this extremely helpful, feel free to reach out
 | <a href="http://a.co/d/6aAYt6w"><img src="https://assets.pcmag.com/media/images/316505-sonos-playbar.jpg?width=1000&height=542" width="270px" height="160px" /></a><br> [Sonos Playbar](http://a.co/d/6aAYt6w) | 1 | Wi-Fi | [SONOS](https://www.home-assistant.io/components/sonos/) | Very good sound, it's not completely sold me yet though $699 |
 | <a href="http://a.co/d/cbajxaQ"><img src="https://images-na.ssl-images-amazon.com/images/I/51Y-Dulc3bL._SL1024_.jpg" width="200px" height="160px" /></a><br> [Apple TV](http://a.co/d/cbajxaQ) | 1 | Wi-Fi | [Apple TV](https://www.home-assistant.io/components/apple_tv/) | This is my main media player, althought this is not the 4K model, $150 |
 | <a href="http://a.co/d/dxfiS79"><img src="https://images-na.ssl-images-amazon.com/images/I/817C2spZZDL._SL1500_.jpg" width="210px" height="180px" /></a><br> [LG Web OS Smart TV](http://a.co/d/dxfiS79) | 1 | Wi-Fi | [LG WebOS](https://www.home-assistant.io/components/media_player.webostv/) | This is my main main TV. Highly recommend OLED and this is the 4K model |
-| <a href="http://a.co/d/bzj6UVi"><img src="https://images-na.ssl-images-amazon.com/images/I/91FXcrjI-3L._SL1500_.jpg" width="210px" height="180px" /></a><br> [NAS Synology 218+](http://a.co/d/bzj6UVi) | 1 | Ethernet | [Synology](https://www.home-assistant.io/components/sensor.synologydsm/) | Loaded with 2x [4TB NAS Drives](http://a.co/d/67f2Rza) |
-  
+
 ### Sensors
 | Device  | Quantity | Connection | Component | Notes |
 | ------------- | :---: | ------------- | ------------- | ------------- |
 | <a href="https://www.monoprice.com/product?p_id=24259"><img src="https://images.monoprice.com/productlargeimages/242591.jpg" width="270px" height="160px" /></a><br> [Monoprice Z-Wave Plus Door Sensor](https://www.monoprice.com/product?p_id=24259) | 2 | Z-Wave | [Z-Wave](https://www.home-assistant.io/components/zwave/) | Locations: Washer door / Back door |
+| <a href="https://www.monoprice.com/product?p_id=15269"><img src="https://images-na.ssl-images-amazon.com/images/I/41QK0%2BdoHvL._SL1200_.jpg" width="270px" height="160px" /></a><br> [Monoprice Z-Wave Vibration Sensor](https://www.monoprice.com/product?p_id=24259) | 1 | Z-Wave | [Z-Wave](https://www.home-assistant.io/components/zwave/) | Locations: Dryer Motor (to determine when dryer is finished) |
 
-### Plugs and Misc
+### Plugs
 | Device  | Quantity | Connection | Component | Notes |
 | ------------- | :---: | ------------- | ------------- | ------------- |
 | <a href="http://a.co/d/4Z3Zl8v9"><img src="https://images-na.ssl-images-amazon.com/images/I/61HqxIYsqPL._SL1000_.jpg" width="200px" height="160px" /></a><br> [WeMo Mini Smart Plugs](http://a.co/d/4Z3Zl8v) | 1 | Wi-Fi | [WeMo](https://www.home-assistant.io/components/wemo/) | Useful plugs that you can automate, I like that you can use 2 per outlet  |
 
-
+### Shower
+| Device  | Quantity | Connection | Component | Notes |
+| ------------- | :---: | ------------- | ------------- | ------------- |
+| <a href="https://amzn.to/2khdhIO"><img src="https://images-na.ssl-images-amazon.com/images/I/61aNUTvrUhL._SL1500_.jpg" width="200px" height="160px" /></a><br> [U by Moen](http://a.co/d/4Z3Zl8v) | 1 | Wi-Fi | N/A Yet (Hoping to use Wi-fi & API) | Amazing Shower Controller, but expensive and requires 3 different parts  |
 
 ## [Services](#services)
 * Weather and Climate related
@@ -135,6 +139,7 @@ If you found this extremely helpful, feel free to reach out
   * [Open Weather Map](https://www.home-assistant.io/components/sensor.openweathermap/)
   * [Open Weather Map Api for Node-Red](https://openweathermap.org/api)
   * [Pollen](https://www.home-assistant.io/components/sensor.pollen/) sensor for allergy related information
+  * [Github](https://www.home-assistant.io/components/github/)
 * Presence:
   * [Life360](https://github.com/pnbruckner/homeassistant-config/blob/master/docs/life360.md)
   * [iOS app](https://itunes.apple.com/us/app/home-assistant-companion/id1099568401?mt=8)
