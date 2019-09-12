@@ -73,6 +73,12 @@ cards:
             entity: cover.kitchen
             name: Kitchen Shade
             icon: mdi:blinds
+      - type: horizontal-stack
+        cards:
+        - type: custom:shade-status-card
+          entity: sensor.kitchen_shade_position
+        - type: custom:shade-status-card
+          entity: sensor.main_shade_position
       - type: custom:mini-media-player
         entity: media_player.tv_room
         name: SONOS
@@ -118,7 +124,6 @@ cards:
         showColors: true
         showProgressBar: true
         progressBarColor: orange
-
   - type: vertical-stack
     cards:
       - id: 46961635462048c996587f7ea3db8feb  # Automatically created id
