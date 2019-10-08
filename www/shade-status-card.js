@@ -21,7 +21,8 @@ class ShadeStatusCard extends LitElement {
       config: {},
       entity: {},
       stateString: String,
-      name: String
+      name: String,
+      icon: String
     };
   }
 
@@ -29,6 +30,7 @@ class ShadeStatusCard extends LitElement {
     if (!hass) return;
     const entity = this.config.entity;
     const name = this.config.name;
+    const icon = this.config.icon;
     const entityState = hass.states[entity];
     const stateString = entityState ? entityState.state : 'unavailable';
     this._hass = hass;
@@ -41,6 +43,9 @@ class ShadeStatusCard extends LitElement {
     if (name && this.name !== name) {
       this.name = name;
     }
+    if (icon && this.icon != icon) {
+      this.icon = icon;
+    }
   }
 
   get hass() {
@@ -50,23 +55,25 @@ class ShadeStatusCard extends LitElement {
   render() {
     return html`
       <ha-card>
-        <div>
-          Hi Mom
+        <div style="text-align: center;">
+          ${this.renderShadeIcon()}
         </div>
-        ${this.entity}
+        <div style="text-align: center;">
+          ${this.stateString}
+        </div>
         <br>
-        ${this.stateString}
+        <div style="text-align: center;">
+          ${this.name}
+        </div>
         <br>
-        ${this.name}
-        <br>
-        <ha-icon id="down-arrow" icon="mdi:arrow-down-bold"></ha-icon> | <ha-icon id="down-arrow" icon="mdi:arrow-down-bold"></ha-icon>
+        <div style="text-align: center;">
+          <ha-icon id="down-arrow" icon="mdi:arrow-down-bold"></ha-icon>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<ha-icon id="up-arrow" icon="mdi:arrow-up-bold"></ha-icon>
+        </div>
       </ha-card>
     `;
   }
 
   renderUpArrow() {
-    const arrowUpIcon = "mdi:arrow-up-bold";
-
     return html`
       <div>
         <ha-icon data-domain="arrow-up-bold" id="up-arrow" icon="mdi:arrow-up-bold"></ha-icon>
@@ -75,8 +82,6 @@ class ShadeStatusCard extends LitElement {
   }
 
   renderDownArrow() {
-    const arrowDownIcon = "mdi:arrow-down-bold";
-
     return html`<ha-icon id="down-arrow" icon="mdi:arrow-down-bold"></ha-icon>`;
   }
 
