@@ -35,18 +35,6 @@ cards:
         show_header_toggle: false
         entities:
           - type: custom:slider-entity-row
-            entity: light.living_room
-            name: Living Room
-            icon: mdi:lightbulb
-            hide_when_off: true
-            toggle: true
-          - type: custom:slider-entity-row
-            entity: light.kitchen
-            name: Kitchen
-            icon: mdi:lightbulb
-            hide_when_off: true
-            toggle: true
-          - type: custom:slider-entity-row
             entity: light.hallway
             name: Hallway
             icon: mdi:lightbulb
@@ -61,6 +49,22 @@ cards:
           - type: custom:slider-entity-row
             entity: light.bathroom
             name: Bathroom
+            icon: mdi:lightbulb
+          - type: custom:slider-entity-row
+            entity: light.living_room
+            name: Living Room
+            icon: mdi:lightbulb
+            hide_when_off: true
+            toggle: true            
+          - type: custom:slider-entity-row
+            entity: light.kitchen
+            name: Kitchen
+            icon: mdi:lightbulb
+            hide_when_off: true
+            toggle: true
+          - type: custom:slider-entity-row
+            entity: light.outdoor
+            name: Outdoor
             icon: mdi:lightbulb
             hide_when_off: true
             toggle: true
