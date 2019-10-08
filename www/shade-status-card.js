@@ -52,13 +52,55 @@ class ShadeStatusCard extends LitElement {
         </div>
         <br>
         <div style="text-align: center;">
-          <ha-icon id="down-arrow" icon="mdi:arrow-down-bold" @click="${this._shadesDown()}"></ha-icon>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<ha-icon id="up-arrow" icon="mdi:arrow-up-bold" @click="${this._shadesUp()}></ha-icon>
+          <ha-icon id="down-arrow" 
+                   icon="mdi:arrow-down-bold" 
+                   @ha-click="${this._shadesDown(entity)}" 
+                   @ha-hold="${this._allShadesDown()}">
+          </ha-icon>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <ha-icon id="up-arrow" 
+                   icon="mdi:arrow-up-bold" 
+                   @ha-click="${this._singleShadeUp(entity)}"
+                   @ha-hold="${this._allShadesDown()}">
+          </ha-icon>
         </div>
       </ha-card>
     `;
   }
 
-  _shadesUp() {
+  _singleShadeUp(entityId) {
+    let eventCall = "";
+    if (entityId === "sensor.kitchen_shade_position"){
+      eventCall = "kitchen_blind_up_request";
+    } else {
+      eventCall = "main_blind_up_request";
+    }
+
+    this.hass.callService("ifttt", "trigger", {
+      event: eventCall
+    });
+    this.hass.callService("input_boolean", "turn_on", {
+      entity_id: input_boolean.blind_override
+    });
+  }
+
+  _singleSHadeDown(entityId) {
+    let eventCall = "";
+    if (entityId === "sensor.kitchen_shade_position"){
+      eventCall = "kitchen_blind_down_request";
+    } else {
+      eventCall = "main_blind_down_request";
+    }
+
+    this.hass.callService("ifttt", "trigger", {
+      event: eventCall
+    });
+    this.hass.callService("input_boolean", "turn_on", {
+      entity_id: input_boolean.blind_override
+    });
+  }
+
+  _allShadesUp() {
     this.hass.callService("ifttt", "trigger", {
       event: all_blinds_up_request
     });
@@ -67,7 +109,7 @@ class ShadeStatusCard extends LitElement {
     });
   }
 
-  _shadesDown() {
+  _allShadesDown() {
     this.hass.callService("ifttt", "trigger", {
       event: all_blinds_down_request
     });
