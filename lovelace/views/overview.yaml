@@ -70,15 +70,14 @@ cards:
             icon: mdi:lightbulb
             hide_when_off: true
             toggle: true
-          - type: divider
-          - type: custom:slider-entity-row
-            entity: cover.main_shade
-            name: Living Room Shade
-            icon: mdi:blinds
-          - type: custom:slider-entity-row
-            entity: cover.kitchen
-            name: Kitchen Shade
-            icon: mdi:blinds
+      - type: horizontal-stack
+        cards:
+        - type: custom:shade-status-card
+          entity: sensor.kitchen_shade_position
+          name: Kitchen Shade
+        - type: custom:shade-status-card
+          entity: sensor.main_shade_position
+          name: Living Room Shade
       - type: custom:mini-media-player
         entity: media_player.tv_room
         name: SONOS
@@ -96,6 +95,8 @@ cards:
             name: Bathroom
           - entity_id: media_player.bedroom
             name: Bedroom
+          - entity_id: media_player.move
+            name: Portable
         shortcuts:
           columns: 4
           buttons:
@@ -124,7 +125,6 @@ cards:
         showColors: true
         showProgressBar: true
         progressBarColor: orange
-
   - type: vertical-stack
     cards:
       - id: 46961635462048c996587f7ea3db8feb  # Automatically created id

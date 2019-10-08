@@ -232,6 +232,15 @@ ios:
 #######################################################################################
 
 #######################################################################################
+# Sensor information for Pi-Hole
+# https://www.home-assistant.io/components/pi_hole/
+pi_hole:
+  host: !secret pi_hole_url
+  ssl: false
+  verify_ssl: false
+#######################################################################################
+
+#######################################################################################
 # Allows connection of multiple device tracer entities to a single person
 # 
 # https://www.home-assistant.io/components/person/
