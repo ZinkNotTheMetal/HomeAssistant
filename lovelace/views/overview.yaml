@@ -104,6 +104,8 @@ cards:
             name: Bathroom
           - entity_id: media_player.bedroom
             name: Bedroom
+          - entity_id: media_player.move
+            name: Portable
         shortcuts:
           columns: 4
           buttons:
