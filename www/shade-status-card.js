@@ -19,7 +19,6 @@ class ShadeStatusCard extends LitElement {
     if (!hass) return;
     const entity = this.config.entity;
     const name = this.config.name;
-    const icon = this.config.icon;
     const entityState = hass.states[entity];
     const stateString = entityState ? entityState.state : 'unavailable';
     this._hass = hass;
