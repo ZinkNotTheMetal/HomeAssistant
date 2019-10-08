@@ -70,15 +70,6 @@ cards:
             icon: mdi:lightbulb
             hide_when_off: true
             toggle: true
-          - type: divider
-          - type: custom:slider-entity-row
-            entity: cover.main_shade
-            name: Living Room Shade
-            icon: mdi:blinds
-          - type: custom:slider-entity-row
-            entity: cover.kitchen
-            name: Kitchen Shade
-            icon: mdi:blinds
       - type: horizontal-stack
         cards:
         - type: custom:shade-status-card

@@ -54,13 +54,13 @@ class ShadeStatusCard extends LitElement {
         <div style="text-align: center;">
           <ha-icon id="down-arrow" 
                    icon="mdi:arrow-down-bold" 
-                   @ha-click="${this._shadesDown(entity)}" 
+                   @ha-click="${this._shadesDown(this.entity)}" 
                    @ha-hold="${this._allShadesDown()}">
           </ha-icon>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           <ha-icon id="up-arrow" 
                    icon="mdi:arrow-up-bold" 
-                   @ha-click="${this._singleShadeUp(entity)}"
+                   @ha-click="${this._singleShadeUp(this.entity)}"
                    @ha-hold="${this._allShadesDown()}">
           </ha-icon>
         </div>
