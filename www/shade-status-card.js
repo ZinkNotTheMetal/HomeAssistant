@@ -2,16 +2,6 @@
 
 //You can use Polymer, Angular, Preact or any other popular framework
 
-
-//    const entityId = this.config.entity;
-//    const entityName = this.config.name;
-//    const state = hass.states[entityId];
-//    const stateStr = state ? state.state : 'unavailable';
-
-//    const blindClosedIcon = "mdi:blinds"
-//    const blindOpenIcon = "mdi:blinds-open";
-//    const arrowUpIcon = "mdi:arrow-up-bold";
-//    const arrowDownIcon = "mdi:arrow-down-bold";
 import { LitElement, html, css } from "https://unpkg.com/lit-element@2.0.1/lit-element.js?module";
 
 class ShadeStatusCard extends LitElement {
@@ -22,7 +12,6 @@ class ShadeStatusCard extends LitElement {
       entity: {},
       stateString: String,
       name: String,
-      icon: String
     };
   }
 
@@ -43,9 +32,6 @@ class ShadeStatusCard extends LitElement {
     if (name && this.name !== name) {
       this.name = name;
     }
-    if (icon && this.icon != icon) {
-      this.icon = icon;
-    }
   }
 
   get hass() {
@@ -54,7 +40,7 @@ class ShadeStatusCard extends LitElement {
 
   render() {
     return html`
-      <ha-card>
+      <ha-card style="padding: 15px;">
         <div style="text-align: center;">
           ${this.renderShadeIcon()}
         </div>
@@ -67,12 +53,31 @@ class ShadeStatusCard extends LitElement {
         </div>
         <br>
         <div style="text-align: center;">
-          <ha-icon id="down-arrow" icon="mdi:arrow-down-bold"></ha-icon>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<ha-icon id="up-arrow" icon="mdi:arrow-up-bold"></ha-icon>
+          <ha-icon id="down-arrow" icon="mdi:arrow-down-bold" @click="${this._shadesDown()}"></ha-icon>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<ha-icon id="up-arrow" icon="mdi:arrow-up-bold" @click="${this._shadesUp()}></ha-icon>
         </div>
       </ha-card>
     `;
   }
 
+  _shadesUp() {
+    this.hass.callService("ifttt", "trigger", {
+      event: all_blinds_up_request
+    });
+    this.hass.callService("input_boolean", "turn_on", {
+      entity_id: input_boolean.blind_override
+    });
+  }
+
+  _shadesDown() {
+    this.hass.callService("ifttt", "trigger", {
+      event: all_blinds_down_request
+    });
+    this.hass.callService("input_boolean", "turn_on", {
+      entity_id: input_boolean.blind_override
+    });
+  }
+
+  // Not currently used
   renderUpArrow() {
     return html`
       <div>
@@ -81,6 +86,7 @@ class ShadeStatusCard extends LitElement {
       `;
   }
 
+  // Not currently used
   renderDownArrow() {
     return html`<ha-icon id="down-arrow" icon="mdi:arrow-down-bold"></ha-icon>`;
   }
