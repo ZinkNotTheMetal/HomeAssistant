@@ -54,14 +54,16 @@ class ShadeStatusCard extends LitElement {
         <div style="text-align: center;">
           <ha-icon id="down-arrow" 
                    icon="mdi:arrow-down-bold" 
-                   @ha-click="${this._shadesDown(this.entity)}" 
-                   @ha-hold="${this._allShadesDown()}">
+                   @ha-click="${() => this._singleShadeDown(this.entity)}" 
+                   @ha-hold="${() => this._allShadesDown()}"
+          >
           </ha-icon>
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           <ha-icon id="up-arrow" 
                    icon="mdi:arrow-up-bold" 
-                   @ha-click="${this._singleShadeUp(this.entity)}"
-                   @ha-hold="${this._allShadesDown()}">
+                   @ha-click="${() => this._singleShadeUp(this.entity)}"
+                   @ha-hold="${() => this._allShadesUp()}"
+          >
           </ha-icon>
         </div>
       </ha-card>
@@ -84,7 +86,7 @@ class ShadeStatusCard extends LitElement {
     });
   }
 
-  _singleSHadeDown(entityId) {
+  _singleShadeDown(entityId) {
     let eventCall = "";
     if (entityId === "sensor.kitchen_shade_position"){
       eventCall = "kitchen_blind_down_request";
