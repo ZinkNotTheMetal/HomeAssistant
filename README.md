@@ -1,6 +1,6 @@
 # Here's my [Home Assistant (HA)](https://home-assistant.io/) configuration. 
 
-| ![](https://img.shields.io/badge/Home%20Assistant-0.100.3-blue.svg) | ![](https://img.shields.io/github/stars/zinknotthemetal/homeassistant.svg?label=Stars)|
+| ![](https://img.shields.io/badge/Home%20Assistant-0.102.2-blue.svg) | ![](https://img.shields.io/github/stars/zinknotthemetal/homeassistant.svg?label=Stars)|
 |:---:|:---:|
 | Configuration for Home Assistant version | Please :star: this repo if you found it useful! (Click Star in the top right) |
 | [![](https://img.shields.io/github/issues-raw/zinknotthemetal/homeassistant.svg)](https://github.com/ZinkNotTheMetal/HomeAssistant/issues) | ![](https://img.shields.io/github/last-commit/zinknotthemetal/homeassistant.svg) |
