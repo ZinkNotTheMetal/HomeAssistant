@@ -123,10 +123,7 @@ cards:
         line_width: 5
         font_size: 65
         hours_to_show: 168
-        aggregate_func: max
-        group_by: date
         show:
-          graph: bar
           icon: false
           extrema: true   
         color_thresholds:
