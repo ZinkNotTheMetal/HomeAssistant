@@ -113,6 +113,29 @@ cards:
           - icon: mdi:playlist-music-outline
             type: source
             id: Chill Hits
+  - type: vertical-stack
+    cards:
+      - type: custom:mini-graph-card
+        entities: 
+        - sensor.steps
+        name: Steps
+        height: 74
+        line_width: 5
+        font_size: 65
+        hours_to_show: 168
+        aggregate_func: max
+        group_by: date
+        show:
+          graph: bar
+          icon: false
+          extrema: true   
+        color_thresholds:
+          - value: 10000
+            color: "#00cc00"
+          - value: 5000
+            color: "#cccc00"
+          - value: 2300
+            color: "#b30000"   
       - type: "custom:atomic-calendar"
         title: "Calendar"
         entities:
@@ -125,22 +148,22 @@ cards:
         showColors: true
         showProgressBar: true
         progressBarColor: orange
-  - type: vertical-stack
-    cards:
-      - id: 46961635462048c996587f7ea3db8feb  # Automatically created id
-        type: weather-forecast
-        title: Weather
-        entity: weather.openweathermap
+      - id: c4e87938182444d19ad8bac260c5d528  # Automatically created id
+        type: map
+        entities:
+          - zone.home
+          - zone.work
+          - device_tracker.life360_william
       - id: bc9daf3c39c04d66a3fcaf81e41b4942  # Automatically created id
         type: iframe
         aspect_ratio: 75%
         url: https://embed.windy.com/embed2.html?lat=36.076&lon=-86.814&zoom=7&level=surface&overlay=wind&menu=&message=true&marker=true&calendar=&pressure=true&type=map&location=coordinates&detail=&detailLat=36.120&detailLon=-86.814&metricWind=kt&metricTemp=%C2%B0F&radarRange=-1
   - type: vertical-stack
     cards:
-      - id: ad3a584234024c138264a636d2e19f85  # Automatically created id
-        type: thermostat
-        entity: climate.condo
-        name: HVAC
+      - id: 46961635462048c996587f7ea3db8feb  # Automatically created id
+        type: weather-forecast
+        title: Weather
+        entity: weather.openweathermap
       - type: custom:mini-graph-card
         entities: 
         - sensor.owm_temperature
@@ -153,6 +176,17 @@ cards:
         show:
           icon: false
           extrema: true
+        color_thresholds:
+          - value: 77
+            color: "#e74c3c"
+          - value: 73
+            color: "#1db954"
+          - value: 68
+            color: "#3498db"
+      - id: ad3a584234024c138264a636d2e19f85  # Automatically created id
+        type: thermostat
+        entity: climate.condo
+        name: HVAC
       - type: horizontal-stack
         cards:
         - type: custom:mini-graph-card
@@ -194,14 +228,6 @@ cards:
             - value: 68
               color: "#3498db"
         aspect_ratio: 100%
-      - id: c4e87938182444d19ad8bac260c5d528  # Automatically created id
-        type: map
-        entities:
-          - zone.home
-          - zone.work
-          - device_tracker.life360_william
-  - type: vertical-stack
-    cards:
       - type: gauge
         entity: sensor.condo_humidity
         name: Indoor Humidity
@@ -211,6 +237,8 @@ cards:
           red: 0
           green: 30
           yellow: 65
+  - type: vertical-stack
+    cards:
       - type: horizontal-stack
         cards:
         - type: custom:mini-graph-card
