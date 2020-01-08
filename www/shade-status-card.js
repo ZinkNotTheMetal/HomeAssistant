@@ -77,72 +77,45 @@ class ShadeStatusCard extends LitElement {
     }
 
     this.hass.callService("ifttt", "trigger", {
-      event: eventCall
+      "event": eventCall
     });
     this.hass.callService("input_boolean", "turn_on", {
-      entity_id: input_boolean.blind_override
+      "entity_id": "input_boolean.blind_override"
     });
   }
 
   _singleShadeDown(entityId) {
     let eventCall = "";
-    if (entityId === "sensor.kitchen_shade_position"){
+    if (entityId === "sensor.kitchen_shade_position") {
       eventCall = "kitchen_blind_down_request";
     } else {
       eventCall = "main_blind_down_request";
     }
 
     this.hass.callService("ifttt", "trigger", {
-      event: eventCall
+      "event": eventCall
     });
     this.hass.callService("input_boolean", "turn_on", {
-      entity_id: input_boolean.blind_override
+      "entity_id": "input_boolean.blind_override"
     });
   }
 
   _allShadesUp() {
     this.hass.callService("ifttt", "trigger", {
-      event: all_blinds_up_request
+      "event": "all_blinds_up_request"
     });
     this.hass.callService("input_boolean", "turn_on", {
-      entity_id: input_boolean.blind_override
+      "entity_id": "input_boolean.blind_override"
     });
   }
 
   _allShadesDown() {
     this.hass.callService("ifttt", "trigger", {
-      event: all_blinds_down_request
+      "event": "all_blinds_down_request"
     });
     this.hass.callService("input_boolean", "turn_on", {
-      entity_id: input_boolean.blind_override
+      "entity_id": "input_boolean.blind_override"
     });
-  }
-
-  // Not currently used
-  renderUpArrow() {
-    return html`
-      <div>
-        <ha-icon data-domain="arrow-up-bold" id="up-arrow" icon="mdi:arrow-up-bold"></ha-icon>
-      </div>
-      `;
-  }
-
-  // Not currently used
-  renderDownArrow() {
-    return html`<ha-icon id="down-arrow" icon="mdi:arrow-down-bold"></ha-icon>`;
-  }
-
-  renderShadeIcon() {
-     const blindClosedIcon = "mdi:blinds"
-     const blindOpenIcon = "mdi:blinds-open";
-     let icon = "";
-     if(this.stateString === "Closed") {
-       icon = blindClosedIcon;
-     } else {
-       icon = blindOpenIcon;
-     }  
-
-     return html`<ha-icon .icon=${icon}></ha-icon>`
   }
 
   getCardSize() {
