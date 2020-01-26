@@ -19,7 +19,7 @@ cards:
             name: Back
             tap_action:
               action: more-info
-          - entity: media_player.lg_webos_smart_tv
+          - entity: media_player.lg_tv_living_room
             name: TV
             tap_action:
               action: toggle

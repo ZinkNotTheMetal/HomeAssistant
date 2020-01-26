@@ -1,6 +1,6 @@
 - platform: history_stats
   name: stats_tv
-  entity_id: media_player.lg_webos_smart_tv
+  entity_id: media_player.lg_tv_living_room
   state: 'playing'
   type: time
   end: '{{ now() }}'

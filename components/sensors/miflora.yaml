@@ -1,4 +1,0 @@
-- platform: miflora
-  mac: !secret miflora_mac_1
-- platform: miflora
-  mac: !secret miflora_mac_2
