@@ -39,32 +39,44 @@ class ShadeStatusCard extends LitElement {
 
   render() {
     return html`
-      <ha-card style="padding: 15px;">
-        <div style="text-align: center;">
-          ${this.renderShadeIcon()}
-        </div>
-        <div style="text-align: center;">
-          ${this.stateString}
-        </div>
-        <br>
-        <div style="text-align: center;">
-          ${this.name}
-        </div>
-        <br>
-        <div style="text-align: center;">
-          <div id="container-down-arrow-${this.entity}"
-               @ha-click="${() => this._singleShadeDown(this.entity)}" 
-               @ha-hold="${() => this._allShadesDown()}">
-            <ha-icon id="down-arrow-${this.entity}" icon="mdi:arrow-down-bold">
+      <style>
+        .icon-button {
+          background: none;
+          border  : 1px transparent;
+          cursor  : pointer;
+        }
+      </style>
+
+      <div class="shade-status-card-container">
+
+        <ha-card style="padding: 15px;">
+          <div style="text-align: center;">
+            ${this.stateString === 'Open' ? html`<ha-icon icon="mdi:blinds-open" />` : html`<ha-icon icon="mdi:blinds" />`}
           </div>
-          &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
-          <div id="container-up-arrow-${this.entity}"
-               @ha-click="${() => this._singleShadeUp(this.entity)}" 
-               @ha-hold="${() => this._allShadesUp()}">
-            <ha-icon id="up-arrow-${this.entity}" icon="mdi:arrow-up-bold">
+          <div style="text-align: center; font-weight: bold; padding-top: 5px;">
+            ${this.stateString}
           </div>
-        </div>
-      </ha-card>
+          <div style="text-align: center; padding-top: 10px;">
+            ${this.name}
+          </div>
+          <div style="text-align: center; padding-top:10px;">
+            <button class="icon-button" id="container-down-arrow-${this.entity}"
+               @click="${ev => this._singleShadeDown(this.entity)}" 
+               @ha-hold="${ev => this._allShadesDown()}"
+            >
+              <ha-icon style="color: white;" id="down-arrow-${this.entity}" icon="mdi:arrow-down-bold" />
+            </button>
+            &nbsp;&nbsp;|&nbsp;&nbsp;
+            <button class="icon-button" id="container-up-arrow-${this.entity}"
+               @click="${ev => this._singleShadeUp(this.entity)}" 
+               @ha-hold="${ev => this._allShadesUp()}"
+            >
+              <ha-icon style="color: white;" id="up-arrow-${this.entity}" icon="mdi:arrow-up-bold" />
+            </button>
+          </div>
+        </ha-card>
+      
+      </div>
     `;
   }
 

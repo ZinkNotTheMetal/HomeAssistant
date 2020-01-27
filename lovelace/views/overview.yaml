@@ -73,11 +73,11 @@ cards:
       - type: horizontal-stack
         cards:
         - type: custom:shade-status-card
-          entity: sensor.kitchen_shade_position
-          name: Kitchen Shade
-        - type: custom:shade-status-card
           entity: sensor.main_shade_position
           name: Living Room Shade
+        - type: custom:shade-status-card
+          entity: sensor.kitchen_shade_position
+          name: Kitchen Shade
       - type: custom:mini-media-player
         entity: media_player.tv_room
         name: SONOS
