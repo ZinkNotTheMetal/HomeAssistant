@@ -83,6 +83,12 @@ recorder:
       - sensor.speedtest_download
       - sensor.speedtest_ping
       - sensor.speedtest_upload
+      - sensor.kitchen_temperature
+      - sensor.condo_temperature
+      - sensor.owm_temperature
+      - sensor.steps
+      - sensor.allergy_index_forecasted_average
+      - sensor.cold_flu_forecasted_average_2
 
 #######################################################################################
 #                                                                                     #

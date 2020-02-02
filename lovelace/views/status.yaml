@@ -33,8 +33,10 @@ cards:
           - zwave.aeotec_zw090_z_stick_gen5_us
           - device_tracker.august_connect
           - media_player.lg_tv_living_room
+          - media_player.move
           - media_player.bathroom
           - media_player.bedroom
+          - media_player.tv_room
           - sensor.stats_tv
       - type: entities
         title: Home Assistant
@@ -118,16 +120,9 @@ cards:
         show_header_toggle: false
         entities:
           - sensor.august_lock_battery
-          - sensor.closet_motion_sensor_battery
-          - sensor.laundry_motion_sensor_battery
-          - sensor.utility_motion_sensor_battery
-          - sensor.hallway_switch_battery
-          - sensor.bedroom_switch_battery
-          - sensor.kitchen_switch_battery
           - entity: sensor.hallway_nest_protect_battery_health
             name: Nest Battery Level (3x AAA)
             icon: mdi:battery
-          - sensor.williams_iphone_battery_level
       - type: entities
         title: Switches
         show_header_toggle: false
