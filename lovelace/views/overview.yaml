@@ -147,6 +147,8 @@ cards:
         progressBarColor: orange
       - id: c4e87938182444d19ad8bac260c5d528  # Automatically created id
         type: map
+        default_zoom: 8
+        dark_mode: true
         entities:
           - zone.home
           - zone.work
