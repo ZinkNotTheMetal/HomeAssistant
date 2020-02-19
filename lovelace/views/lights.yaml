@@ -12,6 +12,8 @@ cards:
       - type: light
         entity: light.kitchen
       - type: light
+        entity: light.office
+      - type: light
         entity: light.outdoor
   - type: vertical-stack
     cards:

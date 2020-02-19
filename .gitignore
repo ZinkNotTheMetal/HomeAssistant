@@ -42,3 +42,4 @@ google_calendars.yaml
 custom_components/hue_custom/__pycache__/binary_sensor.cpython-37.pyc
 custom_components/hue_custom/__pycache__/device_tracker.cpython-37.pyc
 custom_components/hue_custom/__pycache__/sensor.cpython-37.pyc
+.vs/slnx.sqlite

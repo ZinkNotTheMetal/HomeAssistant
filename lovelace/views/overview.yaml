@@ -65,6 +65,12 @@ cards:
             hide_when_off: true
             toggle: true
           - type: custom:slider-entity-row
+            entity: light.office
+            name: Office
+            icon: mdi:lightbulb
+            hide_when_off: true
+            toggle: true
+          - type: custom:slider-entity-row
             entity: light.outdoor
             name: Outdoor
             icon: mdi:lightbulb
@@ -147,8 +153,7 @@ cards:
         progressBarColor: orange
       - id: c4e87938182444d19ad8bac260c5d528  # Automatically created id
         type: map
-        default_zoom: 8
-        dark_mode: true
+        default_zoom: 13
         entities:
           - zone.home
           - zone.work
