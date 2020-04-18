@@ -240,7 +240,7 @@ nest:
 #  - Router
 #  - GPS
 # https://www.home-assistant.io/components/device_tracker/
-device_tracker: !include components/device_tracker.yaml
+# device_tracker: !include components/device_tracker.yaml
 #######################################################################################
 
 #######################################################################################
