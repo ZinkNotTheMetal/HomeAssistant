@@ -96,7 +96,8 @@ recorder:
 #                                                                                     #
 #######################################################################################
 #######################################################################################
-# Asus Router utilized for device_tracker
+# Asus Router utilized for Router Information and Presence Detection (device_tracker)
+#  to add a device to a person (search in States and see what ASUS is returning)
 #
 # https://www.home-assistant.io/components/asuswrt/
 asuswrt:
@@ -231,16 +232,6 @@ person: !include_dir_merge_list people/
 nest:
   client_id: !secret nest_client_id
   client_secret: !secret nest_client_secret
-#######################################################################################
-
-
-#######################################################################################
-# Tracking all devices through Home Assistant
-#  - Bluetooth
-#  - Router
-#  - GPS
-# https://www.home-assistant.io/components/device_tracker/
-# device_tracker: !include components/device_tracker.yaml
 #######################################################################################
 
 #######################################################################################
