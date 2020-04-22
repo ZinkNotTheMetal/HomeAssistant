@@ -123,7 +123,7 @@ cards:
     cards:
       - type: custom:mini-graph-card
         entities: 
-        - sensor.steps
+        - sensor.williams_iphone_x_steps
         name: Steps
         height: 74
         line_width: 5
