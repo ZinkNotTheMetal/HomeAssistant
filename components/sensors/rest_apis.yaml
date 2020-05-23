@@ -1,0 +1,18 @@
+####################################################
+#                                                  #
+#                      REST                        #
+#                                                  #
+####################################################
+- platform: rest
+  resource: https://s3.amazonaws.com/hassio-version/stable.json
+  name: Hassio Version
+  value_template: "{{ value_json.homeassistant.default }}"
+  scan_interval: 3600  
+
+- platform: rest
+  resource: !secret blind_hub_rest_url
+  name: Shade Positions
+  json_attributes:
+    - shadeData
+  value_template: "{{ value_json.value }}"
+  scan_interval: 15

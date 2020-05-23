@@ -1,0 +1,189 @@
+
+# Configure a default setup of Home Assistant (frontend, api, etc)
+default_config:
+
+# https://www.home-assistant.io/components/recorder/
+recorder:
+  purge_keep_days: 8
+  include:
+    entities:
+      - binary_sensor.patio_door
+      - binary_sensor.washing_machine
+      - calendar.appointments
+      - climate.domain
+      - person.william
+      - device_tracker.powerview_hub
+      - device_tracker.august_lock
+      - lock.august_lock
+      - sensor.speedtest_download
+      - sensor.speedtest_ping
+      - sensor.speedtest_upload
+      - sensor.kitchen_temperature
+      - sensor.condo_temperature
+      - sensor.owm_temperature
+      - sensor.steps
+      - sensor.allergy_index_forecasted_average
+      - sensor.cold_flu_forecasted_average_2
+
+
+#######################################################################################
+#                                                                                     #
+#                       COMPONENTS                                                    #
+#                                                                                     #
+#######################################################################################
+#######################################################################################
+# Asus Router utilized for Router Information and Presence Detection (device_tracker)
+#  to add a device to a person (search in States and see what ASUS is returning)
+#
+# https://www.home-assistant.io/components/asuswrt/
+asuswrt:
+  host: !secret router_ip_address
+  username: !secret router_username
+  password: !secret router_password
+#######################################################################################
+
+
+
+#######################################################################################
+# Binary sensors in Home Assistant
+#
+# https://www.home-assistant.io/components/binary_sensor/
+binary_sensor: !include_dir_list components/binary_sensors
+#######################################################################################
+
+
+#######################################################################################
+# Google Component - only used for calendar in Home Assistant
+#
+# https://www.home-assistant.io/components/calendar.google/
+google:
+  client_id: !secret google_client_id
+  client_secret: !secret google_client_secret
+#######################################################################################
+
+
+#######################################################################################
+# Using IFTTT for quite a few components that support this more than home assistant
+#
+# https://www.home-assistant.io/components/ifttt/
+ifttt:
+  key: !secret ifttt_api_key
+#######################################################################################
+
+
+#######################################################################################
+# The input_boolean component allows the user to define boolean values that
+# can be controlled via the frontend and can be used within conditions of
+# automation. This can for example be used to disable or enable certain
+# automations.
+#
+# https://www.home-assistant.io/components/input_boolean/
+input_boolean: !include_dir_merge_named components/input_booleans
+#######################################################################################
+
+
+#######################################################################################
+# Customized iOS push Notifications for Home Assistant / Node-Red
+# TODO: File Structure
+#
+# https://www.home-assistant.io/docs/ecosystem/ios/
+ios:
+  push:
+    categories:
+      - name: Home
+        identifier: 'home'
+        actions:
+          - identifier: 'NO_MUSIC'
+            title: 'Turn off music'
+            activationMode: 'background'
+            authenticationRequired: no
+            destructive: yes
+          - identifier: 'RAISE_BLINDS'
+            title: 'Raise Shades'
+            activationMode: 'background'
+            authenticationRequired: no
+            destructive: no
+      - name: Laundry Notification
+        identifier: 'laundry'
+        actions:
+          - identifier: 'REMIND_ME_30'
+            title: 'Remind me in 30 minutes'
+            activationMode: 'background'
+            authenticationRequired: no
+            destructive: no
+          - identifier: 'TELL_OTHER_PERSON'
+            title: 'Ask them to do it'
+            activationMode: 'background'
+            authenticationRequired: no
+            destructive: no
+#######################################################################################
+
+
+#######################################################################################
+# Media players in Home Assistant
+#
+# https://www.home-assistant.io/components/media_player/
+media_player: !include_dir_merge_list components/media_players
+#######################################################################################
+
+
+#######################################################################################
+# Nest Components
+# - smoke detector / CO detector
+#
+# https://www.home-assistant.io/integrations/nest/
+nest:
+  client_id: !secret nest_client_id
+  client_secret: !secret nest_client_secret
+#######################################################################################
+
+#######################################################################################
+# All custom scripts that do multiple actions with one call
+#
+# https://www.home-assistant.io/components/script
+script: !include_dir_merge_named components/scripts
+#######################################################################################
+
+#######################################################################################
+# All Sensors that are in Home Assistant
+#
+# https://www.home-assistant.io/components/sensor
+sensor: !include_dir_merge_list components/sensors
+#######################################################################################
+
+#######################################################################################
+# Speedtest.Net
+#
+# https://www.home-assistant.io/components/speedtestdotnet/
+speedtestdotnet:
+  scan_interval:
+    minutes: 20
+  monitored_conditions:
+    - ping
+    - download
+    - upload
+#######################################################################################
+
+
+#######################################################################################
+# Weather configuration in Home Assistant
+#   Used for overall weather on lovelace page 
+#
+# https://www.home-assistant.io/components/weather/
+weather: !include_dir_list components/weather
+#######################################################################################
+
+
+#######################################################################################
+# WebOs TV
+#
+# https://www.home-assistant.io/integrations/webostv/
+webostv:
+  name: LG TV Living Room
+  host: !secret tv_ip_address
+  # other settings
+  turn_on_action:
+    service: wake_on_lan.send_magic_packet
+    data:
+      mac: !secret tv_mac_address
+#######################################################################################

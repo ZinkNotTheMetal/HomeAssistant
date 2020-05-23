@@ -1,0 +1,13 @@
+.google.token
+google_calendars.yaml
+known_devices.yaml
+home-assistant_v2.db
+home-assistant.log
+zwcfg_0xd30a70fa.xml
+zwscene.xml
+webostv.conf
+secrets.yaml
+.vs/
+.storage/
+*.sqlite
+OZW_Log.txt
