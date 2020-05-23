@@ -1,0 +1,4 @@
+go_to_sleep:
+  name: 'Go to Sleep'
+  icon: mdi:hotel
+  initial: off

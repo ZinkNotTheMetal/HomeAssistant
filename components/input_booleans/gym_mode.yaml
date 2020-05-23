@@ -1,0 +1,4 @@
+gym_mode:
+  name: 'Gym Mode'
+  initial: off
+  icon: mdi:dumbbell

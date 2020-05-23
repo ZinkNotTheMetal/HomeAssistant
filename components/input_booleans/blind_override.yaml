@@ -1,0 +1,4 @@
+blind_override:
+  name: 'Blind Automation Override'
+  initial: off
+  icon: mdi:blinds

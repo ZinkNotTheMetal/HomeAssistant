@@ -1,0 +1,4 @@
+guest_override:
+  name: 'Guest Override'
+  initial: off
+  icon: mdi:human-male-female
