@@ -1,0 +1,6 @@
+- platform: wake_on_lan
+  name: 'PC'
+  mac: !secret razer_wired_mac_address
+  host: !secret computer_ip_address
+  turn_off:
+    - service: shell_command.turn_off_pc
