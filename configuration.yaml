@@ -43,7 +43,6 @@ asuswrt:
 #######################################################################################
 
 
-
 #######################################################################################
 # Binary sensors in Home Assistant
 #
@@ -59,6 +58,14 @@ binary_sensor: !include_dir_list components/binary_sensors
 google:
   client_id: !secret google_client_id
   client_secret: !secret google_client_secret
+#######################################################################################
+
+
+#######################################################################################
+# https://www.home-assistant.io/integrations/http/
+http:
+  ssl_certificate: /ssl/keys/letsencrypt/fullchain.pem
+  ssl_key: /ssl/keys/letsencrypt/privkey.pem
 #######################################################################################
 
 
@@ -137,6 +144,7 @@ nest:
   client_secret: !secret nest_client_secret
 #######################################################################################
 
+
 #######################################################################################
 # All custom scripts that do multiple actions with one call
 #
@@ -144,12 +152,22 @@ nest:
 script: !include_dir_merge_named components/scripts
 #######################################################################################
 
+
 #######################################################################################
 # All Sensors that are in Home Assistant
 #
 # https://www.home-assistant.io/components/sensor
 sensor: !include_dir_merge_list components/sensors
 #######################################################################################
+
+
+#######################################################################################
+# Custom Shell Commands in Home Assistant
+#
+# https://www.home-assistant.io/components/switch/
+shell_command: !include_dir_merge_named components/shell_commands
+#######################################################################################
+
 
 #######################################################################################
 # Speedtest.Net
@@ -164,12 +182,30 @@ speedtestdotnet:
     - upload
 #######################################################################################
 
+
+#######################################################################################
+# Custom Switches in Home Assistant
+#
+# https://www.home-assistant.io/components/switch/
+switch: !include_dir_merge_list components/switches
+#######################################################################################
+
+
+#######################################################################################
+# System Health
+#
+# https://www.home-assistant.io/integrations/system_health/
+system_health:
+#######################################################################################
+
+
 #######################################################################################
 # Wake on LAN - Computer and TV
 #
 # https://www.home-assistant.io/integrations/wake_on_lan
 wake_on_lan:
 #######################################################################################
+
 
 #######################################################################################
 # Weather configuration in Home Assistant
