@@ -1,6 +1,5 @@
-hallway_lights:
+- platform: group
   name: Hallway Lights
-  icon: mdi:lightbulb
   entities:
     - light.dividor_right
     - light.dividor_left

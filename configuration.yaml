@@ -2,6 +2,12 @@
 # Configure a default setup of Home Assistant (frontend, api, etc)
 default_config:
 
+frontend:
+  themes: !include_dir_merge_named themes
+
+#lovelace:
+#  mode: yaml
+
 # https://www.home-assistant.io/components/recorder/
 recorder:
   purge_keep_days: 8
@@ -62,15 +68,9 @@ google:
 
 
 #######################################################################################
-#
-# https://www.home-assistant.io/integrations/group
-group: !include_dir_merge_named components/groups
-#######################################################################################
-
-
-#######################################################################################
 # https://www.home-assistant.io/integrations/http/
 http:
+  base_url: !secret ha_base_url
   ssl_certificate: /ssl/keys/letsencrypt/fullchain.pem
   ssl_key: /ssl/keys/letsencrypt/privkey.pem
 #######################################################################################
@@ -130,6 +130,13 @@ ios:
             activationMode: 'background'
             authenticationRequired: no
             destructive: no
+#######################################################################################
+
+
+#######################################################################################
+#
+# https://www.home-assistant.io/integrations/light.group/
+light: !include_dir_merge_named components/light_groups
 #######################################################################################
 
 

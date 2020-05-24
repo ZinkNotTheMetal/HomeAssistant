@@ -1,6 +1,5 @@
-kitchen_lights:
+- platform: group
   name: Kitchen Lights
-  icon: mdi:lightbulb
   entities:
     - light.microwave_light
     - light.kitchen_sink_light_strip

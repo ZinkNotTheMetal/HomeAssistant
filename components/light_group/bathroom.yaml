@@ -1,0 +1,7 @@
+- platform: group
+  name: Bathroom Lights
+  entities:
+    - light.mirror_light
+    - light.vanity_light
+    - light.shower_light
+    - light.toilet_light
