@@ -1,0 +1,8 @@
+living_room_lights:
+  name: Living Room Lights
+  icon: mdi:lightbulb
+  entities:
+    - light.hallway_can_6
+    - light.hallway_can_7
+    - light.hallway_can_8
+    #- light.template.fan

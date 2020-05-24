@@ -1,0 +1,11 @@
+kitchen_lights:
+  name: Kitchen Lights
+  icon: mdi:lightbulb
+  entities:
+    - light.microwave_light
+    - light.kitchen_sink_light_strip
+    - light.kitchen_walkway_light
+    - light.bright_patio_light
+    - light.computer_desk_light
+    - light.kitchen_corner_light
+    - light.kitchen_sink_light

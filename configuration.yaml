@@ -62,6 +62,13 @@ google:
 
 
 #######################################################################################
+#
+# https://www.home-assistant.io/integrations/group
+group: !include_dir_merge_named components/groups
+#######################################################################################
+
+
+#######################################################################################
 # https://www.home-assistant.io/integrations/http/
 http:
   ssl_certificate: /ssl/keys/letsencrypt/fullchain.pem
