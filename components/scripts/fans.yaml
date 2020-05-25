@@ -16,10 +16,7 @@ living_room_fan_off:
   sequence:
     - service: input_boolean.turn_off
       entity_id: input_boolean.fan_living_room_state
-      data: {}        
-    - service: light.turn_on
-      data:
-        entity_id: light.office_light
+      data: {}
     - service: ifttt.trigger
       data:
         event: 'turn_living_room_fan_off'
@@ -64,3 +61,55 @@ living_room_fan_light_on:
 #                  Bedroom Fan                                                    #
 #                      Powered by: Fanimation                                     #
 ###################################################################################
+bedroom_fan_on:
+  sequence:
+    - alias: Turn off Fan State
+      service: input_boolean.turn_on
+      entity_id: input_boolean.fan_bedroom_state
+      data: {}   
+    - service: ifttt.trigger
+      data:
+        event: 'turn_bedroom_fan_on'
+bedroom_fan_off:
+  sequence:
+    - service: input_boolean.turn_off
+      entity_id: input_boolean.fan_bedroom_state
+      data: {}
+    - service: ifttt.trigger
+      data:
+        event: 'turn_bedroom_fan_off'
+set_bedroom_fan_speed:
+  sequence:
+    - alias: Change Fan Input Select
+      service: input_select.select_option
+      entity_id: input_select.fan_bedroom_speed
+      data_template:
+        option: >
+          {{ fan_speed }}
+    - alias: Call ifttt
+      service: ifttt.trigger
+      data_template:
+        event: >
+          {% if fan_speed == "10%" %}
+            set_bedroom_fan_10
+          {% elif fan_speed == "25%" %}
+            set_bedroom_fan_25
+          {% elif fan_speed == "50%" %}
+            set_bedroom_fan_50
+          {% elif fan_speed == "75%" %}
+            set_bedroom_fan_75
+          {% elif fan_speed == "100%" %}
+            set_bedroom_fan_100
+          {% endif %}
+bedroom_fan_light_off:
+  sequence:
+    - alias: Turn off light via IFTTT
+      service: ifttt.trigger
+      data:
+        event: turn_off_bedroom_fan_light       
+bedroom_fan_light_on:
+  sequence:
+    - alias: Turn on light via IFTTT
+      service: ifttt.trigger
+      data:
+        event: turn_on_80_bedroom_fan_light

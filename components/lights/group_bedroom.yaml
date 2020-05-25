@@ -1,0 +1,6 @@
+- platform: group
+  name: Bedroom Lights
+  entities:
+    - light.left_side_lamp
+    - light.right_side_lamp
+    - light.bedroom_fan_light

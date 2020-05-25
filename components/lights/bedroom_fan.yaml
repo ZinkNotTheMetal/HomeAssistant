@@ -1,0 +1,8 @@
+- platform: template
+  lights: 
+    bedroom_fan_light:
+      friendly_name: "Bedroom Fan Light"
+      turn_on:
+        service: script.bedroom_fan_light_on
+      turn_off:
+        service: script.bedroom_fan_light_off

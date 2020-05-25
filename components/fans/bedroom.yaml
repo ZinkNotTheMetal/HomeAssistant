@@ -1,0 +1,24 @@
+###################################################################################
+#                                                                                 #
+#                  Bedroom Fan                                                    #
+#                      Powered by: Fanimation                                     #
+###################################################################################
+bedroom_fan:
+    friendly_name: "Bedroom Fan"
+    value_template: "{{ states('input_boolean.fan_bedroom_state') }}"
+    speed_template: "{{ states('input_select.fan_bedroom_speed') }}"
+    turn_on:
+      service: script.bedroom_fan_on
+    turn_off:
+      service: script.bedroom_fan_off
+    set_speed:
+      service: script.set_bedroom_fan_speed
+      data_template:
+        fan_speed: "{{ speed }}"
+    # set direction ? maybe since IFTTT is limited in what it can do
+    speeds: 
+      - "10%"
+      - "25%"
+      - "50%"
+      - "75%"
+      - "100%"
