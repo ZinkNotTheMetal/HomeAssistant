@@ -1,0 +1,4 @@
+- platform: group
+  name: Outdoor Lights
+  entities:
+    - light.bench_light
