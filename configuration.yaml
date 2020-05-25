@@ -75,6 +75,15 @@ binary_sensor: !include_dir_list components/binary_sensors
 
 
 #######################################################################################
+# Fan Templates for Home Assistant
+# https://www.home-assistant.io/integrations/fan.template/
+fan: 
+  - platform: template
+    fans: !include_dir_merge_named components/fans
+#######################################################################################
+
+
+#######################################################################################
 # Google Component - only used for calendar in Home Assistant
 #
 # https://www.home-assistant.io/components/calendar.google/
@@ -109,6 +118,14 @@ ifttt:
 #
 # https://www.home-assistant.io/components/input_boolean/
 input_boolean: !include_dir_merge_named components/input_booleans
+#######################################################################################
+
+
+#######################################################################################
+# Used for Fanimation fans
+#
+# https://www.home-assistant.io/components/input_boolean/
+input_select: !include_dir_merge_named components/input_selects
 #######################################################################################
 
 

@@ -1,0 +1,55 @@
+###################################################################################
+#                                                                                 #
+#                  Living Room Fan                                                #
+#                      Powered by: Fanimation                                     #
+###################################################################################
+living_room_fan_on:
+  sequence:
+    - alias: Turn off Fan State
+      service: input_boolean.turn_on
+      entity_id: input_boolean.fan_living_room_state
+      data: {}   
+    - service: ifttt.trigger
+      data:
+        event: 'turn_living_room_fan_on'
+living_room_fan_off:
+  sequence:
+    - service: input_boolean.turn_off
+      entity_id: input_boolean.fan_living_room_state
+      data: {}        
+    - service: light.turn_on
+      data:
+        entity_id: light.office_light
+    - service: ifttt.trigger
+      data:
+        event: 'turn_living_room_fan_off'
+set_living_room_fan_speed:
+  sequence:
+    - alias: Change Fan Input Select
+      service: input_select.select_option
+      entity_id: input_select.fan_living_room_speed
+      data_template:
+        option: >
+          {{ fan_speed }}
+    - alias: Call ifttt
+      service: ifttt.trigger
+      data_template:
+        event: >
+          {% if fan_speed == "10%" %}
+            set_living_room_fan_10
+          {% elif fan_speed == "25%" %}
+            set_living_room_fan_25
+          {% elif fan_speed == "50%" %}
+            'set_living_room_fan_50'
+          {% elif fan_speed == "75%" %}
+            set_living_room_fan_75
+          {% elif fan_speed == "100%" %}
+            set_living_room_fan_100
+          {% endif %}
+
+
+###################################################################################
+#                                                                                 #
+#                  Bedroom Fan                                                    #
+#                      Powered by: Fanimation                                     #
+###################################################################################

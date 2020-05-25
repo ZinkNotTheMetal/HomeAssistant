@@ -1,0 +1,24 @@
+###################################################################################
+#                                                                                 #
+#                  Living Room Fan                                                #
+#                      Powered by: Fanimation                                     #
+###################################################################################
+living_room_fan:
+  friendly_name: "Living Room Fan"
+  value_template: "{{ states('input_boolean.fan_living_room_state') }}"
+  speed_template: "{{ states('input_select.fan_living_room_speed') }}"
+  turn_on:
+    service: script.living_room_fan_on
+  turn_off:
+    service: script.living_room_fan_off
+  set_speed:
+    service: script.set_living_room_fan_speed
+    data_template:
+      fan_speed: "{{ speed }}"
+  # set direction ? maybe since IFTTT is limited in what it can do
+  speeds: 
+    - "10%"
+    - "25%"
+    - "50%"
+    - "75%"
+    - "100%"
