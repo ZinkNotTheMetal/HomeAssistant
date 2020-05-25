@@ -1,0 +1,8 @@
+- platform: template
+  lights: 
+    living_room_fan_light:
+      friendly_name: "Living Room Fan Light"
+      turn_on:
+        service: script.living_room_fan_light_on
+      turn_off:
+        service: script.living_room_fan_light_off

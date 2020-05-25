@@ -4,4 +4,4 @@
     - light.hallway_can_6
     - light.hallway_can_7
     - light.hallway_can_8
-    #- light.template.fan
+    - light.living_room_fan_light

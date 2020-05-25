@@ -46,7 +46,18 @@ set_living_room_fan_speed:
           {% elif fan_speed == "100%" %}
             set_living_room_fan_100
           {% endif %}
-
+living_room_fan_light_off:
+  sequence:
+    - alias: Turn off light via IFTTT
+      service: ifttt.trigger
+      data:
+        event: turn_off_living_room_fan_light          
+living_room_fan_light_on:
+  sequence:
+    - alias: Turn on light via IFTTT
+      service: ifttt.trigger
+      data:
+        event: turn_on_50_living_room_fan_light
 
 ###################################################################################
 #                                                                                 #
