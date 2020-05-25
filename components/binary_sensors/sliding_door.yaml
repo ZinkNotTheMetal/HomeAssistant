@@ -1,0 +1,7 @@
+---
+platform: template
+sensors: 
+  back_patio_door:
+    friendly_name: 'Back Door'
+    device_class: door
+    value_template: "{{ is_state('sensor.back_door_open_status', '22') }}"

@@ -1,0 +1,7 @@
+---
+platform: template
+sensors: 
+  washing_machine_door:
+    friendly_name: 'Washing Machine door'
+    device_class: door
+    value_template: "{{ is_state('sensor.laundry_washer_door_sensor', '22') }}"

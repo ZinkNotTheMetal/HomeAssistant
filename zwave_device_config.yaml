@@ -1,3 +1,6 @@
 lock.august_lock:
   ignored: false
   polling_intensity: 1
+sensor.hank_electronics_ltd_hkzw_dws01_door_window_sensor_access_control:
+  ignored: false
+  polling_intensity: 1
