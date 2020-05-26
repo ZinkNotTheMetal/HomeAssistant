@@ -1,0 +1,35 @@
+set_bedroom_lights_to_bright:
+  sequence:
+    - service: light.turn_on
+      entity_id: light.bedroom_lights
+      data:
+        rgb_color: [255, 207, 119]
+        brightness_pct: 100
+set_hallway_lights_to_bright:
+  sequence:
+    - service: light.turn_on
+      entity_id: light.hallway_lights
+      data:
+        rgb_color: [255, 207, 119]
+        brightness_pct: 100
+set_kitchen_lights_to_bright:
+  sequence:
+    - service: light.turn_on
+      entity_id: light.kitchen_lights
+      data:
+        rgb_color: [255, 207, 119]
+        brightness_pct: 100
+set_bathroom_lights_to_bright:
+  sequence:
+    - service: light.turn_on
+      entity_id: light.bathroom_lights
+      data:
+        rgb_color: [255, 207, 119]
+        brightness_pct: 100
+set_living_room_lights_to_bright:
+  sequence:
+    - service: light.turn_on
+      entity_id: light.living_room_lights
+      data:
+        rgb_color: [255, 207, 119]
+        brightness_pct: 100
