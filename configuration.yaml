@@ -183,6 +183,11 @@ nest:
   client_secret: !secret nest_client_secret
 #######################################################################################
 
+#######################################################################################
+# Adding custom panels to Home Assistant
+# https://www.home-assistant.io/integrations/panel_custom/
+panel_iframe: !include_dir_merge_named components/iframe_panels
+#######################################################################################
 
 #######################################################################################
 # All custom scripts that do multiple actions with one call
