@@ -34,7 +34,7 @@ recorder:
       - binary_sensor.washing_machine
       - calendar.appointments
       - climate.domain
-      - person.william
+      - !secret person_me
       - device_tracker.powerview_hub
       - device_tracker.august_lock
       - lock.august_lock
