@@ -55,6 +55,7 @@ If you found this extremely helpful, feel free to reach out
   * [Node-Red via Docker](https://hub.docker.com/r/nodered/node-red)
   * [Duck DNS via Docker](https://hub.docker.com/r/linuxserver/duckdns/)
   * [Let's Encrypt via Docker](https://hub.docker.com/r/linuxserver/letsencrypt/)
+  * [HACS for Plugins](https://hacs.xyz/docs/installation/manual)
 
 * Software used
   * WSL for windows to SSH into NUC (PuTTY is another option)
