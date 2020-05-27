@@ -1,6 +1,6 @@
 # Here's my [Home Assistant (HA)](https://home-assistant.io/) configuration. 
 
-| ![](https://img.shields.io/badge/Home%20Assistant-0.110.2-blue.svg) | ![](https://img.shields.io/github/stars/zinknotthemetal/homeassistant.svg?label=Stars)|
+| ![](https://img.shields.io/badge/Home%20Assistant-0.110.3-blue.svg) | ![](https://img.shields.io/github/stars/zinknotthemetal/homeassistant.svg?label=Stars)|
 |:---:|:---:|
 | Configuration for Home Assistant version | Please :star: this repo if you found it useful! (Click Star in the top right) |
 | [![](https://img.shields.io/github/issues-raw/zinknotthemetal/homeassistant.svg)](https://github.com/ZinkNotTheMetal/HomeAssistant/issues) | ![](https://img.shields.io/github/last-commit/zinknotthemetal/homeassistant.svg) |
@@ -48,24 +48,22 @@ If you found this extremely helpful, feel free to reach out
 - [Raspberry Pi Zero W (PiHole)](https://www.raspberrypi.org/products/raspberry-pi-zero-w/)
 
 ### Installation:
-* Computer
-  * [Etcher](https://etcher.io/) for burning an image to Micro SD (installation following Hass.io documenation)
-  * [Sweeet Home 3D](http://www.sweethome3d.com/) for Floor plan picture
-  * [PuTTY](https://www.putty.org/) to SSH into NUC
-  * [Visual Studio Code](https://code.visualstudio.com/) text editor of choice
-* NUC 8 - i3 Short
-  * [Migration from Raspberry Pi to NUC](https://github.com/ZinkNotTheMetal/HomeAssistant/wiki/Moving-from-Raspberry-Pi-to-NUC-(Docker)-for-HomeAssistant---Hass.io-with-Z-Wave)
+* NUC 8 -i3 Short
+  * Standard Debian Installation with Docker (lightweight and reliable)
+  * [Home Assistant via Docker](https://hub.docker.com/r/homeassistant/home-assistant)
+  * [Portainer](https://hub.docker.com/u/portainer/#!)
+  * [Node-Red via Docker](https://hub.docker.com/r/nodered/node-red)
+  * [Duck DNS via Docker](https://hub.docker.com/r/linuxserver/duckdns/)
+  * [Let's Encrypt via Docker](https://hub.docker.com/r/linuxserver/letsencrypt/)
 
-* Additional Hass.io Addons
-  * [Samba Share](https://github.com/home-assistant/hassio-addons/tree/master/samba) (using Hassio addins)
-  * [Duck DNS & Let's Encrypt](https://www.home-assistant.io/addons/duckdns/) (using Hassio addins)  
-* Lovelace (Custom Components)
-  * [Custom Mini Media Player](https://github.com/kalkih/mini-media-player) for SONOS speakers
-* [Pi-hole](https://pi-hole.net/) installed on the Raspberry Pi Zero W [instructions](https://learn.adafruit.com/pi-hole-ad-blocker-with-pi-zero-w/overview-adafruit2)
+* Software used
+  * WSL for windows to SSH into NUC (PuTTY is another option)
+  * [PuTTY](https://www.putty.org/) to SSH into NUC
+  * [Visual Studio Code](https://code.visualstudio.com/) code editor of choice
+
+Migrated to individual docker images as Supervised installations of hass.io become obsolete.
 
 ### Useful Documentation:
-- [Raspberry Pi 3 B+ Migration to NUC 8-i3](https://github.com/ZinkNotTheMetal/HomeAssistant/wiki/Moving-from-Raspberry-Pi-to-NUC-(Docker)-for-HomeAssistant---Hass.io-with-Z-Wave)
-- [Raspberry Pi 3 B+ Hass.io WIFI setup](https://github.com/ZinkNotTheMetal/HomeAssistant/wiki/Hass.io-RPi-3-B--Wifi-Connection)
 - [Home Assistant Releases](https://github.com/home-assistant/home-assistant/releases)
 - [Awesome Home Assistant](https://www.awesome-ha.com/)
 
@@ -80,7 +78,7 @@ If you found this extremely helpful, feel free to reach out
 ### Lighting
 | Device  | Quantity | Connection | Component | Notes |
 | ------------- | :---: | ------------- | ------------- | ------------- |
-| <a href="http://a.co/d/a54cHvp"><img src="https://images.homedepot-static.com/productImages/7d8edcf4-11b5-4cf1-8747-7ba637f618d1/svn/philips-led-bulbs-530210-64_1000.jpg" width="185px" height="180px" /></a><br> [Philips Hue A19 Bulb](http://a.co/d/a54cHvp) | 24 | Hue Bridge | [Philips Hue](https://www.home-assistant.io/components/hue/) | Color changing smart bulbs developed by Philips ($40-$50) |
+| <a href="http://a.co/d/a54cHvp"><img src="https://images.homedepot-static.com/productImages/7d8edcf4-11b5-4cf1-8747-7ba637f618d1/svn/philips-led-bulbs-530210-64_1000.jpg" width="185px" height="180px" /></a><br> [Philips Hue A19 Bulb](http://a.co/d/a54cHvp) | 26 | Hue Bridge | [Philips Hue](https://www.home-assistant.io/components/hue/) | Color changing smart bulbs developed by Philips ($40-$50) |
 | <a href="http://a.co/d/a54cHvp"><img src="https://images-na.ssl-images-amazon.com/images/I/41LOPIeIkBL.jpg" width="185px" height="180px" /></a><br> [Philips Hue Bloom](https://amzn.to/2lPkEY8) | 2 | Hue Bridge | [Philips Hue](https://www.home-assistant.io/components/hue/) | Color changing smart lamps developed by Philips ($60) |
 | <a href="http://a.co/d/6OUFPsd"><img src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/4373/4373913_sd.jpg;maxHeight=640;maxWidth=550" width="185px" height="180px" /></a><br> [Philips Hue Indoor Light Strip](http://a.co/d/6OUFPsd) | 2 | Hue Bridge | [Philips Hue](https://www.home-assistant.io/components/hue/) | Color changing LED indoor light Strips ($60-$80) I have one over the kitchen cabinet with an extension |
 | <a href="http://a.co/d/7N361Gx"><img  src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6284/6284603_sd.jpg;maxHeight=640;maxWidth=550" width="185px" height="180px" /></a><br> [Philips Hue Outdoor Light Strip](http://a.co/d/7N361Gx) | 4 | Hue Bridge | [Philips Hue](https://www.home-assistant.io/components/hue/) | Color changing LED outdoor light Strips ($160) |
@@ -113,8 +111,8 @@ If you found this extremely helpful, feel free to reach out
 | Device  | Quantity | Connection | Component | Notes |
 | ------------- | :---: | ------------- | ------------- | ------------- |
 | <a href="http://a.co/d/0uRLeYF"><img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/image/AppleInc/aos/published/images/H/KK/HKKZ2/HKKZ2_AV1?wid=572&hei=572&fmt=jpeg&qlt=95&op_usm=0.5,0.5&.v=1475452852873" width="270px" height="160px" /></a><br> [Sonos Play:1](http://a.co/d/0uRLeYF) | 3 | Wi-Fi | [SONOS](https://www.home-assistant.io/components/sonos/) | I currently do not have any Alexa or Google Assistant devices $150 |
-| <a href="http://a.co/d/6aAYt6w"><img src="https://assets.pcmag.com/media/images/316505-sonos-playbar.jpg?width=1000&height=542" width="270px" height="160px" /></a><br> [Sonos Playbar](http://a.co/d/6aAYt6w) | 1 | Wi-Fi | [SONOS](https://www.home-assistant.io/components/sonos/) | Very good sound, it's not completely sold me yet though $699 |
-| <a href="http://a.co/d/cbajxaQ"><img src="https://images-na.ssl-images-amazon.com/images/I/51Y-Dulc3bL._SL1024_.jpg" width="200px" height="160px" /></a><br> [Apple TV](http://a.co/d/cbajxaQ) | 1 | Wi-Fi | [Apple TV](https://www.home-assistant.io/components/apple_tv/) | This is my main media player, althought this is not the 4K model, $150 |
+| <a href="http://a.co/d/6aAYt6w"><img src="https://assets.pcmag.com/media/images/316505-sonos-playbar.jpg?width=1000&height=542" width="270px" height="160px" /></a><br> [Sonos Playbar](http://a.co/d/6aAYt6w) | 1 | Wi-Fi | [SONOS](https://www.home-assistant.io/components/sonos/) | Good soundbar and integrates well with SONOS system |
+| <a href="https://amzn.to/2M4m3nD"><img src="https://cdn.shopify.com/s/files/1/1698/5279/products/move-dock-hover.jpg?v=1574712653" width="270px" height="160px" /></a><br> [Sonos Move](http://a.co/d/6aAYt6w) | 1 | Wi-Fi | [SONOS](https://www.home-assistant.io/components/sonos/) | Expensive at $399 but it is 'portable' |
 | <a href="http://a.co/d/dxfiS79"><img src="https://images-na.ssl-images-amazon.com/images/I/817C2spZZDL._SL1500_.jpg" width="210px" height="180px" /></a><br> [LG Web OS Smart TV](http://a.co/d/dxfiS79) | 1 | Wi-Fi | [LG WebOS](https://www.home-assistant.io/components/media_player.webostv/) | This is my main main TV. Highly recommend OLED and this is the 4K model |
 
 ### Sensors
@@ -149,35 +147,22 @@ If you found this extremely helpful, feel free to reach out
   
   
 ## [Automations](#automations)
-All Automations are using Node-Red (using Hassio Addins). This can be downloaded from my [scrubbed file](https://github.com/ZinkNotTheMetal/HomeAssistant/blob/master/Node-Red-Scrubbed-Automations.js)
-### Time Automations
-1) At 4AM (when everyone is sleeping) raise the shades (blinds) to allow more light in, in the morning.
+All Automations are using Node-Red (via Docker)
 
-<img src="https://github.com/ZinkNotTheMetal/HomeAssistant/blob/master/misc/pictures/NR-Timed-Shade-Raise.PNG" alt="Timed Shade Raise">
+Automations:
+1) In the middle of the night raise the blinds, turn down the fan, and turn the AC to normal (not sleep mode). This allows me to wake up warmer and wanting to get out of bed
 
-### The most intelligent blinds
-* When the proper elevation and azimuth is set to a blinding sun. Shut the blinds (with some follow the sun features), once the sun is not a factor open the shades again.
+2) Intelligent blinds. Check the elevation and azimuth of the sun using the sun sensor, bringing them down to the appropriate height as the sun sets in my windows. Also checks to see if there is cloud cover and not to lower them if there is cloud coverage greater than 75%
 
-<img src="https://github.com/ZinkNotTheMetal/HomeAssistant/blob/master/misc/pictures/NR-SmartShades-1.PNG" alt="Smart Shades pt.1">
+3) When the Hue Tap is pressed for good night, Set the AC to sleep mode, turn off TV, turn off SONOS, lock the door, turn on the fan to high.
 
-<img src="https://github.com/ZinkNotTheMetal/HomeAssistant/blob/master/misc/pictures/NR-SmartShades-2.PNG" alt="Smart Shades pt.2">
+4) When any of the Hue Dimmer switches are held on, raise the blinds
 
-<img src="https://github.com/ZinkNotTheMetal/HomeAssistant/blob/master/misc/pictures/NR-SmartShades-3.PNG" alt="Smart Shades pt.3">
+5) When any of the Hue Dimmer switches are held off, lower the blinds
 
-### Hue Switch Automations
-1) When the Tap is pressed, turn off all lights, Set AC to sleep mode, turn off TV, turn off Sonos, lock the door...
-2) When any of the Dimmer switches are held on, raise the blinds
-3) When any of the Dimmer switches are held off, lower the blinds
+6) When leaving the house, lock the door, turn off AC, lower the blinds, turn off all the lights.
 
-<img src="https://github.com/ZinkNotTheMetal/HomeAssistant/blob/master/misc/pictures/NR-Switches.PNG" alt="Switch Node-Red Screenshot">
-
-
-### Device Change automations
-1) If the back door opens, turn on the Hue Outdoor lights
-2) If no one is home, set AC to away
-
-<img src="https://github.com/ZinkNotTheMetal/HomeAssistant/blob/master/misc/pictures/NR-Away.PNG" alt="Away Node-Red Screenshot">
-
+7) When coming home, unlock the door, turn off AC, raise blinds following automation in step 2)
 
 ### Useful Notification Automations
 1) Notify when the windspeed is over 20 miles per hour
@@ -187,34 +172,9 @@ All Automations are using Node-Red (using Hassio Addins). This can be downloaded
 5) Plus many more....
 
 
-<img src="https://github.com/ZinkNotTheMetal/HomeAssistant/blob/master/misc/pictures/NR-Windspeed-Notification.PNG" alt="Windspeed Node-Red Screenshot">
-
-
-<img src="https://github.com/ZinkNotTheMetal/HomeAssistant/blob/master/misc/pictures/NR-Vacation-Notification.PNG" alt="Vacation Node-Red Screenshot">
-
-
-<img src="https://github.com/ZinkNotTheMetal/HomeAssistant/blob/master/misc/pictures/NR-Humidity-Notification.PNG" alt="Humidity Node-Red Screenshot">
-
-
-### Weather Automations
-1) Do not lower the blinds if the cloud cover is more than 60% (using open weather map api)
-
-<img src="https://github.com/ZinkNotTheMetal/HomeAssistant/blob/master/misc/pictures/NR-Home.PNG" alt="Home Node-Red Screenshot">
-
-
-<img src="https://github.com/ZinkNotTheMetal/HomeAssistant/blob/master/misc/pictures/NR-Links.PNG" alt="Links Node-Red Screenshot">
-
-
-
 ## [Dashboard](#dashboard)
-<img src="https://github.com/ZinkNotTheMetal/HomeAssistant/blob/master/misc/pictures/Home-Assistant-Lovelace-1.PNG" alt="Home Assistant dashboard 1" />
+<img src="https://github.com/ZinkNotTheMetal/HomeAssistant/blob/master/www/dashboard_pictures/overview.png" alt="Home Assistant dashboard 1" />
 
-<img src="https://github.com/ZinkNotTheMetal/HomeAssistant/blob/master/misc/pictures/Home-Assistant-Lovelace-2.PNG" alt="Home Assistant dashboard 2" />
-
-<img src="https://github.com/ZinkNotTheMetal/HomeAssistant/blob/master/misc/pictures/Home-Assistant-Lovelace-3.PNG" alt="Home Assistant dashboard 3" />
-
-<img src="https://github.com/ZinkNotTheMetal/HomeAssistant/blob/master/misc/pictures/Home-Assistant-Lovelace-4.PNG" alt="Home Assistant dashboard 4" />
-
-<img src="https://github.com/ZinkNotTheMetal/HomeAssistant/blob/master/misc/pictures/Home-Assistant-Lovelace-5.PNG" alt="Home Assistant dashboard 5" />
+<img src="https://github.com/ZinkNotTheMetal/HomeAssistant/blob/master/www/dashboard_pictures/status-page.png" alt="Home Assistant dashboard 2" />
 
 -ZinkNotTheMetal
