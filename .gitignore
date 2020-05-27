@@ -13,3 +13,4 @@ custom_components/
 *.sqlite
 OZW_Log.txt
 components/shell_commands/turn_off_pc.yaml
+www/community
