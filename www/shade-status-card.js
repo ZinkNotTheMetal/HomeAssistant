@@ -81,9 +81,9 @@ class ShadeStatusCard extends LitElement {
   _singleShadeUp(entityId) {
     let eventCall = "";
     if (entityId === "sensor.kitchen_shade_position"){
-      eventCall = "kitchen_blind_up_request";
+      eventCall = "raise_kitchen_shade";
     } else {
-      eventCall = "main_blind_up_request";
+      eventCall = "raise_main_shade";
     }
 
     this.hass.callService("ifttt", "trigger", {
@@ -97,9 +97,9 @@ class ShadeStatusCard extends LitElement {
   _singleShadeDown(entityId) {
     let eventCall = "";
     if (entityId === "sensor.kitchen_shade_position") {
-      eventCall = "kitchen_blind_down_request";
+      eventCall = "lower_kitchen_shade";
     } else {
-      eventCall = "main_blind_down_request";
+      eventCall = "lower_main_shade";
     }
 
     this.hass.callService("ifttt", "trigger", {
@@ -112,7 +112,7 @@ class ShadeStatusCard extends LitElement {
 
   _allShadesUp() {
     this.hass.callService("ifttt", "trigger", {
-      "event": "all_blinds_up_request"
+      "event": "all_shades_up_request"
     });
     this.hass.callService("input_boolean", "turn_on", {
       "entity_id": "input_boolean.blind_override"
@@ -121,7 +121,7 @@ class ShadeStatusCard extends LitElement {
 
   _allShadesDown() {
     this.hass.callService("ifttt", "trigger", {
-      "event": "all_blinds_down_request"
+      "event": "all_shades_down_request"
     });
     this.hass.callService("input_boolean", "turn_on", {
       "entity_id": "input_boolean.blind_override"
