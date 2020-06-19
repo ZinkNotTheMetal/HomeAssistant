@@ -54,7 +54,7 @@ living_room_fan_light_on:
     - alias: Turn on light via IFTTT
       service: ifttt.trigger
       data:
-        event: turn_on_50_living_room_fan_light
+        event: set_living_room_fan_light_60
 
 ###################################################################################
 #                                                                                 #
