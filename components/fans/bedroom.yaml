@@ -15,7 +15,6 @@ bedroom_fan:
       service: script.set_bedroom_fan_speed
       data_template:
         fan_speed: "{{ speed }}"
-    # set direction ? maybe since IFTTT is limited in what it can do
     speeds: 
       - 'off'
       - "10%"
