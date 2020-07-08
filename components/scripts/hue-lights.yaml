@@ -33,3 +33,24 @@ set_living_room_lights_to_bright:
       data:
         rgb_color: [255, 207, 119]
         brightness_pct: 100
+set_office_light_to_bright:
+  sequence:
+    - service: light.turn_on
+      entity_id: light.office_light
+      data:
+        rgb_color: [255, 207, 119]
+        brightness_pct: 100
+set_laundry_room_to_bright:
+  sequence:
+    - service: light.turn_on
+      entity_id: light.laundry_room_sconce
+      data:
+        rgb_color: [255, 207, 119]
+        brightness_pct: 100
+set_utility_room_to_bright:
+  sequence:
+    - service: light.turn_on
+      entity_id: light.utility_closet_sconce
+      data:
+        rgb_color: [255, 207, 119]
+        brightness_pct: 100
