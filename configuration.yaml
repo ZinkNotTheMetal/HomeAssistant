@@ -31,10 +31,9 @@ recorder:
   include:
     entities:
       - binary_sensor.patio_door
-      - binary_sensor.washing_machine
       - calendar.appointments
-      - climate.domain
       - !secret person_me
+      - !secret step_tracker
       - device_tracker.powerview_hub
       - device_tracker.august_lock
       - lock.august_lock
@@ -44,9 +43,13 @@ recorder:
       - sensor.kitchen_temperature
       - sensor.condo_temperature
       - sensor.owm_temperature
-      - sensor.steps
       - sensor.allergy_index_forecasted_average
       - sensor.cold_flu_forecasted_average_2
+      - sensor.processor_use
+      - sensor.memory_use
+      - sensor.load_1m
+      - sensor.load_5m
+      - sensor.load_15m
 
 
 #######################################################################################
