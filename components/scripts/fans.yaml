@@ -5,7 +5,7 @@
 ###################################################################################
 living_room_fan_on:
   sequence:
-    - alias: Turn off Fan State
+    - alias: Turn on Fan State
       service: input_boolean.turn_on
       entity_id: input_boolean.fan_living_room_state
       data: {}   
@@ -22,6 +22,10 @@ living_room_fan_off:
         event: 'turn_living_room_fan_off'
 set_living_room_fan_speed:
   sequence:
+    - alias: Turn on Fan State
+      service: input_boolean.turn_on
+      entity_id: input_boolean.fan_living_room_state
+      data: {}
     - alias: Change Fan Input Select
       service: input_select.select_option
       entity_id: input_select.fan_living_room_speed
@@ -80,6 +84,10 @@ bedroom_fan_off:
         event: 'turn_bedroom_fan_off'
 set_bedroom_fan_speed:
   sequence:
+    - alias: Turn on Fan State
+      service: input_boolean.turn_on
+      entity_id: input_boolean.fan_bedroom_state
+      data: {}
     - alias: Change Fan Input Select
       service: input_select.select_option
       entity_id: input_select.fan_bedroom_speed
