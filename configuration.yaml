@@ -233,6 +233,17 @@ system_health:
 
 
 #######################################################################################
+# System Health
+#
+# https://www.home-assistant.io/integrations/system_health/
+vacuum:
+  - platform: xiaomi_miio
+    host: !secret roborock_ipaddress
+    token: !secret roborock_token
+#######################################################################################  
+
+
+#######################################################################################
 # Wake on LAN - Computer and TV
 #
 # https://www.home-assistant.io/integrations/wake_on_lan

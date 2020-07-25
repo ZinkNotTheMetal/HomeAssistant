@@ -1,6 +1,0 @@
-'1590367682211':
-  alias: Test
-  sequence:
-  - data: {}
-    entity_id: input_boolean.fan_living_room_state
-    service: input_boolean.turn_on
