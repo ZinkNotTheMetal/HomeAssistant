@@ -101,3 +101,74 @@
         {% else %}
           mdi:battery-{{state_attr("binary_sensor.utility_room_sensor_motion", "battery_level") | float / 10 | round * 10}}
         {%- endif %}
+##############################################
+#                                            #
+#               Vacuum                       #
+#                                            #
+##############################################
+    vacuum_status:
+      friendly_name: "Status"
+      entity_id: vacuum.xiaomi_vacuum_cleaner
+      value_template: 'Status: {{ states.vacuum.xiaomi_vacuum_cleaner.attributes.status }}'
+      icon_template: >
+          {% set val =  states.vacuum.xiaomi_vacuum_cleaner.attributes.status  %}
+          {% if val == 'Charging' %}
+            mdi:battery-charging
+          {% elif val == 'Cleaning' %}
+            mdi:move-resize
+          {% elif val == 'Returning home' %}
+            mdi:keyboard-return
+          {% elif val == 'Idle' %}
+            mdi:dots-horizontal
+          {% elif val == 'Paused' %}
+            mdi:pause-circle
+          {% else %}
+            mdi:help-circle
+          {% endif %}
+    vacuum_fan_speed:
+      friendly_name: Fan Speed
+      entity_id: vacuum.xiaomi_vacuum_cleaner
+      value_template: 'Mode: {{ states.vacuum.xiaomi_vacuum_cleaner.attributes.fan_speed }}'
+      icon_template: 'mdi:speedometer'
+    vacuum_battery:
+      friendly_name: Vacuum Battery
+      entity_id: vacuum.xiaomi_vacuum_cleaner
+      value_template: 'Battery: {{ states.vacuum.xiaomi_vacuum_cleaner.attributes.battery_level }}'
+      unit_of_measurement: '%'
+      icon_template: '{{ states.vacuum.xiaomi_vacuum_cleaner.attributes.battery_icon }}'
+    vacuum_cleaning_time:
+      friendly_name: Time of Last Cycle
+      entity_id:
+        - vacuum.xiaomi_vacuum_cleaner
+      value_template: '{{ states.vacuum.xiaomi_vacuum_cleaner.attributes.cleaning_time }}'
+      icon_template: 'mdi:timer'
+    vacuum_cleaned_area:
+      friendly_name: Area of Last Cycle
+      unit_of_measurement: 'sq ft'
+      entity_id:
+        - vacuum.xiaomi_vacuum_cleaner
+      value_template: >
+       {% set result = float(states("vacuum.xiaomi_vacuum_cleaner.attributes.cleaned_area")) * 10.76391 %}
+        {{ result | round() }}
+      icon_template: 'mdi:ruler'
+    vacuum_cleanmainbrush:
+      friendly_name: Replace main brush
+      unit_of_measurement: 'h'
+      entity_id:
+        - vacuum.xiaomi_vacuum_cleaner
+      value_template: 'Main Brush: {{ states.vacuum.xiaomi_vacuum_cleaner.attributes.main_brush_left }}'
+      icon_template: 'mdi:screwdriver'
+    vacuum_cleansidebrush:
+      friendly_name: Replace side brush
+      unit_of_measurement: 'h'
+      entity_id:
+        - vacuum.xiaomi_vacuum_cleaner
+      value_template: 'Side brush: {{ states.vacuum.xiaomi_vacuum_cleaner.attributes.side_brush_left }}'
+      icon_template: 'mdi:screwdriver'
+    vacuum_cleanfilter:
+      friendly_name: Replace filter
+      unit_of_measurement: 'h'
+      entity_id:
+        - vacuum.xiaomi_vacuum_cleaner
+      value_template: 'Filter: {{ states.vacuum.xiaomi_vacuum_cleaner.attributes.filter_left }}'
+      icon_template: 'mdi:screwdriver'
