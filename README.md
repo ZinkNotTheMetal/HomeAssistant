@@ -127,6 +127,11 @@ Migrated to individual docker images as Supervised installations of hass.io beco
 | ------------- | :---: | ------------- | ------------- | ------------- |
 | <a href="http://a.co/d/4Z3Zl8v9"><img src="https://images-na.ssl-images-amazon.com/images/I/61HqxIYsqPL._SL1000_.jpg" width="200px" height="160px" /></a><br> [WeMo Mini Smart Plugs](http://a.co/d/4Z3Zl8v) | 1 | Wi-Fi | [WeMo](https://www.home-assistant.io/components/wemo/) | Useful plugs that you can automate, I like that you can use 2 per outlet  |
 
+### Vacuum
+| Device  | Quantity | Connection | Component | Notes |
+| ------------- | :---: | ------------- | ------------- | ------------- |
+| <a href="https://amzn.to/2ZYBrd4"><img src="https://sg-test-11.slatic.net/p/6ae07c5e299ed81d081faee9b7d9b447.jpg" width="250px" height="160px" /></a><br> [Roborock S55](https://amzn.to/2ZYBrd4) | 1 | Wi-Fi | [Xiaomi](https://www.home-assistant.io/integrations/vacuum.xiaomi_miio/) | Attempted to load Valetudo, but it did not work. I might attempt again later but for now just using the regular Xiaomi Integration  |
+
 ### Shower
 | Device  | Quantity | Connection | Component | Notes |
 | ------------- | :---: | ------------- | ------------- | ------------- |
