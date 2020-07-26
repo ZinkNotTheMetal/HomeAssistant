@@ -101,6 +101,21 @@
         {% else %}
           mdi:battery-{{state_attr("binary_sensor.utility_room_sensor_motion", "battery_level") | float / 10 | round * 10}}
         {%- endif %}
+    bathroom_motion_sensor_battery:
+      friendly_name: "Bathroom Motion Sensor Battery"
+      unit_of_measurement: "%"
+      value_template: >
+        {{ state_attr("binary_sensor.bathroom_sensor_motion", "battery_level") }}
+      icon_template: >-
+        {%- if is_state("states.binary_sensor.utility_room_sensor_motion.attributes.battery_level", "unknown") %}
+          mdi:battery-unknown
+        {% elif state_attr("binary_sensor.utility_room_sensor_motion", "battery_level") | float <= 5 %}
+          mdi:battery-outline
+        {% elif state_attr("binary_sensor.utility_room_sensor_motion", "battery_level") | float >= 95 %}
+          mdi:battery
+        {% else %}
+          mdi:battery-{{state_attr("binary_sensor.utility_room_sensor_motion", "battery_level") | float / 10 | round * 10}}
+        {%- endif %}
 ##############################################
 #                                            #
 #               Vacuum                       #
