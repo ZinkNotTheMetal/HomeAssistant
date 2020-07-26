@@ -185,6 +185,4 @@
       icon_template: 'mdi:screwdriver'
     vacuum_last_cleaning_time:
       friendly_name: Date and Time of Last Clean
-      value_template: >
-        {{ set lastCleanDate = state_attr("vacuum.xiaomi_vacuum_cleaner", "clean_stop") }}
-        {{ lastCleanDate }}
+      value_template: '{{ state_attr("vacuum.xiaomi_vacuum_cleaner", "clean_stop").strftime("%b %d %I:%M %p") }}'
