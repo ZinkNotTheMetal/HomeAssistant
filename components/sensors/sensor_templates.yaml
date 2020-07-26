@@ -123,7 +123,6 @@
 ##############################################
     vacuum_status:
       friendly_name: "Status"
-      entity_id: vacuum.xiaomi_vacuum_cleaner
       value_template: 'Status: {{ states.vacuum.xiaomi_vacuum_cleaner.attributes.status }}'
       icon_template: >
           {% set val =  states.vacuum.xiaomi_vacuum_cleaner.attributes.status  %}
@@ -142,48 +141,48 @@
           {% endif %}
     vacuum_fan_speed:
       friendly_name: Fan Speed
-      entity_id: vacuum.xiaomi_vacuum_cleaner
-      value_template: 'Mode: {{ states.vacuum.xiaomi_vacuum_cleaner.attributes.fan_speed }}'
+      value_template: 'Mode: {{ state_attr("vacuum.xiaomi_vacuum_cleaner", "fan_speed") }}'
       icon_template: 'mdi:speedometer'
     vacuum_battery:
       friendly_name: Vacuum Battery
-      entity_id: vacuum.xiaomi_vacuum_cleaner
-      value_template: 'Battery: {{ states.vacuum.xiaomi_vacuum_cleaner.attributes.battery_level }}'
+      value_template: 'Battery: {{ state_attr("vacuum.xiaomi_vacuum_cleaner", "battery_level") }}'
       unit_of_measurement: '%'
       icon_template: '{{ states.vacuum.xiaomi_vacuum_cleaner.attributes.battery_icon }}'
     vacuum_cleaning_time:
       friendly_name: Time of Last Cycle
-      entity_id:
-        - vacuum.xiaomi_vacuum_cleaner
-      value_template: '{{ states.vacuum.xiaomi_vacuum_cleaner.attributes.cleaning_time }}'
+      unit_of_measurement: "min"
+      value_template: '{{ state_attr("vacuum.xiaomi_vacuum_cleaner", "cleaning_time") }}'
       icon_template: 'mdi:timer'
+    vacuum_cleaning_count:
+      friendly_name: Total Cleaning Count
+      value_template: '{{ state_attr("vacuum.xiaomi_vacuum_cleaner", "cleaning_count") }}'
     vacuum_cleaned_area:
       friendly_name: Area of Last Cycle
       unit_of_measurement: 'sq ft'
-      entity_id:
-        - vacuum.xiaomi_vacuum_cleaner
       value_template: >
-       {% set result = float(states("vacuum.xiaomi_vacuum_cleaner.attributes.cleaned_area")) * 10.76391 %}
+        {% set result = float(state_attr("vacuum.xiaomi_vacuum_cleaner", "cleaned_area")) * 10.76391 %}
         {{ result | round() }}
       icon_template: 'mdi:ruler'
     vacuum_cleanmainbrush:
       friendly_name: Replace main brush
       unit_of_measurement: 'h'
-      entity_id:
-        - vacuum.xiaomi_vacuum_cleaner
-      value_template: 'Main Brush: {{ states.vacuum.xiaomi_vacuum_cleaner.attributes.main_brush_left }}'
+      value_template: 'Main Brush: {{ state_attr("vacuum.xiaomi_vacuum_cleaner", "main_brush_left") }}'
       icon_template: 'mdi:screwdriver'
     vacuum_cleansidebrush:
       friendly_name: Replace side brush
       unit_of_measurement: 'h'
-      entity_id:
-        - vacuum.xiaomi_vacuum_cleaner
-      value_template: 'Side brush: {{ states.vacuum.xiaomi_vacuum_cleaner.attributes.side_brush_left }}'
+      value_template: 'Side brush: {{ state_attr("vacuum.xiaomi_vacuum_cleaner", "side_brush_left") }}'
       icon_template: 'mdi:screwdriver'
     vacuum_cleanfilter:
       friendly_name: Replace filter
       unit_of_measurement: 'h'
-      entity_id:
-        - vacuum.xiaomi_vacuum_cleaner
-      value_template: 'Filter: {{ states.vacuum.xiaomi_vacuum_cleaner.attributes.filter_left }}'
+      value_template: 'Filter: {{ state_attr("vacuum.xiaomi_vacuum_cleaner", "filter_left") }}'
       icon_template: 'mdi:screwdriver'
+    vacuum_sensordirtyleft:
+      friendly_name: Replace filter
+      unit_of_measurement: 'h'
+      value_template: 'Sensor: {{ state_attr("vacuum.xiaomi_vacuum_cleaner", "sensor_dirty_left") }}'
+      icon_template: 'mdi:screwdriver'
+    vacuum_last_cleaning_time:
+      friendly_name: Date and Time of Last Clean
+      value_template: "{{ strptime(state_attr("vacuum.xiaomi_vacuum_cleaner", "clean_stop"), '%Y-%M-%dT%H:%M:%S') }}"
