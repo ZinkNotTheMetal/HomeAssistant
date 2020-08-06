@@ -60,61 +60,61 @@
       friendly_name: "Closet Motion Sensor Battery"
       unit_of_measurement: "%"
       value_template: >
-        {{ state_attr("binary_sensor.closet_sensor_motion", "battery_level") }}
+        {{ state_attr("binary_sensor.closet_motion_sensor_motion", "battery_level") }}
       icon_template: >-
-        {%- if is_state("states.binary_sensor.closet_sensor_motion.attributes.battery_level", "unknown") %}
+        {%- if is_state("states.binary_sensor.closet_motion_sensor_motion.attributes.battery_level", "unknown") %}
           mdi:battery-unknown
-        {% elif state_attr("binary_sensor.closet_sensor_motion", "battery_level") | float <= 5 %}
+        {% elif state_attr("binary_sensor.closet_motion_sensor_motion", "battery_level") | float <= 5 %}
           mdi:battery-outline
-        {% elif state_attr("binary_sensor.closet_sensor_motion", "battery_level") | float >= 95 %}
+        {% elif state_attr("binary_sensor.closet_motion_sensor_motion", "battery_level") | float >= 95 %}
           mdi:battery
         {% else %}
-          mdi:battery-{{state_attr("binary_sensor.closet_sensor_motion", "battery_level") | float / 10 | round * 10}}
+          mdi:battery-{{state_attr("binary_sensor.closet_motion_sensor_motion", "battery_level") | float / 10 | round * 10}}
         {%- endif %}
     laundry_motion_sensor_battery:
       friendly_name: "Laundry Motion Sensor Battery"
       unit_of_measurement: "%"
       value_template: >
-        {{ state_attr("binary_sensor.laundry_room_sensor_motion", "battery_level") }}
+        {{ state_attr("binary_sensor.laundry_room_motion_sensor_motion", "battery_level") }}
       icon_template: >-
-        {%- if is_state("states.binary_sensor.laundry_room_sensor_motion.attributes.battery_level", "unknown") %}
+        {%- if is_state("states.binary_sensor.laundry_room_motion_sensor_motion.attributes.battery_level", "unknown") %}
           mdi:battery-unknown
-        {% elif state_attr("binary_sensor.laundry_room_sensor_motion", "battery_level") | float <= 5 %}
+        {% elif state_attr("binary_sensor.laundry_room_motion_sensor_motion", "battery_level") | float <= 5 %}
           mdi:battery-outline
-        {% elif state_attr("binary_sensor.laundry_room_sensor_motion", "battery_level") | float >= 95 %}
+        {% elif state_attr("binary_sensor.laundry_room_motion_sensor_motion", "battery_level") | float >= 95 %}
           mdi:battery
         {% else %}
-          mdi:battery-{{state_attr("binary_sensor.laundry_room_sensor_motion", "battery_level") | float / 10 | round * 10}}
+          mdi:battery-{{state_attr("binary_sensor.laundry_room_motion_sensor_motion", "battery_level") | float / 10 | round * 10}}
         {%- endif %}
     utility_motion_sensor_battery:
       friendly_name: "Utility Room Motion Sensor Battery"
       unit_of_measurement: "%"
       value_template: >
-        {{ state_attr("binary_sensor.utility_room_sensor_motion", "battery_level") }}
+        {{ state_attr("binary_sensor.utility_room_motion_sensor_motion", "battery_level") }}
       icon_template: >-
-        {%- if is_state("states.binary_sensor.utility_room_sensor_motion.attributes.battery_level", "unknown") %}
+        {%- if is_state("states.binary_sensor.utility_room_motion_sensor_motion.attributes.battery_level", "unknown") %}
           mdi:battery-unknown
-        {% elif state_attr("binary_sensor.utility_room_sensor_motion", "battery_level") | float <= 5 %}
+        {% elif state_attr("binary_sensor.utility_room_motion_sensor_motion", "battery_level") | float <= 5 %}
           mdi:battery-outline
-        {% elif state_attr("binary_sensor.utility_room_sensor_motion", "battery_level") | float >= 95 %}
+        {% elif state_attr("binary_sensor.utility_room_motion_sensor_motion", "battery_level") | float >= 95 %}
           mdi:battery
         {% else %}
-          mdi:battery-{{state_attr("binary_sensor.utility_room_sensor_motion", "battery_level") | float / 10 | round * 10}}
+          mdi:battery-{{state_attr("binary_sensor.utility_room_motion_sensor_motion", "battery_level") | float / 10 | round * 10}}
         {%- endif %}
     bathroom_motion_sensor_battery:
       friendly_name: "Bathroom Motion Sensor Battery"
       unit_of_measurement: "%"
       value_template: >
-        {{ state_attr("binary_sensor.bathroom_sensor_motion", "battery_level") }}
+        {{ state_attr("binary_sensor.bathroom_motion_sensor_motion", "battery_level") }}
       icon_template: >-
-        {%- if is_state("states.binary_sensor.utility_room_sensor_motion.attributes.battery_level", "unknown") %}
+        {%- if is_state("states.binary_sensor.bathroom_motion_sensor_motion.attributes.battery_level", "unknown") %}
           mdi:battery-unknown
-        {% elif state_attr("binary_sensor.utility_room_sensor_motion", "battery_level") | float <= 5 %}
+        {% elif state_attr("binary_sensor.bathroom_motion_sensor_motion", "battery_level") | float <= 5 %}
           mdi:battery-outline
-        {% elif state_attr("binary_sensor.utility_room_sensor_motion", "battery_level") | float >= 95 %}
+        {% elif state_attr("binary_sensor.bathroom_motion_sensor_motion", "battery_level") | float >= 95 %}
           mdi:battery
         {% else %}
-          mdi:battery-{{state_attr("binary_sensor.utility_room_sensor_motion", "battery_level") | float / 10 | round * 10}}
+          mdi:battery-{{state_attr("binary_sensor.bathroom_motion_sensor_motion", "battery_level") | float / 10 | round * 10}}
         {%- endif %}
 ##############################################
 #                                            #

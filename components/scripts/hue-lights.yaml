@@ -1,56 +1,56 @@
 set_bedroom_lights_to_bright:
   sequence:
     - service: light.turn_on
-      entity_id: light.bedroom_lights
+      entity_id: light.bedroom
       data:
         rgb_color: [255, 207, 119]
         brightness_pct: 100
 set_hallway_lights_to_bright:
   sequence:
     - service: light.turn_on
-      entity_id: light.hallway_lights
+      entity_id: light.hallway
       data:
         rgb_color: [255, 207, 119]
         brightness_pct: 100
 set_kitchen_lights_to_bright:
   sequence:
     - service: light.turn_on
-      entity_id: light.kitchen_lights
+      entity_id: light.kitchen
       data:
         rgb_color: [255, 207, 119]
         brightness_pct: 100
 set_bathroom_lights_to_bright:
   sequence:
     - service: light.turn_on
-      entity_id: light.bathroom_lights
+      entity_id: light.bathroom
       data:
         rgb_color: [255, 207, 119]
         brightness_pct: 100
 set_living_room_lights_to_bright:
   sequence:
     - service: light.turn_on
-      entity_id: light.living_room_lights
+      entity_id: light.living_room
       data:
         rgb_color: [255, 207, 119]
         brightness_pct: 100
 set_office_light_to_bright:
   sequence:
     - service: light.turn_on
-      entity_id: light.office_light
+      entity_id: light.office
       data:
         rgb_color: [255, 207, 119]
         brightness_pct: 100
 set_laundry_room_to_bright:
   sequence:
     - service: light.turn_on
-      entity_id: light.laundry_room_sconce
+      entity_id: light.laundry_room
       data:
         rgb_color: [255, 207, 119]
         brightness_pct: 100
 set_utility_room_to_bright:
   sequence:
     - service: light.turn_on
-      entity_id: light.utility_closet_sconce
+      entity_id: light.utility_room
       data:
         rgb_color: [255, 207, 119]
         brightness_pct: 100

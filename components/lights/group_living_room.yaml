@@ -1,7 +1,8 @@
 - platform: group
   name: Living Room Lights
   entities:
-    - light.hallway_can_6
-    - light.hallway_can_7
-    - light.hallway_can_8
+    - light.living_room_can_1
+    - light.living_room_can_2
+    - light.living_room_can_3
+    - light.living_room_can_4
     - light.living_room_fan_light

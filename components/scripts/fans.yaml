@@ -15,7 +15,7 @@ living_room_fan_on:
     - service: input_select.select_option
       entity_id: input_select.fan_living_room_speed
       data_template:
-        option: '25%'
+        option: '10%'
 living_room_fan_off:
   sequence:
     - service: input_boolean.turn_off

@@ -58,18 +58,6 @@ recorder:
 #                                                                                     #
 #######################################################################################
 #######################################################################################
-# Asus Router utilized for Router Information and Presence Detection (device_tracker)
-#  to add a device to a person (search in States and see what ASUS is returning)
-#
-# https://www.home-assistant.io/components/asuswrt/
-asuswrt:
-  host: !secret router_ip_address
-  username: !secret router_username
-  password: !secret router_password
-#######################################################################################
-
-
-#######################################################################################
 # Binary sensors in Home Assistant
 #
 # https://www.home-assistant.io/components/binary_sensor/
@@ -217,6 +205,23 @@ shell_command: !include_dir_merge_named components/shell_commands
 
 
 #######################################################################################
+# SONOS Manual - Auto Discovery not working with multiple VLANs
+#
+# https://www.home-assistant.io/integrations/sonos/
+sonos: 
+  media_player:
+    hosts:
+      - !secret sonos_tv_bar_ip_address
+      - !secret sonos_move_ip_address
+      - !secret sonos_bedroom_ip_address
+      - !secret sonos_bathroom_ip_address
+      - !secret sonos_kitchen_left_ip_address
+      - !secret sonos_kitchen_right_ip_address
+#######################################################################################
+
+
+
+#######################################################################################
 # Custom Switches in Home Assistant
 #
 # https://www.home-assistant.io/components/switch/
@@ -238,7 +243,7 @@ system_health:
 # https://www.home-assistant.io/integrations/system_health/
 vacuum:
   - platform: xiaomi_miio
-    host: !secret roborock_ipaddress
+    host: !secret roborock_ip_address
     token: !secret roborock_token
 #######################################################################################  
 
