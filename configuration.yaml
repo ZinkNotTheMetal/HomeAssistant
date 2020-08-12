@@ -205,6 +205,15 @@ shell_command: !include_dir_merge_named components/shell_commands
 
 
 #######################################################################################
+# Shelly for Home Assistant Shell Commands in Home Assistant
+#
+# https://github.com/StyraHem/ShellyForHASS
+shelly:
+  discovery: true
+#######################################################################################
+
+
+#######################################################################################
 # SONOS Manual - Auto Discovery not working with multiple VLANs
 #
 # https://www.home-assistant.io/integrations/sonos/
@@ -259,9 +268,10 @@ wake_on_lan:
 #######################################################################################
 # Weather configuration in Home Assistant
 #   Used for overall weather on lovelace page 
+#   Moved away from this component in 0.114.0 - AccuWeather added via UI
 #
 # https://www.home-assistant.io/components/weather/
-weather: !include_dir_list components/weather
+#weather: !include_dir_list components/weather
 #######################################################################################
 
 

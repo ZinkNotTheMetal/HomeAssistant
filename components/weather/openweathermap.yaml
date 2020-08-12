@@ -1,7 +1,0 @@
-# https://www.home-assistant.io/components/sensor.openweathermap/
-platform: openweathermap
-api_key: !secret openweather_api_key
-name: 'Nashville Weather'
-latitude: !secret home_latitude
-longitude: !secret home_longitude
-mode: freedaily
