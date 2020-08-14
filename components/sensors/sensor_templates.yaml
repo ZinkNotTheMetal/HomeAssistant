@@ -49,6 +49,23 @@
       icon_template: mdi:github-circle
       value_template: >
         {{ state_attr("sensor.homeassistant", "stargazers") }}
+    outdoor_humidity:
+      friendly_name: Outdoor Humidity
+      unit_of_measurement: '%'
+      device_class: humidity
+      value_template: >
+        {{ state_attr("weather.home", "humidity") }}
+    visibility:
+      friendly_name: Visibility
+      unit_of_measurement: 'mi'
+      icon_template: 'mdi:eye-circle-outline'
+      value_template: >
+        {{ state_attr("weather.home", "visibility") }}
+##############################################
+#                                            #
+#               Batteries                    #
+#                                            #
+##############################################
     closet_motion_sensor_battery:
       friendly_name: "Closet Motion Sensor Battery"
       unit_of_measurement: "%"

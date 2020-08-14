@@ -266,16 +266,6 @@ wake_on_lan:
 
 
 #######################################################################################
-# Weather configuration in Home Assistant
-#   Used for overall weather on lovelace page 
-#   Moved away from this component in 0.114.0 - AccuWeather added via UI
-#
-# https://www.home-assistant.io/components/weather/
-#weather: !include_dir_list components/weather
-#######################################################################################
-
-
-#######################################################################################
 # WebOs TV
 #
 # https://www.home-assistant.io/integrations/webostv/
