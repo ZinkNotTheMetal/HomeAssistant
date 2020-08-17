@@ -18,3 +18,4 @@ themes/
 home-assistant_v2.db-wal
 .shopping_list.json
 home-assistant_v2.db-shm
+*.august.conf
