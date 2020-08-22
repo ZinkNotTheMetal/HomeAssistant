@@ -28,7 +28,7 @@
       value_template: >
         {% if states.sensor.shade_positions.attributes.shadeData[1].positions.position1 == 65535 %}
           Open
-        {% elif states.sensor.shade_positions.attributes.shadeData[1].positions.position1 == 0 %}
+        {% elif states.sensor.shade_positions.attributes.shadeData[1].positions.position1 <= 20 %}
           Closed
         {% else %}
           {{ ((1 - (states.sensor.shade_positions.attributes.shadeData[1].positions.position1 / 65535)) * 100) | round(0) }}%
@@ -39,7 +39,7 @@
       value_template: >
         {% if states.sensor.shade_positions.attributes.shadeData[0].positions.position1 == 65535 %}
           Open
-        {% elif states.sensor.shade_positions.attributes.shadeData[0].positions.position1 == 0 %}
+        {% elif states.sensor.shade_positions.attributes.shadeData[0].positions.position1 <= 20 %}
           Closed
         {% else %}
           {{ ((1 - (states.sensor.shade_positions.attributes.shadeData[0].positions.position1 / 65535)) * 100) | round(0) }}%

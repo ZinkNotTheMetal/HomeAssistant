@@ -3,3 +3,8 @@
   origin: !secret home_address
   destination: !secret work_address
   region: 'US'
+- platform: waze_travel_time
+  name: !secret main_airport_name
+  origin: !secret home_address
+  destination: !secret airport_address
+  region: 'US'
