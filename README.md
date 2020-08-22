@@ -1,6 +1,6 @@
 # Here's my [Home Assistant (HA)](https://home-assistant.io/) configuration. 
 
-| ![](https://img.shields.io/badge/Home%20Assistant-0.114.2-blue.svg) | ![](https://img.shields.io/github/stars/zinknotthemetal/homeassistant.svg?label=Stars)|
+| ![](https://img.shields.io/badge/Home%20Assistant-0.114.3-blue.svg) | ![](https://img.shields.io/github/stars/zinknotthemetal/homeassistant.svg?label=Stars)|
 |:---:|:---:|
 | Configuration for Home Assistant version | Please :star: this repo if you found it useful! (Click Star in the top right) |
 | [![](https://img.shields.io/github/issues-raw/zinknotthemetal/homeassistant.svg)](https://github.com/ZinkNotTheMetal/HomeAssistant/issues) | ![](https://img.shields.io/github/last-commit/zinknotthemetal/homeassistant.svg) |
@@ -99,7 +99,7 @@ Migrated to individual docker images as Supervised installations of hass.io beco
 ### Lock
 | Device  | Quantity | Connection | Component | Notes |
 | ------------- | :---: | ------------- | ------------- | ------------- |
-| <a href="http://a.co/d/9L8AI94"><img src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6085/6085415_sd.jpg;maxHeight=1000;maxWidth=1000" width="210px" height="80px" /></a><br> [August Smart Lock Pro](http://a.co/d/9L8AI94) | 1 | Z-Wave / Wi-Fi | [Z-Wave](https://www.home-assistant.io/components/zwave/) | I found using Z-Wave worked better than using the actual component. Luckily this lock supports both $200 |
+| <a href="http://a.co/d/9L8AI94"><img src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6085/6085415_sd.jpg;maxHeight=1000;maxWidth=1000" width="210px" height="80px" /></a><br> [August Smart Lock Pro - Gen 3](http://a.co/d/9L8AI94) | 1 | Z-Wave / Wi-Fi | [Wi-Fi](https://www.home-assistant.io/integrations/august/) | The new August Lock component in Home Assistant is fast and reliable. Z-Wave has been hit or miss for some devices.  $200 |
 
 ### Indoor Climate 
 | Device  | Quantity | Connection | Component | Notes |
