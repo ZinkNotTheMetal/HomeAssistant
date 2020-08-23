@@ -49,6 +49,11 @@
       icon_template: mdi:github-circle
       value_template: >
         {{ state_attr("sensor.homeassistant", "stargazers") }}
+##############################################
+#                                            #
+#               Weather                      #
+#                                            #
+##############################################
     outdoor_humidity:
       friendly_name: Outdoor Humidity
       unit_of_measurement: '%'
@@ -61,6 +66,12 @@
       icon_template: 'mdi:eye-circle-outline'
       value_template: >
         {{ state_attr("weather.home", "visibility") }}
+    today_rain_percentage:
+      friendly_name: Today's Rain Probability
+      unit_of_measurement: '%'
+      icon_template: 'mdi:weather-pouring'
+      value_template: >
+        {{ states.weather.home.attributes.forecast[0].precipitation_probability }}
 ##############################################
 #                                            #
 #               Batteries                    #
@@ -211,3 +222,36 @@
     vacuum_last_cleaning_time:
       friendly_name: Date and Time of Last Clean
       value_template: '{{ state_attr("vacuum.xiaomi_vacuum_cleaner", "clean_stop").strftime("%b %d %I:%M %p") }}'
+##############################################
+#                                            #
+#               Lights                       #
+#                                            #
+##############################################
+    living_room_light_brightness:
+      friendly_name: Living Room Light Brightness
+      value_template: >
+        {% set brightness = state_attr("light.living_room", "brightness")  %}
+        {% if brightness == 'None' or is_state("light.living_room", "off") %}
+          0
+        {% else %}
+          {{ ((brightness / 255) * 100) | round(0) }}
+        {% endif %}
+      unit_of_measurement: '%'
+    kitchen_room_light_brightness:
+      friendly_name: Kitchen Light Brightness
+      value_template: >
+        {% set brightness = state_attr("light.kitchen", "brightness")  %}
+        {% if brightness == 'None' or is_state("light.kitchen", "off") %}
+          0
+        {% else %}
+          {{ ((brightness / 255) * 100) | round(0) }}
+        {% endif %}
+      unit_of_measurement: '%'
+    kitchen_room_light_color:
+      friendly_name: Kitchen Light Color Array
+      value_template: '{{ state_attr("light.kitchen", "rgb_color") }}'
+      unit_of_measurement: '%'
+    kitchen_room_light_color:
+      friendly_name: Living Room Light Color Array
+      value_template: '{{ state_attr("light.living_room", "rgb_color") }}'
+      unit_of_measurement: '%'
