@@ -72,6 +72,31 @@
       icon_template: 'mdi:weather-pouring'
       value_template: >
         {{ states.weather.home.attributes.forecast[0].precipitation_probability }}
+    wind_speed_knots:
+      friendly_name: Current - Wind Speed Knots
+      unit_of_measurement: 'kt'
+      icon_template: 'mdi:weather-windy'
+      value_template: >
+        {{ state_attr("weather.home", "wind_speed") }}
+    current_real_feel_temp:
+      friendly_name: Current - Real Feel Temperature
+      unit_of_measurement: '°F'
+      value_template: >
+        {{ states('sensor.home_realfeel_temperature') }}
+    current_cloud_coverage:
+      friendly_name: Current - Cloud Coverage
+      unit_of_measurement: '%'
+      icon_template: >-
+        {% set coverage = states('sensor.owm_cloud_coverage') %}
+        {%- if coverage > 78 %}
+          mdi:cloudy
+        {% elif coverage > 36 %}
+          mdi:weather-partly-cloudy
+        {% else %}
+          mdi:white-balance-sunny
+        {%- endif %}
+      value_template: >
+        {{ states('sensor.owm_cloud_coverage') }}
 ##############################################
 #                                            #
 #               Batteries                    #

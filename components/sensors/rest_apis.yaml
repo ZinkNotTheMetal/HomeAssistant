@@ -16,3 +16,9 @@
     - shadeData
   value_template: "{{ value_json.value }}"
   scan_interval: 15
+
+- platform: rest
+  resource: !secret get_cloud_coverage_url
+  name: owm_cloud_coverage
+  value_template: '{{ value_json.clouds.all }}'
+  scan_interval: 600
