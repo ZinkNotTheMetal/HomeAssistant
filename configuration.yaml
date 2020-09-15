@@ -226,8 +226,7 @@ sonos:
       - !secret sonos_move_ip_address
       - !secret sonos_bedroom_ip_address
       - !secret sonos_bathroom_ip_address
-      - !secret sonos_kitchen_left_ip_address
-      - !secret sonos_kitchen_right_ip_address
+      - !secret sonos_foyer_ip_address
 #######################################################################################
 
 
