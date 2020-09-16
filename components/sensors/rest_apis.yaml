@@ -10,7 +10,7 @@
   scan_interval: 3600  
 
 - platform: rest
-  resource: !secret blind_hub_rest_url
+  resource: !secret hunter_douglas_hub_rest_url
   name: Shade Positions
   json_attributes:
     - shadeData

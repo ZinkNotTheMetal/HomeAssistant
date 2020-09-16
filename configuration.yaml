@@ -183,6 +183,14 @@ panel_iframe: !include_dir_merge_named components/iframe_panels
 
 
 #######################################################################################
+# ReST Commands - used to invoke repeatable ReST commands (currently used for shades)
+#
+# https://www.home-assistant.io/integrations/rest_command/
+rest_command: !include_dir_merge_named components/rest_commands
+#######################################################################################
+
+
+#######################################################################################
 # All custom scripts that do multiple actions with one call
 #
 # https://www.home-assistant.io/components/script

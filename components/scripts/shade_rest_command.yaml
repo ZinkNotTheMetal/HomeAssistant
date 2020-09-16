@@ -1,0 +1,12 @@
+open_kitchen_shade:
+  sequence:
+    - service: rest_command.kitchen_shade_open
+close_kitchen_shade:
+  sequence:
+    - service: rest_command.kitchen_shade_close
+open_living_room_shade:
+  sequence:
+    - service: rest_command.living_room_shade_open
+close_living_room_shade:
+  sequence:
+    - service: rest_command.living_room_shade_close

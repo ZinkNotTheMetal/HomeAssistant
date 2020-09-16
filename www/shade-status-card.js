@@ -59,15 +59,13 @@ class ShadeStatusCard extends LitElement {
           </div>
           <div style="text-align: center; padding-top:10px;">
             <button class="icon-button" id="container-down-arrow-${this.entity}"
-               @click="${ev => this._singleShadeDown(this.entity)}" 
-               @ha-hold="${ev => this._allShadesDown()}"
+               @click="${ev => this._singleShadeDown(this.entity)}"
             >
               <ha-icon style="color: white;" id="down-arrow-${this.entity}" icon="mdi:arrow-down-bold" />
             </button>
             &nbsp;&nbsp;|&nbsp;&nbsp;
             <button class="icon-button" id="container-up-arrow-${this.entity}"
                @click="${ev => this._singleShadeUp(this.entity)}" 
-               @ha-hold="${ev => this._allShadesUp()}"
             >
               <ha-icon style="color: white;" id="up-arrow-${this.entity}" icon="mdi:arrow-up-bold" />
             </button>
@@ -79,32 +77,24 @@ class ShadeStatusCard extends LitElement {
   }
 
   _singleShadeUp(entityId) {
-    let eventCall = "";
-    if (entityId === "sensor.kitchen_shade_position"){
-      eventCall = "raise_kitchen_shade";
+    if (entityId === "sensor.kitchen_shade_position") {
+      this.hass.callService("script", "open_kitchen_shade");
     } else {
-      eventCall = "raise_main_shade";
+      this.hass.callService("script", "open_living_room_shade");
     }
 
-    this.hass.callService("ifttt", "trigger", {
-      "event": eventCall
-    });
     this.hass.callService("input_boolean", "turn_on", {
       "entity_id": "input_boolean.blind_override"
     });
   }
 
   _singleShadeDown(entityId) {
-    let eventCall = "";
     if (entityId === "sensor.kitchen_shade_position") {
-      eventCall = "lower_kitchen_shade";
+      this.hass.callService("script", "close_kitchen_shade");
     } else {
-      eventCall = "lower_main_shade";
+      this.hass.callService("script", "close_living_room_shade");
     }
 
-    this.hass.callService("ifttt", "trigger", {
-      "event": eventCall
-    });
     this.hass.callService("input_boolean", "turn_on", {
       "entity_id": "input_boolean.blind_override"
     });

@@ -1,0 +1,20 @@
+kitchen_shade_open:
+  url: !secret kitchen_shade_rest_url
+  method: put
+  content_type: 'application/json; charset=utf-8'
+  payload: '{ "shade": { "positions": { "posKind1": 1, "position1": 65535 } } }'
+kitchen_shade_close:
+  url: !secret kitchen_shade_rest_url
+  method: put
+  content_type: 'application/json; charset=utf-8'
+  payload: '{ "shade": { "positions": { "posKind1": 1, "position1": 0 } } }'
+living_room_shade_open:
+  url: !secret living_room_shade_rest_url
+  method: put
+  content_type: 'application/json; charset=utf-8'
+  payload: '{ "shade": { "positions": { "posKind1": 1, "position1": 65535 } } }'
+living_room_shade_close:
+  url: !secret living_room_shade_rest_url
+  method: put
+  content_type: 'application/json; charset=utf-8'
+  payload: '{ "shade": { "positions": { "posKind1": 1, "position1": 0 } } }'
