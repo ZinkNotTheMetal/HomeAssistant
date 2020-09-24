@@ -280,3 +280,24 @@
       friendly_name: Living Room Light Color Array
       value_template: '{{ state_attr("light.living_room", "rgb_color") }}'
       unit_of_measurement: '%'
+##############################################
+#                                            #
+#        TP-Link (HS110) - Dishwasher        #
+#                                            #
+##############################################
+    dishwasher_amps:
+      friendly_name: "Dishwasher Current"
+      value_template: '{{ states.switch.dishwasher.attributes["current_a"] | float }}'
+      unit_of_measurement: 'A'
+    dishwasher_watts:
+      friendly_name: "Dishwasher Current Consumption"
+      unit_of_measurement: 'W'
+      value_template: '{{ states.switch.dishwasher.attributes["current_power_w"] | float }}'
+    dishwasher_kwh:
+      friendly_name: "Dishwasher Total Consumption"
+      unit_of_measurement: 'kWh'
+      value_template: '{{ states.switch.dishwasher.attributes["total_energy_kwh"] | float }}'
+    dishwasher_today_kwh:
+      friendly_name: "Dishwasher Today's Consumption"
+      value_template: '{{ states.switch.dishwasher.attributes["today_energy_kwh"] | float }}'
+      unit_of_measurement: 'kWh'

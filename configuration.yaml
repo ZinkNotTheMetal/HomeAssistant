@@ -255,6 +255,17 @@ system_health:
 
 
 #######################################################################################
+# TP-Link Kasa Smart devices
+#
+# https://www.home-assistant.io/integrations/tplink
+tplink:
+  discovery: false
+  switch:
+    - host: !secret dishwasher_plug_ip_address
+#######################################################################################
+  
+
+#######################################################################################
 # System Health
 #
 # https://www.home-assistant.io/integrations/system_health/
