@@ -1,0 +1,6 @@
+living_room_fan_light:
+  name: 'Living Room Fan Light'
+  initial: 200
+  min: 0
+  max: 255
+  step: 1

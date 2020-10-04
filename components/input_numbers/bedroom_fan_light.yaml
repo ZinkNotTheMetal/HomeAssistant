@@ -1,0 +1,6 @@
+bedroom_fan_light:
+  name: 'Bedroom Fan Light'
+  initial: 255
+  min: 0
+  max: 255
+  step: 1

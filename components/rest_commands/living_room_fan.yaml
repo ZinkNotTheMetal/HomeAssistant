@@ -1,0 +1,23 @@
+set_living_room_fan_speed:
+  url: !secret local_home_assistant_relay_url
+  method: POST
+  content_type: 'application/json'
+  payload: '{"command": "turn on living room fan to {{ speed }}", "user": "home-assistant-relay"}'
+
+turn_off_living_room_fan:
+  url: !secret local_home_assistant_relay_url
+  method: POST
+  content_type: 'application/json'
+  payload: '{"command": "turn off living room fan", "user": "home-assistant-relay"}'
+
+set_living_room_fan_light:
+  url: !secret local_home_assistant_relay_url
+  method: POST
+  content_type: 'application/json'
+  payload: '{"command": "turn on living room fan light to {{ light_percentage }} %", "user": "home-assistant-relay"}'
+
+turn_off_living_room_fan_light:
+  url: !secret local_home_assistant_relay_url
+  method: POST
+  content_type: 'application/json'
+  payload: '{"command": "turn off living room fan light", "user": "home-assistant-relay"}'

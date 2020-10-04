@@ -2,8 +2,6 @@ fan_living_room_speed:
   name: Living Room Fan Speed
   options:
     - 'off'
-    - 10%
-    - 25%
-    - 50%
-    - 75%
-    - 100%
+    - 'low'
+    - 'medium'
+    - 'high'

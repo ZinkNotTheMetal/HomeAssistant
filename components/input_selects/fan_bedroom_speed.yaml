@@ -2,8 +2,6 @@ fan_bedroom_speed:
   name: Bedroom Fan Speed
   options:
     - 'off'
-    - 10%
-    - 25%
-    - 50%
-    - 75%
-    - 100%
+    - 'low'
+    - 'medium'
+    - 'high'

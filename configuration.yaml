@@ -93,15 +93,6 @@ http:
 
 
 #######################################################################################
-# Using IFTTT for quite a few components that support this more than home assistant
-#
-# https://www.home-assistant.io/components/ifttt/
-ifttt:
-  key: !secret ifttt_api_key
-#######################################################################################
-
-
-#######################################################################################
 # The input_boolean component allows the user to define boolean values that
 # can be controlled via the frontend and can be used within conditions of
 # automation. This can for example be used to disable or enable certain
@@ -113,9 +104,19 @@ input_boolean: !include_dir_merge_named components/input_booleans
 
 
 #######################################################################################
+# The input_number component is a built in home-assistant component that lets a
+# user input a number (defined by input_number) to a specififed value
 # Used for Fanimation fans
 #
-# https://www.home-assistant.io/components/input_boolean/
+# https://www.home-assistant.io/components/input_number/
+input_number: !include_dir_merge_named components/input_numbers
+#######################################################################################
+
+
+#######################################################################################
+# Used for Fanimation fans
+#
+# https://www.home-assistant.io/components/input_selects/
 input_select: !include_dir_merge_named components/input_selects
 #######################################################################################
 

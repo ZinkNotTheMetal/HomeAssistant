@@ -1,6 +1,6 @@
 # Here's my [Home Assistant (HA)](https://home-assistant.io/) configuration. 
 
-| ![](https://img.shields.io/badge/Home%20Assistant-0.115.2-blue.svg) | ![](https://img.shields.io/github/stars/zinknotthemetal/homeassistant.svg?label=Stars)|
+| ![](https://img.shields.io/badge/Home%20Assistant-0.115.6-blue.svg) | ![](https://img.shields.io/github/stars/zinknotthemetal/homeassistant.svg?label=Stars)|
 |:---:|:---:|
 | Configuration for Home Assistant version | Please :star: this repo if you found it useful! (Click Star in the top right) |
 | [![](https://img.shields.io/github/issues-raw/zinknotthemetal/homeassistant.svg)](https://github.com/ZinkNotTheMetal/HomeAssistant/issues) | ![](https://img.shields.io/github/last-commit/zinknotthemetal/homeassistant.svg) |
@@ -94,7 +94,7 @@ Migrated to individual docker images as Supervised installations of hass.io beco
 ### Blinds
 | Device  | Quantity | Connection | Component | Notes |
 | ------------- | :---: | ------------- | ------------- | ------------- |
-| <a href="https://www.hunterdouglas.com/operating-systems/motorized/powerview-motorization"><img src="http://www.hunterdouglascomponents.com/media/cache/84/f5/84f500691371a792be660994e9b0b01a.jpg" width="260px" height="120px" /></a><br> [Hunter Douglas Blinds](https://www.hunterdouglas.com/operating-systems/motorized/powerview-motorization) | 2 | Proprietary Bridge | [IFTTT](https://ifttt.com) | Using multiple 'scenes' in PowerView app that sets the blinds to the appropriate height. I have the dimmer switches set to activate scenes using Node-Red |
+| <a href="https://www.hunterdouglas.com/operating-systems/motorized/powerview-motorization"><img src="http://www.hunterdouglascomponents.com/media/cache/84/f5/84f500691371a792be660994e9b0b01a.jpg" width="260px" height="120px" /></a><br> [Hunter Douglas Blinds](https://www.hunterdouglas.com/operating-systems/motorized/powerview-motorization) | 2 | Proprietary Bridge | [Direct Hub API](https://github.com/drbrain/indigo-powerview/blob/master/PowerView%20API.md) | Using multiple 'scenes' in PowerView app that sets the blinds to the appropriate height. I have the dimmer switches set to activate scenes using Node-Red |
 
 ### Lock
 | Device  | Quantity | Connection | Component | Notes |
@@ -106,7 +106,7 @@ Migrated to individual docker images as Supervised installations of hass.io beco
 | ------------- | :---: | ------------- | ------------- | ------------- |
 | <a href="http://a.co/d/9YIbOpm"><img src="https://images-na.ssl-images-amazon.com/images/I/71wlZSurPPL._SL1500_.jpg" width="300px" height="160px" /></a><br> [ecobee - Gen 2](http://a.co/d/9YIbOpm) | 1 | Wi-Fi | [ecobee](https://www.home-assistant.io/components/ecobee/) | Component works great, I use this for my entire HVAC system. I have multiple modes, AWAY, SLEEP, HOME. I also configured it to only be within 3 degrees rather than the typical 5 |
 | <a href="http://a.co/d/cM1LTUv"><img src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/8077/8077101_rd.jpg;maxHeight=1000;maxWidth=1000" width="140px" height="140px" /></a><br> [Nest Smoke & Carbon Monoxide Alarm - Gen2](http://a.co/d/cM1LTUv) | 1 | Wi-Fi | [NEST](https://www.home-assistant.io/components/nest/) | NEST Smoke & Carbon Monoxide Alarm works great and doesn't have the annoying alarm when the batteries are dead - $119 |
-| <a href="http://a.co/d/evtvD9V"><img src="https://images-na.ssl-images-amazon.com/images/I/51Gmx6KCbVL._SL1000_.jpg" width="140px" height="140px" /></a><br> [MiFlora Flower Sensors](http://a.co/d/evtvD9V) | 3 | Bluetooth | [MiFlora](https://www.home-assistant.io/components/sensor.miflora/) | Very useful to check on indoor plant health. $25 |
+| <a href="https://amzn.to/2SnoFAi"><img src="https://images-na.ssl-images-amazon.com/images/I/61T5C%2B93PjL._AC_SL1500_.jpg" width="140px" height="140px" /></a><br> [Fanimation Fan - 72"](https://amzn.to/2SnoFAi) | 2 | [Google Assistant Relay](https://github.com/greghesp/assistant-relay) | [Google Assistant Relay (ReST commands)](https://www.home-assistant.io/integrations/rest_command/) | Fanimation Wi-Fi Module to connect fans to Wi-Fi. There is currently no local API to set the fan speed or light so using google assistant to set these values |
 
 ### Media
 | Device  | Quantity | Connection | Component | Notes |

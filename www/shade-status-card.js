@@ -100,24 +100,6 @@ class ShadeStatusCard extends LitElement {
     });
   }
 
-  _allShadesUp() {
-    this.hass.callService("ifttt", "trigger", {
-      "event": "all_shades_up"
-    });
-    this.hass.callService("input_boolean", "turn_on", {
-      "entity_id": "input_boolean.blind_override"
-    });
-  }
-
-  _allShadesDown() {
-    this.hass.callService("ifttt", "trigger", {
-      "event": "all_shades_down"
-    });
-    this.hass.callService("input_boolean", "turn_on", {
-      "entity_id": "input_boolean.blind_override"
-    });
-  }
-
   getCardSize() {
     return 2;
   }
