@@ -4,7 +4,7 @@
       friendly_name: "Living Room Fan Light"
       level_template: "{{ states('input_number.living_room_fan_light') | int }}"
       set_level:
-        service: rest_command.set_bedroom_fan_light
+        service: rest_command.living_room_fan_light
         data:
           light_percentage: "{{ ((brightness / 255) * 100) | round(0) }}"
       turn_on:

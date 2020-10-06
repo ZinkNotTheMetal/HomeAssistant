@@ -67,7 +67,7 @@ bedroom_fan_off:
     - service: input_boolean.turn_off
       entity_id: input_boolean.fan_bedroom_state
       data: {}
-    - service: rest_command.turn_off_living_room_fan
+    - service: rest_command.turn_off_bedroom_fan
     - service: input_select.select_option
       entity_id: input_select.fan_bedroom_speed
       data_template:
@@ -85,7 +85,7 @@ set_bedroom_fan_speed:
         option: >
           {{ fan_speed }}
     - alias: Call Google Assistant
-      service: rest_command.set_living_room_fan_speed
+      service: rest_command.set_bedroom_fan_speed
       data:
         speed: >
           {{ fan_speed }}
