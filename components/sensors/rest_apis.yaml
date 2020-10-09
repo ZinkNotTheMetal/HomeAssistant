@@ -1,8 +1,9 @@
-####################################################
-#                                                  #
-#                      REST                        #
-#                                                  #
-####################################################
+#####################################################
+#                                                   #
+#           ReST Sensors                            #
+# https://www.home-assistant.io/integrations/rest/  #
+#                                                   #
+#####################################################
 - platform: rest
   resource: https://s3.amazonaws.com/hassio-version/stable.json
   name: Latest HomeAssistant Version

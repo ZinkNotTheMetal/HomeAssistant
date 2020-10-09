@@ -1,3 +1,9 @@
+########################################################
+#                                                      #
+#           GitHub Sensor                              #
+# https://www.home-assistant.io/integrations/github/   #
+#                                                      #
+########################################################
 - platform: github
   access_token: !secret github_access_token
   repositories:

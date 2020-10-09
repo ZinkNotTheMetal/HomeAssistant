@@ -1,3 +1,9 @@
+##################################################################
+#                                                                #
+#                    Waze Travel times                           #
+# https://www.home-assistant.io/integrations/waze_travel_time/   #
+#                                                                #
+##################################################################
 - platform: waze_travel_time
   name: Work Travel Time
   origin: !secret home_address

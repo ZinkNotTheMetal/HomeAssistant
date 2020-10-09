@@ -1,3 +1,9 @@
+#############################################################
+#                                                           #
+#         Sensor Templates                                  #
+# https://www.home-assistant.io/integrations/template/      #
+#                                                           #
+#############################################################
 - platform: template
   sensors:
     sensor_count:

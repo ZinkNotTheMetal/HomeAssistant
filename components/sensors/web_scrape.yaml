@@ -1,8 +1,9 @@
-####################################################
-#                                                  #
-#                    SCRAPE                        #
-#                                                  #
-####################################################
+#######################################################
+#                                                     #
+#                    SCRAPE                           #
+# https://www.home-assistant.io/integrations/scrape/  #
+#                                                     #
+#######################################################
 - platform: scrape
   resource: !secret tsa_airport_information_url
   select: !secret tsa_selector

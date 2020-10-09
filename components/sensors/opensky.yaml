@@ -1,0 +1,9 @@
+########################################################
+#                                                      #
+#           Open Sky Sensor                            #
+# https://www.home-assistant.io/integrations/opensky/  #
+#                                                      #
+########################################################
+- platform: opensky
+  # Radius is in Kilometers
+  radius: 10
