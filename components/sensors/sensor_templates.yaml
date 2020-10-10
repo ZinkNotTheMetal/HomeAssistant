@@ -52,7 +52,7 @@
         {% endif %}
     github_stargazers:
       friendly_name: HomeAssistant Stars
-      icon_template: mdi:github-circle
+      icon_template: mdi:github
       value_template: >
         {{ state_attr("sensor.homeassistant", "stargazers") }}
 ##############################################
