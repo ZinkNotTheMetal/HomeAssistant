@@ -50,6 +50,7 @@ recorder:
       - sensor.load_1m
       - sensor.load_5m
       - sensor.load_15m
+      - sensor.opensky
 
 
 #######################################################################################
