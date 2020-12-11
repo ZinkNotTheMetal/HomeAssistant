@@ -1,0 +1,6 @@
+sonos_grouped_play_status:
+  name: "All SONOS Play Status"
+  initial: off
+iphone_non_airplay_request:
+  name: "iPhone Play Request"
+  initial: off
