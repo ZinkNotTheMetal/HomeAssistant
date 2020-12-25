@@ -1,0 +1,14 @@
+away_packages_received:
+  name: 'Packages Arrived While Away'
+  initial: 0
+  min: 0
+  max: 255
+  step: 1
+  icon: mdi:gift-off
+yearly_packages_received:
+  name: 'Total yearly packages received'
+  initial: 0
+  min: 0
+  max: 1500
+  step: 1
+  icon: mdi:gift

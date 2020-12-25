@@ -307,3 +307,13 @@
       friendly_name: "Dishwasher Today's Consumption"
       value_template: '{{ states.switch.dishwasher.attributes["today_energy_kwh"] | float }}'
       unit_of_measurement: 'kWh'
+##############################################
+#                                            #
+#        Package Email Reader                #
+#                                            #
+##############################################
+    package_items_found:
+      friendly_name: Package Items Found In Email
+      value_template: >
+        {{ state_attr('sensor.pickup_packages_email', 'body')
+          |regex_findall_index("([0-9.]) item\(s\)") }}

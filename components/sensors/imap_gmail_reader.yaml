@@ -1,0 +1,14 @@
+####################################################################
+#                                                                  #
+#           IMAP Email Content Sensor                              #
+# https://www.home-assistant.io/integrations/imap_email_content/   #
+#                                                                  #
+####################################################################
+- platform: imap_email_content
+  server: imap.gmail.com
+  name: pickup_packages_email
+  port: 993
+  username: !secret my_gmail_address
+  password: !secret my_gmail_password
+  senders:
+    - !secret concierge_email_address
