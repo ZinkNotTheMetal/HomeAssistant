@@ -1,5 +1,7 @@
 # Here's my [Home Assistant (HA)](https://home-assistant.io/) configuration. 
 
+[Follow my blog!](https://thesmartestcondo.com)
+
 | ![](https://img.shields.io/badge/Home%20Assistant-2020.12.1-blue.svg) | ![](https://img.shields.io/github/stars/zinknotthemetal/homeassistant.svg?label=Stars)|
 |:---:|:---:|
 | Configuration for Home Assistant version | Please :star: this repo if you found it useful! (Click Star in the top right) |
@@ -178,9 +180,32 @@ Automations:
 5) Plus many more....
 
 
-## [Dashboard](#dashboard)
-<img src="https://github.com/ZinkNotTheMetal/HomeAssistant/blob/master/www/dashboard_pictures/overview.png" alt="Home Assistant dashboard 1" />
 
-<img src="https://github.com/ZinkNotTheMetal/HomeAssistant/blob/master/www/dashboard_pictures/status-page.png" alt="Home Assistant dashboard 2" />
+## [Dashboard](#dashboard)
+I have detailed the layout in my [blogpost #8 found here](https://thesmartestcondo.com/8-home-assistant-dashboard)
+
+
+### Desktop
+<img src="https://github.com/ZinkNotTheMetal/HomeAssistant/blob/master/www/dashboard_pictures/ha-dashboard.png" alt="Desktop Dashboard" />
+
+### Mobile
+<img src="https://github.com/ZinkNotTheMetal/HomeAssistant/blob/master/www/dashboard_pictures/ha-mobile-1.png" alt="Opening the app image" />
+
+<img src="https://github.com/ZinkNotTheMetal/HomeAssistant/blob/master/www/dashboard_pictures/ha-mobile-2.png" alt="Scrolling down the app image" />
+
+
+## [Detailed Information](#detailed-info)
+<img src="https://github.com/ZinkNotTheMetal/HomeAssistant/blob/master/www/dashboard_pictures/ha-desktop-status-1.png" alt="All information" />
+
+<img src="https://github.com/ZinkNotTheMetal/HomeAssistant/blob/master/www/dashboard_pictures/ha-desktop-status-2.png" alt="All Information scroll down" />
+
+### [Lights](#lights-dashboard)
+
+<img src="https://github.com/ZinkNotTheMetal/HomeAssistant/blob/master/www/dashboard_pictures/ha-desktop-lights.png" alt="Desktop Dashboard" />
+
+### [TV Remote](#tv-remote-page)
+
+<img src="https://github.com/ZinkNotTheMetal/HomeAssistant/blob/master/www/dashboard_pictures/ha-desktop-remote.png" alt="Desktop Dashboard" />
+
 
 -ZinkNotTheMetal
