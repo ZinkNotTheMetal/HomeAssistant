@@ -1,0 +1,6 @@
+fan_bedroom_percentage:
+  name: 'Bedroom Fan Percentage'
+  min: 0
+  max: 100
+  step: 1
+  unit_of_measurement: '%'

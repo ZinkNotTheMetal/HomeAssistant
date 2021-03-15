@@ -2,7 +2,7 @@ set_bedroom_fan_speed:
   url: !secret local_home_assistant_relay_url
   method: POST
   content_type: 'application/json'
-  payload: '{"command": "turn on bedroom fan to {{ speed }}", "user": "home-assistant-relay"}'
+  payload: '{"command": "turn on bedroom fan to {{ speed_percentage }} percent", "user": "home-assistant-relay"}'
   
 turn_off_bedroom_fan:
   url: !secret local_home_assistant_relay_url

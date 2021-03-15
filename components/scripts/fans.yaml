@@ -22,27 +22,26 @@ living_room_fan_off:
       entity_id: input_boolean.fan_living_room_state
       data: {}
     - service: rest_command.turn_off_living_room_fan
-    - service: input_select.select_option
-      entity_id: input_select.fan_living_room_speed
-      data_template:
-        option: 'off'
+    - service: input_number.set_value
+      entity_id: input_number.fan_living_room_percentage
+      data:
+        value: 0
 set_living_room_fan_speed:
   sequence:
     - alias: Turn on Fan State
       service: input_boolean.turn_on
       entity_id: input_boolean.fan_living_room_state
       data: {}
-    - alias: Change Fan Input Select
-      service: input_select.select_option
-      entity_id: input_select.fan_living_room_speed
-      data_template:
-        option: >
-          {{ fan_speed }}
+    - alias: Change Bedroom Fan Percentage Input Number
+      service: input_number.set_value
+      entity_id: input_number.fan_living_room_percentage
+      data:
+        value: "{{ speed_percentage }}"
     - alias: Call Google Assistant
       service: rest_command.set_living_room_fan_speed
       data:
-        speed: >
-          {{ fan_speed }}
+        speed_percentage: >
+          {{ speed_percentage }}
 
 ###################################################################################
 #                                                                                 #
@@ -68,24 +67,23 @@ bedroom_fan_off:
       entity_id: input_boolean.fan_bedroom_state
       data: {}
     - service: rest_command.turn_off_bedroom_fan
-    - service: input_select.select_option
-      entity_id: input_select.fan_bedroom_speed
-      data_template:
-        option: 'off'
+    - service: input_number.set_value
+      entity_id: input_number.fan_bedroom_percentage
+      data:
+        value: 0
 set_bedroom_fan_speed:
   sequence:
     - alias: Turn on Fan State
       service: input_boolean.turn_on
       entity_id: input_boolean.fan_bedroom_state
       data: {}
-    - alias: Change Fan Input Select
-      service: input_select.select_option
-      entity_id: input_select.fan_bedroom_speed
-      data_template:
-        option: >
-          {{ fan_speed }}
+    - alias: Change Bedroom Fan Percentage Input Number
+      service: input_number.set_value
+      entity_id: input_number.fan_bedroom_percentage
+      data:
+        value: "{{ speed_percentage }}"
     - alias: Call Google Assistant
       service: rest_command.set_bedroom_fan_speed
       data:
-        speed: >
-          {{ fan_speed }}
+        speed_percentage: >
+          {{ speed_percentage }}

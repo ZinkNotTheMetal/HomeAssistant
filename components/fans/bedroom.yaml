@@ -4,19 +4,15 @@
 #                      Powered by: Fanimation                                     #
 ###################################################################################
 bedroom_fan:
-    friendly_name: "Bedroom Fan"
-    value_template: "{{ states('input_boolean.fan_bedroom_state') }}"
-    speed_template: "{{ states('input_select.fan_bedroom_speed') }}"
-    turn_on:
-      service: script.bedroom_fan_on
-    turn_off:
-      service: script.bedroom_fan_off
-    set_speed:
-      service: script.set_bedroom_fan_speed
-      data_template:
-        fan_speed: "{{ speed }}"
-    speeds: 
-      - 'off'
-      - 'low'
-      - 'medium'
-      - 'high'
+  friendly_name: "Bedroom Fan"
+  value_template: "{{ states('input_boolean.fan_bedroom_state') }}"
+  percentage_template: "{{ states('input_number.fan_bedroom_percentage') }}"
+  turn_on:
+    service: script.bedroom_fan_on
+  turn_off:
+    service: script.bedroom_fan_off
+  set_percentage:
+    service: script.set_bedroom_fan_speed
+    data_template:
+      speed_percentage: "{{ percentage }}"
+  speed_count: 100

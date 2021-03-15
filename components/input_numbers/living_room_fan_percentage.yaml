@@ -1,0 +1,6 @@
+fan_living_room_percentage:
+  name: 'Living Room Fan Percentage'
+  min: 0
+  max: 100
+  step: 1
+  unit_of_measurement: '%'

@@ -1,7 +1,0 @@
-fan_bedroom_speed:
-  name: Bedroom Fan Speed
-  options:
-    - 'off'
-    - 'low'
-    - 'medium'
-    - 'high'
