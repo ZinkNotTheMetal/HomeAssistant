@@ -1,0 +1,4 @@
+party_mode:
+  name: 'Party Time!'
+  initial: off
+  icon: mdi:party-popper
